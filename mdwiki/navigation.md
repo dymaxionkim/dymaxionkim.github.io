@@ -105,4 +105,6 @@
 -->
 
 [gimmick:themechooser](Choose theme)
+[gimmick: math]()
+
 
