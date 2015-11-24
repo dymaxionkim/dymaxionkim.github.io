@@ -27,6 +27,6 @@ CATIA_BOM
 ## Life
 
 
-[link test](\\172.15.30.55\21. 개인자료\김동호\001.ogv)
+[link test](\\172.15.30.55\RobotSystem_Div\21. 개인자료\김동호\001.ogv)
 
 [gimmick:Disqus](dymaxionkim)
