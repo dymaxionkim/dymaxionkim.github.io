@@ -26,3 +26,5 @@ CATIA_BOM
 
 ## Life
 
+
+[gimmick:Disqus](dymaxionkim)
