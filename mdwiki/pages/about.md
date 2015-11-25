@@ -16,5 +16,5 @@ Hint: GIST Test
 $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 
-()[https://www.youtube.com/watch?v=PU4oXnMg3rE]
+[](https://www.youtube.com/watch?v=PU4oXnMg3rE)
 
