@@ -10,7 +10,6 @@
   -- Default theme
   -- (Read: http://dynalon.github.io/mdwiki/#!customizing.md#Theme_chooser)
   -->
-
 [gimmick:theme](bootstrap)
 
 
@@ -18,7 +17,6 @@
   -- Navigation
   -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
   -->
-
 [About](pages/about.md)
 
 
@@ -34,11 +32,9 @@
   * [Setup Apps](pages/Linux/Setup_Apps.md)
   * [Setup Dev Env](pages/Linux/Setup_Dev.md)
   - - - -
-  * # 관리
-  * [SubMenu Item 3](pages/subitem3.md)
-  - - - -
-  * # 팁
-  * [SubMenu Item 3](pages/subitem3.md)
+  * # 관리 및 팁
+  * [Maintenance](pages/Linux/Maintenance.md)
+  * [Tips](pages/Linux/Tips.md)
 
 
 [Mechanical Engineering]()
@@ -52,11 +48,16 @@
   * [DraftSight](pages/Mechanical_Engineering/DraftSight.md)
   - - - -
   * # CAE
-  * [ElmerFEM](pages/Mechanical_Engineering/ElmerFEM.md)
   * [GMSH](pages/Mechanical_Engineering/GMSH.md)
+  * [ElmerFEM](pages/Mechanical_Engineering/ElmerFEM.md)
+  * [ParaView](pages/Mechanical_Engineering/ParaView.md)
   - - - -
   * # Numerical Analysis
   * [FGPG](pages/Mechanical_Engineering/FGPG.md)
+  - - - -
+  * # Data
+  * [Standards](pages/Mechanical_Engineering/Standards.md)
+  * [Fastener](pages/Mechanical_Engineering/Fastener.md)
 
 
 [Code]()
@@ -79,7 +80,18 @@
 
 
 [Life]()
+  * # Personal URLs
+  * [Personal URL](pages/Life/Personal_URL.md)
+  - - - -
+  * # Job URLs
+  * [Job URL](pages/Life/Job_URL.md)
 
+
+
+<!--
+  -- Let the user choose a theme
+  -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
+-->
 [gimmick:themechooser](Choose theme)
 
 
@@ -91,7 +103,6 @@
   -- Change the Language
   -- Could be useful when there's more than one language wiki.
 -->
-
 <!--
 [Change the Language]()
 
@@ -100,10 +111,6 @@
   * [Italian](/it/)
 -->
 
-<!--
-  -- Let the user choose a theme
-  -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
--->
 [gimmick:Disqus](dymaxionkim)
 [gimmick: math]()
 
