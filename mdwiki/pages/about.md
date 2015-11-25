@@ -4,7 +4,7 @@
 * Email : dymaxion.kim@gmail.com
 * Job : Mechanical Designer / Engineer
 
-[gimmick:googlemaps](도담시스템스, daejeon)
+[gimmick:googlemaps(maptype: 'terrain', zoom: 9, marker: 'true')](도담시스템스, daejeon)
 
 
 
