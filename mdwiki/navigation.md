@@ -81,10 +81,7 @@
 
 [Life]()
 
-  * # Personal URLs
   * [Personal URL](pages/Life/Personal_URL.md)
-  - - - -
-  * # Job URLs
   * [Job URL](pages/Life/Job_URL.md)
 
 
