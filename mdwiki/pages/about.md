@@ -8,4 +8,6 @@ Hint: GIST Test
 
 [gimmick:gist](adf22c7c98696ffca4be)
 
+<html>
 <script src="https://gist.github.com/dymaxionkim/adf22c7c98696ffca4be.js"></script>
+</html>
