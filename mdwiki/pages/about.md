@@ -43,24 +43,7 @@ Hint: Google Search
 <script type="text/javascript" src="http://www.google.co.kr/coop/cse/brand?form=cse-search-box&lang=ko"></script>
 <br />
 
-<div id='cse' style='width: 100%;'>Loading</div>
-<script src='//www.google.com/jsapi' type='text/javascript'></script>
-<script type='text/javascript'>
-google.load('search', '1', {language: 'ko', style: google.loader.themes.MINIMALIST});
-google.setOnLoadCallback(function() {
-  var customSearchOptions = {};
-  var orderByOptions = {};
-  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-  customSearchOptions['enableOrderBy'] = true;
-  customSearchOptions['orderByOptions'] = orderByOptions;
-  customSearchOptions['overlayResults'] = true;
-  var customSearchControl =   new google.search.CustomSearchControl('014003260330693058632:stq-ikka09w', customSearchOptions);
-  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-  var options = new google.search.DrawOptions();
-  options.setAutoComplete(true);
-  customSearchControl.draw('cse', options);
-}, true);
-</script>
+
 
 
 
