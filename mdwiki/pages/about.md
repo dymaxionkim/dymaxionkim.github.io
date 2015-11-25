@@ -11,7 +11,7 @@ Hint: GIST Test
 
 <div class="content">
     <div class="embed-container">
-        https://gist.github.com/dymaxionkim/adf22c7c98696ffca4be#file-ipython_introduction-ipynb
+        <script src="https://gist.github.com/dymaxionkim/adf22c7c98696ffca4be.js"></script>
     </div>
 </div>
 
