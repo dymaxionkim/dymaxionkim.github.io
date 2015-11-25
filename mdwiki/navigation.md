@@ -62,20 +62,14 @@
 
 [Code]()
 
-  * # Julia
   * [Julia](pages/Code/Julia.md)
-  - - - -
-  * # Python
   * [Python](pages/Code/Python.md)
 
 
 [PDM]()
 
-  * # Rule
   * [PartNumber](pages/PDM/PartNumber.md)
   * [BOM](pages/PDM/BOM.md)
-  - - - -
-  * # Code
   * [CATIA BOM](pages/Code/CATIA_BOM.md)
 
 
