@@ -9,6 +9,13 @@ Hint: GIST Test
 [gimmick:gist](adf22c7c98696ffca4be)
 
 
+<div class="content">
+    <div class="embed-container">
+        https://gist.github.com/dymaxionkim/adf22c7c98696ffca4be#file-ipython_introduction-ipynb
+    </div>
+</div>
+
+
 $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 Inline : \\(d=\sqrt{\frac{4A}{\pi}}\\)
