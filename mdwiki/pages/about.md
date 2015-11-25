@@ -21,7 +21,9 @@ Inline : \\(d=\sqrt{\frac{4A}{\pi}}\\)
 
 Hint: Google Search
 
-<div id="div1">
+
+<div class="content">
+  <div id="div1">
 <script>
   (function() {
     var cx = '014003260330693058632:stq-ikka09w';
@@ -35,5 +37,5 @@ Hint: Google Search
   })();
 </script>
 <gcse:search></gcse:search>
+  </div>
 </div>
-
