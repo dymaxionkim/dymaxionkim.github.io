@@ -4,6 +4,8 @@
 * Email : dymaxion.kim@gmail.com
 * Job : Mechanical Designer / Engineer
 
-[gimmick:gist](6147815)
+Hint: GIST Test
 
+[gimmick:gist](adf22c7c98696ffca4be)
 
+<script src="https://gist.github.com/dymaxionkim/adf22c7c98696ffca4be.js"></script>
