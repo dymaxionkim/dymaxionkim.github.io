@@ -80,6 +80,7 @@
 
 [Life]()
 
+[gimmick:themechooser](Choose theme)
 
 <!-- Google Search Button 
      https://cse.google.com/cse/setup/basic?cx=014003260330693058632:stq-ikka09w
@@ -117,7 +118,6 @@
   -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
 -->
 [gimmick:Disqus](dymaxionkim)
-[gimmick:themechooser](Choose theme)
 [gimmick: math]()
 
 
