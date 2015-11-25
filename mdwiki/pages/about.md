@@ -7,5 +7,3 @@
 [gimmick:gist](adf22c7c98696ffca4be)
 
 
-
-
