@@ -4,6 +4,6 @@
 * Email : dymaxion.kim@gmail.com
 * Job : Mechanical Designer / Engineer
 
-[gimmick:gist](adf22c7c98696ffca4be)
+[gimmick:gist](f25d31ef2e798ea21cc0)
 
 
