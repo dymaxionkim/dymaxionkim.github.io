@@ -22,20 +22,10 @@ Inline : \\(d=\sqrt{\frac{4A}{\pi}}\\)
 Hint: Google Search
 
 
+
+
 <div class="content">
-  <div class="javascript">
-<script>
-  (function() {
-    var cx = '014003260330693058632:stq-ikka09w';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
-  </div>
+    <div class="embed-container">
+        <iframe src="//player.vimeo.com/video/70385914" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
 </div>
