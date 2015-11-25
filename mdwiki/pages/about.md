@@ -31,13 +31,16 @@ Hint: Embed Vimeo
 
 
 Hint: Google Search
-
+<!-- Google Search Button 
+     https://cse.google.com/cse/setup/basic?cx=014003260330693058632:stq-ikka09w
+     http://scvlife.kr/3408831
+-->
 <form action="http://www.google.co.kr/cse" id="cse-search-box" target="_blank">
   <div>
-    <input type="hidden" name="cx" value="014003260330693058632:stq-ikka09w" /> // 검색엔진 ID
+    <input type="hidden" name="cx" value="014003260330693058632:stq-ikka09w" />
     <input type="hidden" name="ie" value="UTF-8" /> 
-    <input type="text" name="q" size="50" /> // 검색창 길이
-    <input type="submit" name="sa" value="Search in Dymaxionkim.github.io" /> // 검색창 버튼
+    <input type="text" name="q" size="50" />
+    <input type="submit" name="sa" value="Search!" />
   </div>
 </form>
 <script type="text/javascript" src="http://www.google.co.kr/coop/cse/brand?form=cse-search-box&lang=ko"></script>
