@@ -23,7 +23,7 @@ Hint: Google Search
 
 
 <div class="content">
-  <div class="script">
+  <div class="javascript">
 <script>
   (function() {
     var cx = '014003260330693058632:stq-ikka09w';
