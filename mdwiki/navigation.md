@@ -82,20 +82,7 @@
 
 [gimmick:themechooser](Choose theme)
 
-<!-- Google Search Button 
-     https://cse.google.com/cse/setup/basic?cx=014003260330693058632:stq-ikka09w
-     http://scvlife.kr/3408831
--->
-<form action="http://www.google.co.kr/cse" id="cse-search-box" target="_blank">
-  <div>
-    <input type="hidden" name="cx" value="014003260330693058632:stq-ikka09w" />
-    <input type="hidden" name="ie" value="UTF-8" /> 
-    <input type="text" name="q" size="50" />
-    <input type="submit" name="sa" value="Search!" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.co.kr/coop/cse/brand?form=cse-search-box&lang=ko"></script>
-<br />
+
 
 
 <!-- ---------------------------------------------------------------------------- -->
