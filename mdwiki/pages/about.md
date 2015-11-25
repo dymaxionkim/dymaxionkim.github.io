@@ -12,4 +12,5 @@ Hint: GIST Test
 <script src="https://gist.github.com/dymaxionkim/adf22c7c98696ffca4be.js"></script>
 </html>
 
+[gimmick: math]()
 $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
