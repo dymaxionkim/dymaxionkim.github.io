@@ -337,4 +337,199 @@ leafpad ~/.config/openbox/rc.xml
 ```
 
 
+## ObMenu 설정하기
+
+* 이제 바탕화면에서 마우스 오른쪽 버튼을 누르면 나오는 메뉴를 편집해 봅니다.  이 설정을 관장하는 설정파일은 `~/.config/openbox/menu.xml` 입니다.
+
+* 이 menu.xml 설정파일을 편집하는 방법은, (1) 직접 편집기로 편집하거나 (2) `obmenu` 명령을 사용해서 뜨는 GUI 도구로 편집하는 것입니다.  당연히 (2)번 방법이 더 쉽습니다.  그냥 실행해서 이리저리 살펴보면 쉽게 이해할 수 있습니다.
+
+* 그러나 각각의 명령어 하나하나 다 설정해 주는 것도 귀챦으므로, 본 가이드 내용을 반영한 내용을 올려둡니다.  이것을 긁어다가 (1)번 방법으로 덮어써 저장하면 됩니다.
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal emulator">
+			<action name="Execute">
+				<execute>x-terminal-emulator</execute>
+			</action>
+		</item>
+		<item label="Web browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<item label="PCManFM">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="gmrun">
+			<action name="Execute">
+				<execute>gmrun</execute>
+			</action>
+		</item>
+		<separator/>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<menu id="root-menu-873059" label="Internet">
+			<item label="Chrome">
+				<action name="Execute">
+					<execute>google-chrome</execute>
+				</action>
+			</item>
+			<item label="Firefox">
+				<action name="Execute">
+					<execute>firefox</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-413232" label="Office">
+			<item label="HWPviewer">
+				<action name="Execute">
+					<execute>hwpviewer</execute>
+				</action>
+			</item>
+			<item label="Evince">
+				<action name="Execute">
+					<execute>evince</execute>
+				</action>
+			</item>
+			<item label="LibreOffice">
+				<action name="Execute">
+					<execute>libreoffice</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-393243" label="Utils">
+			<item label="smPlayer">
+				<action name="Execute">
+					<execute>smplayer</execute>
+				</action>
+			</item>
+			<item label="ConvertAll">
+				<action name="Execute">
+					<execute>convertall</execute>
+				</action>
+			</item>
+			<item label="Qalculate">
+				<action name="Execute">
+					<execute>qalculate</execute>
+				</action>
+			</item>
+			<item label="Gedit">
+				<action name="Execute">
+					<execute>gedit</execute>
+				</action>
+			</item>
+			<item label="Leafpad">
+				<action name="Execute">
+					<execute>leafpad</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-413324" label="Graphic">
+			<item label="Mirage Viewer">
+				<action name="Execute">
+					<execute>mirage</execute>
+				</action>
+			</item>
+			<item label="Screenshot">
+				<action name="Execute">
+					<execute>gnome-screenshot</execute>
+				</action>
+			</item>
+			<item label="Inkscape">
+				<action name="Execute">
+					<execute>inkscape</execute>
+				</action>
+			</item>
+			<item label="Gimp">
+				<action name="Execute">
+					<execute>gimp</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-813412" label="CAD">
+			<item label="FreeCAD">
+				<action name="Execute">
+					<execute>freecad</execute>
+				</action>
+			</item>
+			<item label="DraftSight">
+				<action name="Execute">
+					<execute>command</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-773440" label="CAE">
+			<item label="ElmerGUI">
+				<action name="Execute">
+					<execute>ElmerGUI</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="root-menu-263541" label="Setting">
+			<item label="Synaptic">
+				<action name="Execute">
+					<execute>synaptic</execute>
+				</action>
+			</item>
+			<item label="lxTask">
+				<action name="Execute">
+					<execute>lxtask</execute>
+				</action>
+			</item>
+			<item label="Nitrogen">
+				<action name="Execute">
+					<execute>nitrogen</execute>
+				</action>
+			</item>
+			<item label="Appearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+			<item label="autostart">
+				<action name="Execute">
+					<execute>leafpad ~/.config/openbox/autostart</execute>
+				</action>
+			</item>
+			<item label="ObMenu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="ObConf">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<item label=".conkyrc">
+				<action name="Execute">
+					<execute>leafpad ~/.conkyrc</execute>
+				</action>
+			</item>
+			<item label="tint2rc">
+				<action name="Execute">
+					<execute>leafpad ~/.config/tint2/tint2rc</execute>
+				</action>
+			</item>
+			<item label="rc.xml">
+				<action name="Execute">
+					<execute>leafpad ~/.config/openbox/rc.xml</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="client-list-menu"/>
+		<separator/>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>
+
+```
+
+
 
