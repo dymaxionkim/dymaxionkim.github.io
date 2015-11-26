@@ -222,8 +222,10 @@ nano ~/.config/openbox/autostart
 
 * 그리고 아래의 내용을 써 넣어줍니다.
 ```
+xcompmgr &
 nitrogen --restore &
 tint2 &
+conky &
 ```
 
 * 이 autostart라는 파일은, OpenBox가 시작할 때 자동으로 실행할 명령들을 적어주는 배치파일 같은 것입니다.  배경화면을 잡아주는 nitrogen과, 태스크바인 tint2를 자동으로 실행되도록 한 것이죠.  '--restore' 옵션은 설정해 둔 배경화면이 계속 유지되도록 고정해 주라는 의미입니다.  그리고 각 명령어 마지막에 붙인 '&' 문자는, 해당 명령을 백그라운드 실행하라는 의미입니다.
