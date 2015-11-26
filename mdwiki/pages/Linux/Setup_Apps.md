@@ -60,6 +60,125 @@ tint2 -c ~/.config/tint2/Numix_tint2/red_taskbar/tint2rc &
 
 * 이런 식으로 해 줌으로써, Tint2를 시작할 때 tint2rc 설정파일의 경로만 바꿔주면 여러가지 설정으로 손쉽게 변경 가능해질 것입니다.
 
+* 참고로 금방 적용해 본 '.../red_taskbar/tint2rc' 파일의 내용을 기록해 둡니다.
+
+```
+# Tint2 config file by Kexolino
+
+# Background definitions
+
+# ID 1
+rounded = 0
+border_width = 1
+background_color = #2D2D2D 100
+border_color = #484848 100
+
+# ID 2
+rounded = 0
+border_width = 0
+background_color = #D64937 100
+border_color = #000000 100
+
+# Panel
+panel_monitor = all
+panel_position =  bottom center horizontal
+panel_size = 104% 39
+panel_margin = -2 -1
+panel_padding = 0 0 10
+panel_dock = 0
+wm_menu = 1
+panel_layer = normal
+panel_background_id = 1
+
+# Panel Autohide
+autohide = 0
+autohide_show_timeout = 0.2
+autohide_hide_timeout = 1
+autohide_height = 0
+strut_policy = follow_size
+
+# Taskbar
+taskbar_mode = single_desktop
+taskbar_padding = 0 0 10
+taskbar_background_id = 0
+taskbar_active_background_id = 0
+
+# Tasks
+urgent_nb_of_blink = 20
+task_icon = 1
+task_text = 0
+task_centered = 1
+task_maximum_size = 70 32
+task_padding = 10 4
+task_background_id = 0
+task_active_background_id = 2
+task_urgent_background_id = 0
+task_iconified_background_id = 0
+
+# Task Icons
+task_icon_asb = 100 0 0
+task_active_icon_asb = 100 0 0
+task_urgent_icon_asb = 100 0 0
+task_iconified_icon_asb = 100 0 0
+
+# Fonts
+task_font = Droid Sans 9
+task_font_color = #dcdcdc 100
+task_active_font_color = #FFFFFF 100
+task_urgent_font_color = #FFFFFF 100
+task_iconified_font_color = #dcdcdc 80
+font_shadow = 0
+
+# System Tray
+systray = 1
+systray_padding = 0 6 15
+systray_sort = left2right
+systray_background_id = 0
+systray_icon_size = 22
+systray_icon_asb = 100 0 0
+
+# Clock
+time1_format = %H:%M
+time1_font = Droid Sans 10
+clock_font_color = #ffffff 100
+clock_tooltip = 
+clock_padding = 10 6
+clock_background_id = 2
+clock_lclick_command = gsimplecal
+time1_timezone = 
+time2_timezone = 
+clock_tooltip_timezone = 
+
+# Tooltips
+tooltip = 0
+tooltip_padding = 2 2
+tooltip_show_timeout = 0.0
+tooltip_hide_timeout = 0.0
+tooltip_background_id = 2
+tooltip_font = Droid Sans 9
+tooltip_font_color = #FFFFFF 100
+
+# Mouse
+mouse_middle = none
+mouse_right = close
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify
+
+# Battery
+battery = 0
+battery_low_status = 20
+battery_low_cmd = notify-send "battery low"
+battery_hide = 96
+bat1_font = Liberation Mono 8
+bat2_font = Liberation Mono 8
+battery_font_color = #B5B5B5 100
+battery_padding = 2 0
+battery_background_id = 0
+
+# End of config
+
+```
+
 
 
 ## Numix 테마로 아이콘팩 설치하기
@@ -113,6 +232,109 @@ obconf
 
 
 
+## 바탕화면에 배경 그림 넣어주기
+
+* 바탕화면으로 사용할 그림이 있다면, `~/pictures` 같은 디렉토리를 만들어서 거기다 넣어두고 사용하면 될 것입니다.  일단 그림을 준비해 놨다고 치고...  바탕화면을 설정해주는 유틸리티인 Nitrogen을 실행시킵니다.
+
+```
+nitrogen
+```
+
+* 'prefenrences' 버튼을 눌러서 그림이 있는 장소를 등록해 줍니다.  그리고 원하는 그림파일을 선택해 줍니다.  바탕화면 색상도 정해줍니다.  그리고 종료.
+
+* 이미 앞서 'autostart'에서 nitrogen의 설정이 유지되도록 백그라운드 실행을 걸어놓았기 때문에 다음번에 재부팅해도 계속 유지가 됩니다.
+
+
+
+## Conky 설정하기
+
+* Conky는 바탕화면에 위젯으로 떠서 시스템의 현재 상태를 보여주는 유틸리티입니다.  메모리도 자주 조금 사용하고, 설정파일 하나만 잘 만들어주면 굉장히 다양하게 디자인할 수 있는 개방성 때문에 리눅스 사용자들이 좋아하는 것 같습니다.
+
+* 굳이 없어도 되는 유틸리티이긴 하지만 연습삼아 설정을 해 봅시다.  설정파일은 `~/.conkyrc` 입니다.  직접 연구해서 설정파일을 편집해도 되지만 그건 개인적으로 흥미가 있는 사람이 하면 될 일이고, 그냥 다른 사람이 설정해 놓은 것을 하나 땡겨서 활용하도록 해 봅시다.
+
+* 구글로 '.conkyrc' 검색해 보면 많이 나옵니다.  그 중에서 이곳 ( https://github.com/zenzire/conkyrc )의 설정을 가져와서 사용하는 것으로 해 봅니다.
+
+* 주소를 보면 저장된 장소는 Github 사이트 입니다.  Github는 소스코드 관리도구인 Git 기반으로 운용하는 곳입니다.  따라서 일단 Git을 설치합니다.
+
+```
+sudo apt-get install git
+```
+
+* 그리고 설치된 Git 명령어를 이용해서, 이곳의 소스코드를 땡겨옵니다.
+
+```
+mv ~/.conkyrc ~/.conkyrc.old
+mkdir ~/.conky
+git clone git://github.com/zenzire/conkyrc.git ~/.conky
+ln -s ~/.conky/conkyrc ~/.conkyrc
+```
+
+* 기존의 .conkyrc 설정파일을 .conkyrc.old으로 백업해 주고, 대신 .conky라는 디렉토리를 만들어서 그곳에 Github로부터 설정파일과 관련 파일들을 땡겨옵니다.  그 다음에 그 속의 .conkyrc 파일을 심볼릭링크를 걸어서 먹히도록 하는 것입니다.  여기서 사용된 명령어인 'mv', 'mkdir', 'git', 'ln'은 별도로 검색해서 어떤 역할을 하는 것인지 한 번쯤 보고 참고하면 됩니다.
+
+* 이제 현재 화면에서 동작중인 conky에 새로운 설정이 먹히도록 하기 위해, conky를 죽였다가 다시 살리겠습니다.
+
+```
+killall conky
+conky
+```
+
+* 이제 동작이 잘 되는 것을 확인하면 됩니다.  그리고 나중에 .conkyrc 파일을 적당히 편집해서 원하는대로 약간씩 수정해주면 됩니다.  파일을 잘 살펴보면, 별도의 설명서를 정독하지 않아도 대충 맥락을 유추해서 편집할 만 합니다.
+
+* 이미 앞서 'autostart'에서 conky를 자동으로 백그라운드 실횅이 되도록 걸어놓았기 때문에 다음번에 재부팅해도 계속 유지가 됩니다.
+
+
+
+
+## 단축키 설정하기
+
+* 터미널, 텍스트 편집기 같은 매우 자주 사용하는 것들을 단축키를 걸어두고 쓰면 편할 것 같습니다.  단축키 설정해 봅니다.
+
+```
+leafpad ~/.config/openbox/rc.xml
+```
+
+* 이렇게 편집기를 열어서 설정 파일의 내용을 들여다 보면 좀 복잡합니다.  이중에 단축키 관련 부분을 찾아 보려면, `Ctrl+f`키를 눌러서 'keybind' 단어를 검색 해 봅니다.  그러면 현재 이미 설정되어 있는 단축키들을 파악해 볼 수 있습니다.  살펴보면, keybind 설정들은 모두 keyboard 태그 안에 들어 있다는 것을 알 수 있습니다.  내용을 대충 보고 중요한 것들을 숙지합니다.
+
+* 그리고 새로운 단축키를 추가해 봅시다.  물론 keyboard 태그 안에 새로 똑같은 양식으로 삽입해 넣어야겠죠.  이런 식으로...
+
+```
+...
+  <keyboard>
+    ...
+
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
+
+    <keybind key="C-A-t">
+      <action name="Execute">
+        <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
+
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>leafpad</command>
+      </action>
+    </keybind>
+
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
+
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+
+  </keyboard>
+
+```
 
 
 
