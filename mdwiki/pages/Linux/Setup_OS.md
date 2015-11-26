@@ -425,7 +425,7 @@ dpkg: dependency problems prevent configuration of dasom:
   Package libqtgui4 is not installed.
  dasom depends on qtbase-abi-5-2-1; however:
   Package qtbase-abi-5-2-1 is not installed.
-'''
+```
 
 * 이걸 보고 필요한 패키지를 설치해 줍시다.  사소한 문제가 있어도 강제로 설치하기 위해 '-f' 옵션을 붙여줬습니다.
 
