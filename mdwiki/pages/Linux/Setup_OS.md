@@ -292,7 +292,7 @@ sudo apt-get install conky
 * 이제 반드시 필요한 웹브라우저 설치합니다.  제일 기본적으로 Firefox를 설치해 봅시다. Flash 지원 중단 이슈 때문에 골치가 아픈데, 일단은 구버전의 플래쉬 플레이어 플러그인도 함께 깔아줍시다.  Google Chrome은 나중에 필요할 때 별도로 설치하면 됩니다.
 
 ```
-sudo apt-get install firefox flashplugin-nonfree
+sudo apt-get install firefox firefox-locale-ko flashplugin-nonfree
 ```
 
 
@@ -355,7 +355,7 @@ sudo apt-get -f install
 * 그리고 한글 폰트도 설치해 줍니다.  일단 Ubuntu 저장소에서 기본으로 제공하는 한글 폰트 중에서 제일 중요한 것 2종류를 먼저 설치해 줍시다.  Google Noto CJK라는 폰트와, Naver Nanum 폰트 패키지입니다.
 
 ```
-sudo apt-get install fonts-noto-cjk ttf-nanum*
+sudo apt-get install fonts-noto-cjk fonts-nanum*
 ```
 
 * 그리고, 이제 한국어 로케일을 설정해 줍니다.  로케일(Locale)이라는 말의 의미는, 단순히 언어만 변경하는 것이 아니고, 날짜표기 방법이라던가 돈의 표기법, 주소, 전화번호, 숫자 자릿수 끊어주는 기호, 시간 표기법, 도량형 등 각 나라마다 제각각의 표기법들을 전부 다 한 방에 설정해 준다는 개념을 의미합니다.  일단 다음 명령을 쳐서 편집기로 들어가 줍시다.
