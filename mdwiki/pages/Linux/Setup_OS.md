@@ -139,50 +139,42 @@ sudo apt-get install mc
 ## X윈도우 구성
 
 * 일단 예의상 시스템 업그레이드를 해 줍니다.
-
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
 * Xorg 그래픽 서버 패키지를 설치합니다.  이것의 역할은 리눅스에 GUI 환경을 조성해 주는 것입니다.  Xorg 말고도 여러가지 있긴 한데(Xfree86,Wayland,Mir등), 이게 가장 전통적으로 안정화되어 있고 무난합니다.
-
 ```
 sudo apt-get install xorg
 ```
 
 * Openbox 그래픽 매니저를 설치합니다.  그래픽 서버 위에서 실제 화면에 뿌려지는 GUI를 통제하는 것입니다.  역시 다른것들(GNOME,Awesome등)이 많이 있지만, Openbox는 가장 단순하면서도 이해하기가 쉽습니다.
-
 ```
 sudo apt-get install openbox
 ```
 
 * 오픈박스 메뉴(obmenu) 유틸리티를 설치합니다.  이걸 설치해 주면, 바탕화면에서 마우스 오른쪽 버튼을 누르면 메뉴를 띄워줍니다.  윈도우의 '시작버튼'과 같은 역할을 합니다.
-
 ```
 sudo apt-get install obmenu
 ```
 
 * Appearance 설정 유틸리티를 설치합니다.  여기서는 LXDE 환경용으로 사용되는 것을 가져다 씁니다.  이것의 역할은, GUI 화면에 보이는 작업창들의 테마를 변경할 수 있게 해 주는 것입니다.  다른걸 써도 되는데 이게 간단해서 다루기가 좀 나은 것 같습니다.  GTK+ 기반입니다.
-
 ```
 sudo apt-get install lxappearance
 ```
 
 * X Composer Manager 유틸리티를 설치합니다.  이것의 역할은, GUI 작업창의 테두리에 그림자 효과를 주거나 또는 터미널 배경화면을 반투명하게 하거나 하는 효과를 줄 수 있도록 해 줍니다.  이것 말고 Compiz 같은 것들도 있는데, 그것 보다 이게 훨씬 가볍고 3D 가속이 지원되지 않아도 작동이 되기 때문에 이걸 사용합니다.
-
 ```
 sudo apt-get install xcompmgr
 ```
 
 * 배경화면 변경 유틸(Nitrogen)을 설치합니다.  이것의 역할은, 배경화면에 원하는 그림을 넣거나 색깔을 바꿀 수 있게 해 주는 것입니다.
-
 ```
 sudo apt-get install nitrogen
 ```
 
 * Tint2 태스크바를 설치합니다.  이것 말고 Plank Dock 같은 것도 있고 좋은 것들이 많이 있는데, 그중에 이 Tint2가 가장 심플합니다.  디자인은 촌스럽지만... 일단 이걸 사용해보다가 나중에 좋은 걸로 바꾸면 됩니다.
-ㅜ무
 ```
 sudo apt-get install tint2
 ```
@@ -192,7 +184,6 @@ sudo apt-get install tint2
 ## X윈도우의 기본적인 환경 셋팅
 
 * 일단 아래의 명령을 쳐서 X윈도우를 최초로 시작해 봅니다.
-
 ```
 startx
 ```
@@ -207,7 +198,6 @@ startx
 
 
 * 이제 다시 돌아온 텍스트 명령 모드에서, 홈 디렉토리의 파일 목록을 확인해 봅시다.
-
 ```
 ls -a
 ```
@@ -249,7 +239,6 @@ sudo apt-get install terminator
 * 다 깔았으면 이제 터미널 창을 닫았다가, 다시 마우스 오른쪽 버튼으로 누르면 나오는 obmenu 메뉴에서, 'Terminal emulator'를 선택해서 실행시킵니다.  그러면 금방 새로 설치한 Terminator로 바뀌어서 뜹니다.  이게 기능이 더욱 빵빵하므로 천천히 알아가면서 주력으로 사용해 보도록 합시다.
 
 * 또 X윈도우용 텍스트 편집기를 설치합니다.  leafpad, gedit, geany 등등 여러가지 많이 있습니다.  일단 가장 가벼운 leafpad를 설치하도록 하겠습니다.  gedit는 GTK 라이브러리를 적극적으로 가져다 쓰기 때문에 좀 설치용량이 많은 편이고, geany는 프로그래밍용 IDE 성격이 강해서 쓸데없는 메뉴가 많습니다.  윈도우 메모장 정도로 간단한 것은 leafpad인 듯 합니다.  역시 터미널 에뮬레이터에서 작업해 줍니다.
-
 ```
 sudo apt-get install leafpad
 ```
@@ -260,37 +249,31 @@ leafpad
 ```
 
 * 이제 파일탐색기를 설치해 봅시다.  물론 탐색기도 여러가지 많이 있습니다.  일단 가장 가벼운 축에 속하는 PCmanFM을 선택해서 깔아봅니다.  유사품으로 SpaceManFM, Nautilus 등등 매우 여러 종류가 있습니다만, 일단은 제일 가벼운 놈으로 설치해 봅니다.
-
 ```
 sudo apt-get install pcmanfm
 ```
 
 * 이제 작업관리자를 설치해 봅시다.  현재 메모리 사용량, CPU 점유율, 어떤 프로그램이 돌아가고 있는지 등을 보여주는 것입니다.  윈도우에서 Ctrl+Shft+Del 키를 누르면 나오는 작업관리자랑 같다고 보시면 됩니다.  물론 이것도 매우 여러 종류가 있는데, 그중에 제일 가벼운 것으로 lxtask를 갖다 씁니다.
-
 ```
 sudo apt-get install lxtask
 ```
 
 * 필요하다 싶으면 명령 실행기(gmrun)을 설치합니다.  터미널창을 별도로 안 띄우고, 간단히 명령어만 직접 입력해 넣을 때 쓰는건데 사실 저는 잘 안 씁니다.
-
 ```
 sudo apt-get install gmrun
 ```
 
 * 화면 캡쳐 유틸리티도 필요하다면 설치합니다.  뭐 굳이 지금 설치하지 않고 나중에 필요하면 좋은 걸 골라서 설치해도 됩니다.
-
 ```
 sudo apt-get install gnome-screenshot
 ```
 
 * Conky 시스템 모니터링 유틸리티도 필요하다면 설치하면 됩니다.  이건 순수하게 개인 취향에 따라 설치하면 됩니다.  conky가 뭔지는 구글 검색해 보면 수두룩하게 나옵니다.
-
 ```
 sudo apt-get install conky
 ```
 
 * 이제 반드시 필요한 웹브라우저 설치합니다.  제일 기본적으로 Firefox를 설치해 봅시다. Flash 지원 중단 이슈 때문에 골치가 아픈데, 일단은 구버전의 플래쉬 플레이어 플러그인도 함께 깔아줍시다.  Google Chrome은 나중에 필요할 때 별도로 설치하면 됩니다.
-
 ```
 sudo apt-get install firefox firefox-locale-ko flashplugin-nonfree
 ```
@@ -304,13 +287,11 @@ sudo apt-get install firefox firefox-locale-ko flashplugin-nonfree
 * 구체적으로 어떤 기능이 보강되냐면, (1) 화면 해상도를 마음대로 바꿀 있게 됩니다.  전체화면 모드도 가능해지고요.  (2) 또 호스트OS(윈도우)와 게스트OS(리눅스) 간에 클립보드 복사 등을 불완전하나마 할 수 있게 됩니다.
 
 * 우선 빌드 환경을 먼저 만들어줍니다.  기계적으로 따라 써 주면 됩니다.  이때, ` 기호는 키보드 맨 왼쪽 위의 ~ 문자 아래의 문자입니다.  이 문자를 영어로는 BackTick 이라고 지칭하더군요.  작은 따옴표 문자와는 다릅니다.  빌드 환경이란, 어떤 경우에는 프로그램 소스코드를 직접 컴파일해서 설치하는 경우도 있는데 그때 컴파일 및 설치본을 만들어주는 환경을 말합니다.  여러가지 기본적인 라이브러리등과 컴파일러들이 주루룩 깔립니다.
-
 ```
 sudo apt-get install build-essential linux-headers-`uname -r`
 ```
 
 * 이제 VirtualBox 메뉴중에서, '장치'에서 '게스트확장 CD이미지 삽입'을 선택해 줍니다.  그리고 나서 아래의 명령을 쳐 줍니다.
-
 ```
 sudo mount /dev/cdrom /mnt
 ```
@@ -318,7 +299,6 @@ sudo mount /dev/cdrom /mnt
 * 그러면, VirtualBox가 제공해준 가상CD롬을 리눅스에 마운트해 줘서 읽어들이는 것이 가능한 상태가 됩니다.
 
 * 이제 다음 명령을 쳐서 게스트확장 소프트웨어를 설치합니다.  리눅스는 대소문자를 구분하기 때문에 정확히 써 넣어 줍시다.
-
 ```
 sudo /mnt/VBoxLinuxAdditions.run
 ```
@@ -341,31 +321,26 @@ sudo /mnt/VBoxLinuxAdditions.run
 * 현재까지는 영어 환경이었는데, 이제 한글 환경을 꾸며 봅시다.
 
 * 제일 먼저 한글 환경용 언어팩을 설치해 줍니다.  여러가지 자질구레한 것들을 모아서 편하게 설치할 수 있도록 Ubuntu에서 제공해 주는 패키지입니다.
-
 ```
 sudo apt-get install language-pack-ko
 ```
 
 * 이것을 시도할 때, 의존성이 맞지 않다는 등의 메시지가 나오고 중단된면, 다음 명령을 쳐주고 다시 시도하면 강제로 완결할 수 있습니다.
-
 ```
 sudo apt-get -f install
 ```
 
 * 그리고 한글 폰트도 설치해 줍니다.  일단 Ubuntu 저장소에서 기본으로 제공하는 한글 폰트 중에서 제일 중요한 것 2종류를 먼저 설치해 줍시다.  Google Noto CJK라는 폰트와, Naver Nanum 폰트 패키지입니다.
-
 ```
 sudo apt-get install fonts-noto-cjk fonts-nanum*
 ```
 
 * 그리고, 이제 한국어 로케일을 설정해 줍니다.  로케일(Locale)이라는 말의 의미는, 단순히 언어만 변경하는 것이 아니고, 날짜표기 방법이라던가 돈의 표기법, 주소, 전화번호, 숫자 자릿수 끊어주는 기호, 시간 표기법, 도량형 등 각 나라마다 제각각의 표기법들을 전부 다 한 방에 설정해 준다는 개념을 의미합니다.  일단 다음 명령을 쳐서 편집기로 들어가 줍시다.
-
 ```
 sudo leafpad /etc/default/locale
 ```
 
 * 그럼 현재는 영어로 설정해 뒀기 때문에 다음의 내용이 들어있을 것입니다.
-
 ```
 LANG="en_US.UTF-8"
 LANGUAGE="en_US:en"
@@ -389,25 +364,21 @@ LC_MEASUREMENT="ko_KR.UTF-8"
 * 이제 마지막으로, 한글 입력기를 설치합시다.  한글 입력기란, 한글을 키보드로 써 줄 수 있도록 한/영 전환해 주는 유틸리티를 말하죠.  iBus,Fcitx,Nabi,UIM 등등 여러가지가 있는데, 대체로 보면 어떤 경우에도 완벽한 입력기는 아직 없는 듯 합니다.  소프트웨어 생태계가 원체 방대하다보니, 너무 다양한 경우의 수가 나오기 때문인데요.  따라서 2가지 정도를 깔아놓고 필요에 따라 바꿔가면서 쓰는 것이 제일 낫습니다.
 
 * 일단 먼저 UIM을 설치하도록 합니다.  UIM은 일본에서 만든 다국어 입력기이므로, 여기에 한글 입력을 위한 벼루(UIM-Byeoru)라는 확장을 하나 더 추가로 설치해 줍니다.
-
 ```
 sudo apt-get install uim uim-byeoru
 ```
 
 * 그리고, 이것과 별도로 새로 나온 다솜입력기를 설치해 봅니다.  UIM벼루와 비교해서 일장일단이 있는 듯 합니다.  다솜입력기는 개발자께서 Github에서 컴파일된 배포판을 제공해 주고 있습니다.  별도의 웹브라우저로 다운로드 받을 필요 없이, wget 명령을 이용해서 직접 다운로드 받아 봅시다.
-
 ```
 wget https://github.com/cogniti/dasom/releases/download/1.0.1/dasom_1.0.1-ubuntu-14.04_amd64.deb
 ```
 
 * 다운로드가 다 되면 `ls` 명령을 쳐서 파일이 잘 다운되어 있는지 확인해 보고, 이것을 설치합니다.  *.deb 파일을 설치해주는 명령어는 dpkg 입니다.  install 하라는 의미로 '-i'라는 옵션을 붙입니다.  현재 이 디렉토리에는 *.deb 파일이 하나만 있기 때문에, 파일 이름을 번거롭게 다 쓰지 말고 '*.deb'로 써 줘도 충분할 것입니다.
-
 ```
 sudo dpkg -i *.deb
 ```
 
 * 그런데, 현재 상태에서 시도해 보니 의존성 오류가 있는 듯 합니다.  즉 먼저 설치되어 있어야 할 라이브러리 같은 것들이 좀 빠져 있나 봅니다.  일단 오류메시지 중에서 의존서 관련 부분의 내용을 보면 다음과 같습니다.
-
 ```
 dpkg: dependency problems prevent configuration of dasom:
  dasom depends on libappindicator3-1 (>= 0.2.96); however:
@@ -430,7 +401,6 @@ dpkg: dependency problems prevent configuration of dasom:
 ```
 
 * 이걸 보고 필요한 패키지를 설치해 줍시다.  사소한 문제가 있어도 강제로 설치하기 위해 '-f' 옵션을 붙여줬습니다.
-
 ```
 sudo apt-get -f install libappindicator3-1 libhangul1 libqt5core5a libqt5gui5 libqt5gui5-gles libqt5widgets5 libqtcore4 libqtgui4 qtbase-abi-5-2-1
 ```
@@ -441,7 +411,6 @@ sudo dpkg -i *.deb
 ```
 
 * UIM벼루 및 다솜입력기 2가지를 설치했습니다.  이제 어느것을 사용할지 결정해 줘야 할 것 같습니다.  한글입력기 결정을 설정해 주는 유틸리티로 im-config가 있으며, 이것을 또 설치해 줍시다.
-
 ```
 sudo apt-get install im-config
 ```
@@ -454,7 +423,6 @@ im-config
 * 위 명령을 쳐서 창이 뜨면, Next,OK 해 줘서 창을 넘긴 다음에 입력기를 고르는 창이 나오면 'dasom'을 선택해 주면 됩니다.
 
 * 또 다솜입력기의 세부 설정을 건드려주기 위한 유틸리티로는 dconf-editor를 사용하도록 되어 있습니다.  따라서 이걸 깔아주고 실행해 봅니다.
-
 ```
 sudo apt-get install dconf-editor
 dconf-editor
@@ -462,11 +430,11 @@ dconf-editor
 
 * dconf-editor가 실행되면, 좌측 트리에서 'org-freedesktop-dasom-engines-jeongeum'으로 찾아들어갑니다.  여기서 각 항목을 다음과 같이 맞춰줍시다.
 
-> double-consonant-rule ::: 체크해제 (이렇게 하면 'ㄷㄷ'을 칠 때 'ㄸ'이 아니라 'ㄷㄷ'이 된다.)
-> hangul-keys ::: ['hangul', 'shift-mask space'] (한글키(=우측Alt키) 및 Shift+Space키로 모두 한영전환이 되도록 설정)
-> hanja-keys ::: ['hangul-hanja'] (한자키(=우측Ctrl키)로 한글을 한자로 변환)
-> korean-101-104-key-compatible ::: 체크. (내부적으로 xmodmap이 돌아가도록 하는 설정이라고 함)
-> layout ::: '2' (2벌식 자판)
+** double-consonant-rule ** ::: 체크해제 (이렇게 하면 'ㄷㄷ'을 칠 때 'ㄸ'이 아니라 'ㄷㄷ'이 된다.)
+** hangul-keys ** ::: ['hangul', 'shift-mask space'] (한글키(=우측Alt키) 및 Shift+Space키로 모두 한영전환이 되도록 설정)
+** hanja-keys ** ::: ['hangul-hanja'] (한자키(=우측Ctrl키)로 한글을 한자로 변환)
+** korean-101-104-key-compatible ** ::: 체크. (내부적으로 xmodmap이 돌아가도록 하는 설정이라고 함)
+** layout ** ::: '2' (2벌식 자판)
 
 * 설정을 다 맞췄으면 이제 그냥 종료하면 됩니다.  별도의 OK 버튼이라던가 저장 같은 것을 해 줄 필요는 없는 듯 합니다.
 
