@@ -313,6 +313,16 @@ leafpad ~/.config/openbox/rc.xml
   <keyboard>
     ...
 
+    <keybind key="A-F2">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>gmrun</name>
+        </startupnotify>
+        <command>gmrun</command>
+      </action>
+    </keybind>
+
     <keybind key="W-t">
       <action name="Execute">
         <command>x-terminal-emulator</command>
