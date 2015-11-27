@@ -18,7 +18,7 @@
 
 ```
 sudo apt-get install python-pip
-``` 
+```
 
 * 그리고 설치된 pip 패키지를 최신 버전으로 업그레이드 해 봅니다.  apt 보다는 pip 쪽이 더 최신 패키지가 빨리 올라오기 때문에 그렇습니다.
 
@@ -130,8 +130,57 @@ jupyter notebook
 
 
 
+## Jupyter에 Python3 커널 추가
 
-## Jupyter 커널 추가
+* 현재의 Jupyter에는 Python2 커널만 올라가 있는데, 여기에 Python3 커널도 선택할 수 있도록 셋팅해 봅시다.  Ubuntu Server OS 자체에 이미 Python3 자체는 설치되어 있으므로, 셋팅만 연결해 주면 됩니다.
+
+* 일단 먼저
+
+
+
+
+
+
+
+## [Atom](https://atom.io/) 텍스트 에디터 설치
+
+* Atom 에디터에 관해서는 구글 검색해서 알아보면 됩니다.  이것을 설치해서 사용해 보는 이유는 Github에서 제공하니까 당연히 Github와의 직접 연계성이 아주 좋을 것이기 때문입니다.  또, 발표된지 시간이 좀 지나서 정식버전이 배포되는 상태이므로 안정성도 믿을만한 단계에 접어들었다고 생각됩니다.  설치 방법은 아래의 2가지 방법 중에서 골라서 하면 됩니다.
+
+* Github에서 직접 제공하는 공식 설치 방법
+```
+wget -O atom.deb http://atom.io/download/deb
+sudo apt-get install gir1.2-gnomekeyring-1.0 gvfs-bin
+sudo dpkg -i atom.deb
+```
+
+* 비공식 온라인 저장소를 등록해서 설치 ([WebUPD8제공](http://www.webupd8.org/2014/05/atom-text-editor-ubuntu-ppa-update.html))
+```
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+```
+* Atom의 입문용 간단한 설명서로는 이곳( http://dovetail.tistory.com/62 )을 참조하니까 도움이 됩니다.
+
+
+## [Juno](http://junolab.org/) 텍스트 에디터 설치
+
+* 이것을 설치해 보는 이유는 Julia 언어를 위한 환경이 완비되어 있기 때문입니다.  이것은 [LightTable](http://lighttable.com/) 에디터에 Julia 관련 환경을 셋팅해 놓은 것입니다.  LightTable을 설치한 후, 관련 플러그인들을 붙여주면 Juno와 동일하게 됩니다만 아무래도 실패 확률이 있으므로, 그냥 환경설정 다 해 놓은 Juno를 직접 설치하는게 낫습니다.  아무튼 Julia를 로컬에서 코딩할 때는 Juno가 가장 적합하다고 볼 수 있습니다.
+
+* 설치 방법은 아래와 같이 따라 하면 됩니다.
+```
+wget https://junolab.s3.amazonaws.com/release/1.0.2/juno-linux-x64.zip
+sudo unzip juno*.zip -d /opt
+sudo mv /opt/juno-linux64 /opt/juno
+sudo ln -s /opt/juno/Juno /usr/bin/Juno
+```
+
+* 위의 설치 순서는, 간단히 말해 Juno를 다운로드 받은 다음에 압축을 /opt에 풀어서 설치하고, 설치된 디렉토리 이름을 /opt/juno로 간단하게 바꿔주고, 에디터 실행 명령인 `Juno`를 어느 곳에서나 실행시킬 수 있도록 심볼릭 링크를 걸어준 것입니다.
+
+* Juno 즉 LightTable 에디터는 Atom 에디터와 느낌이 비슷한데, 이는 둘 다 Node.js 기반의 웹앱이기 때문입니다.  사상적으로 비슷하다고 볼 수 있을텐데, 다만 LightTable은 Clojure라는 신형 리스프 언어를 기반으로 개발되어서 좀 더 매니악하고 실험적입니다.
+
+
+
+
 
 
 
@@ -149,9 +198,3 @@ jupyter notebook
 
 
 ## Github와 프로젝트 연결
-
-
-
-
-
-
