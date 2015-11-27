@@ -16,6 +16,15 @@ sudo apt-get install libreoffice evince mirage inkscape gimp smplayer cups-pdf c
 sudo dpkg -i hwpviewer*.deb
 ```
 
+* 압축 해제 프로그램을 설치합니다.  여러가지 좋은 것들이 있는데, 그중에서 한국 환경에 적합한 [Arkzip](https://github.com/Thestars3/arkzip)을 선택해 보았습니다.  Ark 라이브러리를 사용하여. 알집으로 압축한 alz,egg 따위의 것들도 압축을 풀 수 있습니다.  GUI상에서 지원되는 기능은, 파일탐색기에서 압축파일 위에서 마우스 오른쪽 버튼을 누르면 뜨는 메뉴에서 'Arkzip'이 나타나는데, 이것을 선택하면 자동으로 압축을 풀어줍니다.  윈도우에서 EUC-KR 인코딩 한글 파일들도 대체로 잘 풀립니다.  단, 이것은 압축 해제 전용이므로, 압축 파일을 묶어주는(압축해 주는) 기능은 없습니다.
+
+```
+wget https://github.com/Thestars3/arkzip/releases/download/v2.4.4/arkzip_2.4.4_amd64.deb
+sudo apt-get install libqt4-core
+sudo dpkg -i arkzip*.deb
+```
+
+
 
 ## 구글 크롬 브라우저 설치
 
@@ -32,8 +41,10 @@ sudo dpkg -i google-chrome*.deb
 * Synaptic으로 apt, dpkg 등의 터미널 명령어 대신 GUI 환경에서 패키지 관리를 할 수 있기 때문에 편리한 점이 있습니다.  Synaptic 말고 다른 것들도 있긴 한데 안정성이 좀 안좋거나 기능이 많이 생략되어 있기 때문에 그냥 이게 제일 낫습니다.
 
 ```
-sudo apt-get install synaptic
+sudo apt-get install gksudo synaptic
 ```
+
+* 이때, 'gksudo'라는 것을 함께 설치해주고 있는데, 이것은 'sudo'와는 달리 GUI 어플리케이션을 슈퍼유저 권한으로 실행하고자 할 때 사용하는 것입니다.  비밀번호를 입력하는 팝업창이 자동으로 뜨게 해 줘서, 터미널이 보이지 않아도 비밀번호를 입력 가능하게 해 줍니다.
 
 
 ## Numix 테마로 Tint2 설정하기
@@ -472,7 +483,7 @@ leafpad ~/.config/openbox/rc.xml
 		<menu id="root-menu-263541" label="Setting">
 			<item label="Synaptic">
 				<action name="Execute">
-					<execute>synaptic</execute>
+					<execute>gksudo synaptic</execute>
 				</action>
 			</item>
 			<item label="lxTask">
