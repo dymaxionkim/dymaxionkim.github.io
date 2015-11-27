@@ -312,7 +312,7 @@ leafpad ~/.config/openbox/rc.xml
 ...
   <keyboard>
     ...
-
+    <!-- Keybindings for running applications -->
     <keybind key="A-F2">
       <action name="Execute">
         <startupnotify>
