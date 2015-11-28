@@ -182,19 +182,3 @@ sudo ln -s /opt/juno/Juno /usr/bin/Juno
 
 
 
-
-
-
-
-## Github 가입
-
-
-
-
-
-## Git 환경 구성
-
-
-
-
-## Github와 프로젝트 연결
