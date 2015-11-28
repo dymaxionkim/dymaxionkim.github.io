@@ -132,14 +132,157 @@ jupyter notebook
 
 ## Jupyter에 Python3 커널 추가
 
-* 현재의 Jupyter에는 Python2 커널만 올라가 있는데, 여기에 Python3 커널도 선택할 수 있도록 셋팅해 봅시다.  Ubuntu Server OS 자체에 이미 Python3 자체는 설치되어 있으므로, 셋팅만 연결해 주면 됩니다.
+* 현재의 Jupyter에는 Python2 커널만 올라가 있는데, 여기에 Python3 커널도 선택할 수 있도록 셋팅해 봅시다. Ubuntu Server OS 자체에 이미 Python3 자체는 설치되어 있으므로, 셋팅만 연결해 주면 됩니다.  그냥 터미널에서 `python`이라고 치면 python2가 실행되도록 연결되어 있습니다.  python3를 사용하려면 `python3`라고 해 주면 되도록 되어 있습니다.  Python이 현재 2와 3가 혼재되어 있는 과도기라서 그렇고, 아마 몇 년 더 지나야 python3로 완전히 넘어오지 않을까 예상합니다.
 
-* 일단 먼저
+* 다만 현재 시스템에 있는 python3는 코어 부분만 있고, 필요한 라이브러리가 모두 다 있는 것은 아닙니다.  따라서 아래의 명령을 차례대로 쳐서 최소한의 것을 갖춰주도록 합시다.
+```
+sudo apt-get install python3-pip
+sudo pip3 install ipykernel
+```
+
+* Jupyter를 다중커널로 운용하기 위해, 커널 설정을 명시적으로 만들어 줍니다.  이를 위해 다음 명령을 쳐 주면 됩니다.
+```
+sudo ipython kernelspec install-self
+```
+
+* 그러면, 다음과 같은 식으로 메시지가 나오는 것을 확인할 수 있습니다.  즉 생성된 커널 설정 정보들이 어디에 있는지 위치를 알 수 있는거죠.
+```
+[InstallNativeKernelSpec] Installed kernelspec python2 in /usr/local/share/jupyter/kernels/python2
+```
+
+* 실제로 `/usr/local/share/jupyter/kernels` 디렉토리로 가 보면, `python2` 디렉토리 하나만 있습니다.  현재 커널이 이거 하나밖에 없다는 이야기죠.  그럼 여기에 python3 커널도 만들어 추가해 봅니다.  일단 아래의 명령을 쳐서 설정을 복사해 줍니다.
+```
+sudo cp -r /usr/local/share/jupyter/kernels/python2 /usr/local/share/jupyter/kernels/python3
+```
+
+* 그리고, 설정 파일을 편집기로 수정해 줍니다.
+```
+sudo leafpad /usr/local/share/jupyter/kernels/python3/kernel.json
+```
+* 해 준 다음에 편집기에 아래의 내용으로 대체합니다.
+```
+{
+ "display_name": "Python 3", 
+ "language": "python", 
+ "argv": [
+  "/usr/bin/python3", 
+  "-m", 
+  "ipykernel", 
+  "-f", 
+  "{connection_file}"
+ ]
+}
+```
+
+* 이제 커널이 python2 및 python3 모두 인식되는지 확인해 봅니다.  아래의 명령을 쳐 넣고 나오는 목록을 보면 됩니다.
+```
+ipython kernelspec list
+```
+
+* 실제로 이게 작동하는지 확인해 봅시다.  아래의 명령을 치면 Jupyter Notebook 서비스가 시작되면서 웹브라우저가 자동으로 뜹니다.
+```
+jupyter notebook
+```
+
+* 이제 여기서 python3 커널을 선택해서 되는지 확인하면 됩니다.  이제 우리는 python2 및 python3로 2개의 커널을 마음대로 쓸 수 있게 되었습니다. Python만 쓰면 재미가 없으므로, 다른 언어 커널들도 설치해 볼까요.
+
+
+## Jupyter에 Julia 커널 추가
+
+* Julia는 과학기술용으로 특화된 최신형 오픈소스 언어입니다.  배우기가 매우 쉬우면서 매우 빠른 계산속도를 가지도록 만들어져서, 컴퓨터공학 전공이 아닌 다른 분야의 과학기술자들에게 환영을 받고 있습니다.  이걸 시스템에 설치하고 Jupyter에 커널로 넣어 봅시다.  앞서 해 본 Python3 추가하는 방법과는 좀 다른데, 그 이유는 Julia에서 쉽게 커널 추가할 수 있도록 도구를 제공하기 때문입니다.  그냥 그걸 쓰면 자동으로 커널 추가가 됩니다.
+
+* 일단 Julia 저장소를 새로 등록해 주고, 거기서 다운로드 받아서 설치해 봅니다.
+```
+sudo add-apt-repository ppa:staticfloat/juliareleases
+sudo add-apt-repository ppa:staticfloat/julia-deps
+sudo apt-get update
+sudo apt-get install julia
+```
+
+* 저장소는 위에 보듯이 2군데 입니다.  juliareleases 저장소는 이름 그대로 Julia의 안정된 배포판을 제공해 줍니다.  julia-deps는 Julia가 의존하는(Dependant) 각종 라이브러리들을 제공해 줍니다.  Julia를 간단히 시작하려면 터미널에서 다음과 같이 치면 됩니다.
+```
+julia
+```
+
+* Julia는 Python이 pip 패키지 관리자를 갖고 있듯이, 자신의 전용 패키지 관리자를 가지고 있습니다.  다만 pip는 python을 별도로 실행하지 않고 터미널 상에서 직접 명령을 쳐 주는 방식이지만, Julia의 패키지 관리는 Julia 인터프리터 안에서 Pkg.*() 계열의 함수를 사용해서 이루어집니다.  일단 Julia가 실행된 상태에서 다음의 내용을 쳐 넣어서 기본적으로 필요한 패키지들을 설치해 봅시다.
+```
+Pkg.init()
+Pkg.add("Jewel")
+Pkg.add("Images")
+Pkg.add("PyPlot")
+Pkg.add("IJulia")
+Pkg.update()
+quit()
+```
+
+* Pkg.init() 함수는 패키지 관리자현 현재 상태를 스캔해서 초기화하는 명령입니다.  그리고 나서 Pkg.add()함수를 이용해서 Jewel 등의 기본적으로 필요한 패키지들을 몇가지 미리 설치해 줍니다.  이 중에서 IJulia 패키지가 보이는데, 바로 이것을 이렇게 설치하면 Jupyter에 커널이 자동으로 추가됩니다.  Pkg.update()는 현재 설치되어 있는 모든 패키지들을 최신판으로 업데이트하는 것이죠.  마지막으로 quit() 함수를 써서 Julia를 종료합니다.
+
+* 이제 터미널에서 `jupyter notebook` 명령을 쳐서 뜨는 서비스로 다시 들어가서, Julia 커널도 추가되어 잘 동작하는지 확인해 봅시다.  그럼 끝입니다.
+
+
+
+## Jupyter에 Octave 커널 추가
+
+* 기계공학과에서 애용하는 언어가 바로 Matlab 입니다.  제어공학 쪽에서도 많이들 애용하고요.  그런데 Matlab은 상용 소프트웨어이기 때문에, 학교에 있을때는 학교에서 제공해 주니까 상관없지만, 졸업하고 취업하면 상황이 완전히 달라집니다.  중소기업에서 이걸 구매하기에는 너무 비싸니까요.
+
+* 그래서, Matlab의 모든 화려한 기능들을 다 쓸 수는 없어도 웬만한 코드들은 잘 호환되도록 오픈소스로 구현한 것들이 여러 종류 나왔습니다.  그중에 가장 오래되어 안정화된 것이 바로 Octave이죠.  Octave의 단점은 속도가 느리다는 것입니다.  Matlab도 원래 느린데, Octave는 더 느립니다.  그래서 대규모 수치해석 같은 일에는 적합하지 않습니다.  대신 이미 익숙한 Matlab 코드들을 거의 그대로 재활용할 수 있으니 생산성은 매우 좋습니다.  때문에 가끔 필요할 때가 있을 것입니다.  물론 앞으로는 Julia 같은 신세대 언어로 넘어가는게 더 좋을 것입니다.
+
+* 일단 커널 설정 전에, Octave 소프트웨어부터 먼저 설치해야겠죠.  이것은 별도의 저장소를 새로 넣어주지 않아도, 기존 저장소에서 이미 제공되어 있기 때문에 그냥 깔면 됩니다.
+```
+sudo apt-get install octave octave-control octave-plot octave-symbolic
+```
+
+* Octave 역시 많은 추가 패키지들이 있는데, 그 중에서 control, plot, symbolic 정도를 함께 설치해 줘 봤습니다.  Octave는 자신의 전용 패키지 관리자가 따로 없기 때문에 이처럼 그냥 apt-get으로 직접 패키지들을 설치합니다.
+
+* 이제 막 설치된 Octave를 Jupyter에 연결해 주는 커널을 설정해 줍니다.  이것은 Python 패키지로 제공이 되네요.
+```
+sudo pip install octave_kernel
+```
+
+* 이제 터미널에서 `jupyter notebook` 명령을 쳐서 뜨는 서비스로 다시 들어가서, Octave 커널이 추가되어 잘 동작하는지 확인해 봅시다.  그럼 끝입니다.
+
+
+## Jupyter에 Javascript 커널 추가
+
+* Javascript 언어는 가장 중요한 언어 중의 하나죠.  왜냐면 웹 표준의 근간을 이루기 때문입니다.  특히 요즘에는 Node.js 때문에 더 중요해졌습니다.  웹서비스 개발할 것은 아니지만 흥미삼아 Javascript 커널도 올려 봅시다.  방식은, Node.js를 설치하고 이걸 Jupyter에 연결하는 겁니다.
+```
+sudo apt-get install nodejs-legacy npm 
+```
+
+* 우선 nodejs-legacy를 설치합니다.  그냥 nodejs로 설치하면 이쪽에는 아직 호환되지 않기 때문에 구버전인 legacy로 해야 한다고 합니다.  npm이라는 것은 Node.js를 위한 패키지 관리자 입니다.  Python의 pip와 같은 역할이죠.
+
+* 이제 npm 패키지 관리자를 이용해서 ijavascript라는 패키지를 설치해 줍니다.  그러면 Jupyter를 위한 커널이 준비되는 것입니다.
+```
+sudo npm install -g ijavascript
+```
+
+* 다만 최초 실행시에는 아래의 명령으로 Jupyter Notebook을 실행해 줍니다.  그래야 설정파일이 생성되면서 먹어들어간다고 합니다.
+```
+ijs
+```
+
+* 그 다음부터는 그냥 `jupyter notebook` 명령을 사용해도 무방합니다.
+
+
+## Jupyter에 Bash 커널 추가
+
+* 데비안/우분투 계열 리눅스 배포판의 표준 쉘 환경이 바로 Bash 입니다.  우리의 현재 터미널이 바로 Bash 환경이죠.
+
+* Jupyter Notebook에서 바로 Bash 명령들을 사용할 수 있게 해 주면 좋을 것입니다.  그래서 이걸 한 번 설정해 봅시다.  이것은 역시 Python 패키지로 제공됩니다.
+```
+sudo pip install bash_kernel
+python -m bash_kernel.install
+```
+
+* 패키지를 설치하고 나서, 해당 패키지를 인식시켜주기 위해 bash_kernel.install 스크립트를 한 번 실행해 준 것입니다.  이게 끝입니다.
+
+* 대충 이정도 커널만 설치해 봤습니다.  이 외에도, Ruby,PHP,C++,Clojure,Go 등등 굉장히 다양한 언어들을 Jupyter 안에 커널로 설치해 줄 수 있습니다만 생략합니다.
 
 
 
 
 
+* Jupyter 환경을 대충 구성해 봤으니, 이제 이것 말고 로컬로 작업할 때 필요할 수 있는 통합개발환경(IDE)을 설치해 봅시다.  여기서는 Eclipse,EMACS 같은 어려운 것 대신 조금은 더 쉽고 흥미로운 다른 에디터를 사용해 봅시다.
 
 
 ## [Atom](https://atom.io/) 텍스트 에디터 설치
