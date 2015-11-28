@@ -154,7 +154,7 @@ sudo apt-get install xorg
 sudo apt-get install openbox
 ```
 
-* 오픈박스 메뉴(obmenu) 유틸리티를 설치합니다.  이걸 설치해 주면, 바탕화면에서 마우스 오른쪽 버튼을 누르면 메뉴를 띄워줍니다.  윈도우의 '시작버튼'과 같은 역할을 합니다.
+* 오픈박스 메뉴(obmenu) 유틸리티를 설치합니다.  이걸 설치해 주면, 바탕화면에서 마우스 오른쪽 버튼을 누르면 나타는 메뉴(윈도우의 '시작버튼'과 같은 것)를 쉽게 편집해 줄 수 있습니다.
 ```
 sudo apt-get install obmenu
 ```
