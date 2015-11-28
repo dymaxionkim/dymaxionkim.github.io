@@ -28,6 +28,8 @@ sudo dpkg -i arkzip*.deb
 
 ## 구글 크롬 브라우저 설치
 
+* 설치용 배포본을 바로 땡겨와서 설치하는 방법을 택합니다.
+
 ```
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
@@ -35,6 +37,16 @@ sudo apt-get install libxss1 libappindicator1 libindicator7
 
 sudo dpkg -i google-chrome*.deb
 ```
+
+* 다만 이렇게 Firefox를 먼저 깔고 나서 나중에 Chrome을 깔게 되면, 기본 웹브라우저가 Chrome으로 변경됩니다.  만약 기본 웹브라우저를 Firefox로 유지하고 싶다면 다음 명령을 쳐넣으면 됩니다.
+
+```
+sudo rm /etc/alternatives/x-www-browser
+sudo ln -s /usr/bin/firefox /etc/alternatives/x-www-browser
+```
+
+* 즉, `x-www-browser`라는 파일이 웹브라우저를 실행하는 명령이 되도록 심볼릭 링크가 걸려있는데, 현재 이것이 `google-chrome`으로 링크되어 있기 때문에, 그것을 삭제하고 새롭게 `firefox`로 심볼릭 링크를 만들어주는 것입니다.  보통 기본 웹브라우저는 `x-www-browser` 명령으로 호출되기 때문에 그렇습니다.
+
 
 ## Synaptic 패키지 관리자 설치
 
@@ -152,13 +164,13 @@ systray_icon_asb = 100 0 0
 time1_format = %H:%M
 time1_font = Droid Sans 10
 clock_font_color = #ffffff 100
-clock_tooltip = 
+clock_tooltip =
 clock_padding = 10 6
 clock_background_id = 2
 clock_lclick_command = gsimplecal
-time1_timezone = 
-time2_timezone = 
-clock_tooltip_timezone = 
+time1_timezone =
+time2_timezone =
+clock_tooltip_timezone =
 
 # Tooltips
 tooltip = 0
@@ -551,6 +563,3 @@ leafpad ~/.config/openbox/rc.xml
 </openbox_menu>
 
 ```
-
-
-

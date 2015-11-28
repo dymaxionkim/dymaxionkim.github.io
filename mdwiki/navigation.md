@@ -35,6 +35,9 @@
   * # 관리 및 팁
   * [Maintenance](pages/Linux/Maintenance.md)
   * [Tips](pages/Linux/Tips.md)
+  - - - -
+  * # 주요 프로그램 설명
+  * [LightTable](pages/Linux/LightTable.md)
 
 
 [Mechanical Engineering]()
@@ -54,6 +57,7 @@
   - - - -
   * # Numerical Analysis
   * [FGPG](pages/Mechanical_Engineering/FGPG.md)
+  * [COMBI](pages/Mechanical_Engineering/COMBI.md)
   - - - -
   * # Data
   * [Standards](pages/Mechanical_Engineering/Standards.md)
@@ -105,5 +109,3 @@
 
 [gimmick:Disqus](dymaxionkim)
 [gimmick: math]()
-
-

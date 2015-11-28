@@ -47,7 +47,7 @@ sudo pip install sympy
 sudo pip install nose
 ```
 
-* 이제 sphinx[스핑크스]를 설치합니다.  이것은 사람이 작성한 *.rst 확장자로 된 '구조화된 텍스트파일'을 읽어서 자동적으로 깔끔한 웹 도큐먼트로 만들어주는 변환기 같은 것입니다.  보통 소프트웨어 개발자들은 코딩과 문서작업을 병행하기가 너무 힘들기 때문에, 코딩을 하면서 거의 동시에 문서화도 이루어지도록 도와주는 이런 툴을 중요시하는 것 같습니다.
+* 이제 sphinx[스핑크스]를 설치합니다.  이것은 사람이 작성한 .rst 확장자로 된 '구조화된 텍스트파일'을 읽어서 자동적으로 깔끔한 웹 도큐먼트로 만들어주는 변환기 같은 것입니다.  보통 소프트웨어 개발자들은 코딩과 문서작업을 병행하기가 너무 힘들기 때문에, 코딩을 하면서 거의 동시에 문서화도 이루어지도록 도와주는 이런 툴을 중요시하는 것 같습니다.
 
 ```
 sudo pip install sphinx
@@ -142,7 +142,7 @@ sudo pip3 install ipykernel
 
 * Jupyter를 다중커널로 운용하기 위해, 커널 설정을 명시적으로 만들어 줍니다.  이를 위해 다음 명령을 쳐 주면 됩니다.
 ```
-sudo ipython kernelspec install-self
+sudo jupyter kernelspec install-self
 ```
 
 * 그러면, 다음과 같은 식으로 메시지가 나오는 것을 확인할 수 있습니다.  즉 생성된 커널 설정 정보들이 어디에 있는지 위치를 알 수 있는거죠.
@@ -162,13 +162,13 @@ sudo leafpad /usr/local/share/jupyter/kernels/python3/kernel.json
 * 해 준 다음에 편집기에 아래의 내용으로 대체합니다.
 ```
 {
- "display_name": "Python 3", 
- "language": "python", 
+ "display_name": "Python 3",
+ "language": "python",
  "argv": [
-  "/usr/bin/python3", 
-  "-m", 
-  "ipykernel", 
-  "-f", 
+  "/usr/bin/python3",
+  "-m",
+  "ipykernel",
+  "-f",
   "{connection_file}"
  ]
 }
@@ -176,7 +176,7 @@ sudo leafpad /usr/local/share/jupyter/kernels/python3/kernel.json
 
 * 이제 커널이 python2 및 python3 모두 인식되는지 확인해 봅니다.  아래의 명령을 쳐 넣고 나오는 목록을 보면 됩니다.
 ```
-ipython kernelspec list
+jupyter kernelspec list
 ```
 
 * 실제로 이게 작동하는지 확인해 봅시다.  아래의 명령을 치면 Jupyter Notebook 서비스가 시작되면서 웹브라우저가 자동으로 뜹니다.
@@ -204,7 +204,7 @@ sudo apt-get install julia
 julia
 ```
 
-* Julia는 Python이 pip 패키지 관리자를 갖고 있듯이, 자신의 전용 패키지 관리자를 가지고 있습니다.  다만 pip는 python을 별도로 실행하지 않고 터미널 상에서 직접 명령을 쳐 주는 방식이지만, Julia의 패키지 관리는 Julia 인터프리터 안에서 Pkg.*() 계열의 함수를 사용해서 이루어집니다.  일단 Julia가 실행된 상태에서 다음의 내용을 쳐 넣어서 기본적으로 필요한 패키지들을 설치해 봅시다.
+* Julia는 Python이 pip 패키지 관리자를 갖고 있듯이, 자신의 전용 패키지 관리자를 가지고 있습니다.  다만 pip는 python을 별도로 실행하지 않고 터미널 상에서 직접 명령을 쳐 주는 방식이지만, Julia의 패키지 관리는 Julia 인터프리터 안에서 Pkg. 계열의 함수를 사용해서 이루어집니다.  일단 Julia가 실행된 상태에서 다음의 내용을 쳐 넣어서 기본적으로 필요한 패키지들을 설치해 봅시다.
 ```
 Pkg.init()
 Pkg.add("Jewel")
@@ -246,7 +246,7 @@ sudo pip install octave_kernel
 
 * Javascript 언어는 가장 중요한 언어 중의 하나죠.  왜냐면 웹 표준의 근간을 이루기 때문입니다.  특히 요즘에는 Node.js 때문에 더 중요해졌습니다.  웹서비스 개발할 것은 아니지만 흥미삼아 Javascript 커널도 올려 봅시다.  방식은, Node.js를 설치하고 이걸 Jupyter에 연결하는 겁니다.
 ```
-sudo apt-get install nodejs-legacy npm 
+sudo apt-get install nodejs-legacy npm
 ```
 
 * 우선 nodejs-legacy를 설치합니다.  그냥 nodejs로 설치하면 이쪽에는 아직 호환되지 않기 때문에 구버전인 legacy로 해야 한다고 합니다.  npm이라는 것은 Node.js를 위한 패키지 관리자 입니다.  Python의 pip와 같은 역할이죠.
@@ -320,8 +320,3 @@ sudo ln -s /opt/juno/Juno /usr/bin/Juno
 * 위의 설치 순서는, 간단히 말해 Juno를 다운로드 받은 다음에 압축을 /opt에 풀어서 설치하고, 설치된 디렉토리 이름을 /opt/juno로 간단하게 바꿔주고, 에디터 실행 명령인 `Juno`를 어느 곳에서나 실행시킬 수 있도록 심볼릭 링크를 걸어준 것입니다.
 
 * Juno 즉 LightTable 에디터는 Atom 에디터와 느낌이 비슷한데, 이는 둘 다 Node.js 기반의 웹앱이기 때문입니다.  사상적으로 비슷하다고 볼 수 있을텐데, 다만 LightTable은 Clojure라는 신형 리스프 언어를 기반으로 개발되어서 좀 더 매니악하고 실험적입니다.
-
-
-
-
-
