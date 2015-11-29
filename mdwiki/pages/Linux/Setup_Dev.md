@@ -320,3 +320,19 @@ sudo ln -s /opt/juno/Juno /usr/bin/Juno
 * 위의 설치 순서는, 간단히 말해 Juno를 다운로드 받은 다음에 압축을 /opt에 풀어서 설치하고, 설치된 디렉토리 이름을 /opt/juno로 간단하게 바꿔주고, 에디터 실행 명령인 `Juno`를 어느 곳에서나 실행시킬 수 있도록 심볼릭 링크를 걸어준 것입니다.
 
 * Juno 즉 LightTable 에디터는 Atom 에디터와 느낌이 비슷한데, 이는 둘 다 Node.js 기반의 웹앱이기 때문입니다.  사상적으로 비슷하다고 볼 수 있을텐데, 다만 LightTable은 Clojure라는 신형 리스프 언어를 기반으로 개발되어서 좀 더 매니악하고 실험적입니다.
+
+
+## 끝!
+
+* 기타 환경 설정은 운용하면서 알아서 하면 되는 것이고, 몇가지 스크린샷을 남겨 봅니다.
+
+
+![Numix Theme](https://cloud.githubusercontent.com/assets/12775748/11458097/81a3e3f4-96fc-11e5-8d66-7a009bf36585.png)
+
+![Terminator Terminal Emulator](https://cloud.githubusercontent.com/assets/12775748/11458099/852898e4-96fc-11e5-8eae-90a0b5f22e00.png)
+
+![FreeCAD and Netgen](https://cloud.githubusercontent.com/assets/12775748/11458100/9000d1e6-96fc-11e5-96a5-0d7cc24c7e91.png)
+
+![ElmerGUI](https://cloud.githubusercontent.com/assets/12775748/11458103/a1ec281a-96fc-11e5-886c-3c88c63ea891.png)
+
+![Jupyter Notebook, Atom Editor, PCManFM File Mangager](https://cloud.githubusercontent.com/assets/12775748/11455961/8b4a237a-96b9-11e5-90fc-0890beeb737e.png)
