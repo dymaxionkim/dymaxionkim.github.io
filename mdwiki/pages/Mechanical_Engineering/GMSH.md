@@ -43,7 +43,11 @@
 sudo apt-get install gmsh
 ```
 * 첫번째 방법의 단점은 조금 뒤쳐진 버전이 설치된다는 것이다.  최신버전을 사용하고 싶다면 직접 다운로드 받는 두번째 방법을 사용하면 된다.  가급적 최신버전을 사용하는 두번째 방법을 추천한다.
-* 다운로드 : [여기](http://geuz.org/gmsh/)서 linux 64bit 버전을 받는다.
-* 압축풀기 : 아무데나 풀어도 되지만 가급적 root 권한으로 `/opt/gmsh`으로 넣는 것이 좋겠다.  나중에 버전업 되면 여기다 압축 풀어서 계속 덮어써 주면 되니까.
-* 실행파일 심볼릭 링크 : 터미널에서 `sudo ln -s /opt/gmsh/bin/gmsh /usr/bin/gmsh` 명령을 준다.
+```
+wget http://geuz.org/gmsh/bin/Linux/gmsh-2.11.0-Linux64.tgz
+sudo tar -xzvf gmsh*.tgz
+rm gmsh*.tgz
+sudo mv gmsh* /opt/gmsh
+sudo ln -s /opt/gmsh/bin/gmsh /usr/bin/gmsh
+
 * 그럼 아무 데서나 `gmsh` 명령을 주면 그 자리에서 실행된다.
