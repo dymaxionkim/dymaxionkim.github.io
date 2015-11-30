@@ -16,6 +16,11 @@ sudo apt-get install libreoffice evince mirage inkscape gimp smplayer cups-pdf c
 sudo dpkg -i hwpviewer*.deb
 ```
 
+* GUI용 압축/해제 프로그램을 설치합니다.  여러가지 있지만 그중에 제일 보편적인 File-roller를 설치하겠습니다.  장점은 그냥 설치만 해도 PCManFM 안에서 연계 작동 가능해 집니다.
+```
+sudo apt-get install file-roller
+```
+
 * 압축 해제 프로그램을 설치합니다.  여러가지 좋은 것들이 있는데, 그중에서 한국 환경에 적합한 [Arkzip](https://github.com/Thestars3/arkzip)을 선택해 보았습니다.  Ark 라이브러리를 사용하여. 알집으로 압축한 alz,egg 따위의 것들도 압축을 풀 수 있습니다.  GUI상에서 지원되는 기능은, 파일탐색기에서 압축파일 위에서 마우스 오른쪽 버튼을 누르면 뜨는 메뉴에서 'Arkzip'이 나타나는데, 이것을 선택하면 자동으로 압축을 풀어줍니다.  윈도우에서 EUC-KR 인코딩 한글 파일들도 대체로 잘 풀립니다.  단, 이것은 압축 해제 전용이므로, 압축 파일을 묶어주는(압축해 주는) 기능은 없습니다.
 
 ```
