@@ -204,7 +204,14 @@ sudo apt-get install julia
 julia
 ```
 
-* Julia는 Python이 pip 패키지 관리자를 갖고 있듯이, 자신의 전용 패키지 관리자를 가지고 있습니다.  다만 pip는 python을 별도로 실행하지 않고 터미널 상에서 직접 명령을 쳐 주는 방식이지만, Julia의 패키지 관리는 Julia 인터프리터 안에서 Pkg. 계열의 함수를 사용해서 이루어집니다.  일단 Julia가 실행된 상태에서 다음의 내용을 쳐 넣어서 기본적으로 필요한 패키지들을 설치해 봅시다.
+* Julia는 Python이 pip 패키지 관리자를 갖고 있듯이, 자신의 전용 패키지 관리자를 가지고 있습니다.  다만 pip는 python을 별도로 실행하지 않고 터미널 상에서 직접 명령을 쳐 주는 방식이지만, Julia의 패키지 관리는 Julia 인터프리터 안에서 Pkg. 계열의 함수를 사용해서 이루어집니다.
+
+* Julia를 Jupyter에 연결해 주는 패키지는 IJulia입니다.  그런데, IJulia를 설치할 때에 커널 설정 파일들이 배치되는 장소가 `/home/dong/.local` 안에 들어가는데, 원래 Julia를 설치할 때 `sudo` 권한으로 설치하다 보니 이 디렉토리의 접근 권한이 막혀 있어서 모순이 발생합니다.  따라서 이 디렉토리에 접근 권한을 줘서 미리 해결합니다.
+```
+sudo chmod -R +rwx /home/dong/.local
+```
+
+* 일단 Julia가 실행된 상태에서 다음의 내용을 쳐 넣어서 기본적으로 필요한 패키지들을 설치해 봅시다.
 ```
 Pkg.init()
 Pkg.add("Jewel")
