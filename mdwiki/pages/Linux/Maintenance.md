@@ -19,6 +19,14 @@
 * 참고한 출처 : http://superuser.com/questions/152347/change-linux-console-screen-blanking-behavior/154388#154388
 
 
+## X윈도우 스크린세이버 끄기
+
+* 콘솔 말고도, X윈도우 역시 일정 시간이 지나면 스크린이 자동으로 꺼지도록 디폴트 설정 되어 있습니다.  VirtualBox에서 운용할 때, 종종 꺼진 스크린을 다시 살릴 때 시스템이 먹통이 되는 경우가 보이므로 이것도 없애려고 합니다.
+
+* `sudo nano /etc/X11/xinit/xinitrc`로 들어간 후 `xset s off -dpms`를 추가해 줍니다.
+
+
+
 
 
 ## SAMBA로 네트워크 드라이브 연결하기
