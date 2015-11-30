@@ -568,3 +568,13 @@ leafpad ~/.config/openbox/rc.xml
 </openbox_menu>
 
 ```
+
+
+* 혹시 VirtualBox가 아니라 실제 시스템에 설치할 경우, NVIDIA 그래픽카드 드라이버 설치는 다음 저장소를 등록해서 합니다.  최신 버전의 드라이버를 설치하기 위해 직접 NVIDIA에서 다운로드 받아다가 설치하는 방법은 실패 위험성이 높기 때문에 생략하겠습니다.
+
+```
+sudo add-apt-repository ppa:xorg-edgers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-current nvidia-settings
+```
+
