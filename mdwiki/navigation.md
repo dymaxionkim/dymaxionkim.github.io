@@ -41,7 +41,7 @@
   - - - -
   * # 주요 프로그램 설명
   * [LightTable](pages/Linux/LightTable.md)
-
+  * [LibreOffice](pages/Linux/LibreOffice.md)
 
 [Mechanical Engineering]()
 
