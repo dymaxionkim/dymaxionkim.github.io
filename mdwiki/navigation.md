@@ -24,7 +24,9 @@
 [About]()
 
   * [About](pages/about.md)
+  * [Link](pages/about/link.md)
   * [Edit](http://prose.io)
+
 
 [Linux]()
 
@@ -77,11 +79,6 @@
   * [BOM](pages/PDM/BOM.md)
   * [CATIA BOM](pages/Code/CATIA_BOM.md)
 
-
-[Life]()
-
-  * [Personal URL](pages/Life/Personal_URL.md)
-  * [Job URL](pages/Life/Job_URL.md)
 
 
 
