@@ -1,8 +1,8 @@
 # about
 
 ## about me
-
-![dodaam_en](https://cloud.githubusercontent.com/assets/12775748/10863216/848701d2-8009-11e5-8d31-2d2416755c4b.png)
-
+* Name : Kim,Dong-ho
 * Email : dymaxion.kim@gmail.com
-* Job : Mechanical Designer in Dodaam Systems LTD.
+* Job : Mechanical Engineer / Mechanical Designer
+* Interested : Easy Engineering with Free/Open Source Softwares
+
