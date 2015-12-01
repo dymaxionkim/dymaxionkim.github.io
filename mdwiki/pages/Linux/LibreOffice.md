@@ -1,7 +1,7 @@
 
 # LibreOffice
 
-## Office
+## WPS Office
 
 * 무료로 리눅스에 설치가능한 오피스 중에서, MS-Office와 가장 호환성이 좋고 완성도가 높은 것은 WPS Ofiice (구 Kings Office) 입니다.  이곳( http://wps-community.org/ )에서 다운로드 받아다가 설치해서 사용할 수 있습니다.
 
