@@ -24,7 +24,7 @@
 [About]()
 
   * [About](pages/about.md)
-  * [Link](pages/about/link.md)
+  * [Link](pages/link.md)
   * [Edit](http://prose.io)
 
 
