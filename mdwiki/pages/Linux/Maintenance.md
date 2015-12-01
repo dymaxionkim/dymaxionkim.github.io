@@ -26,9 +26,76 @@
 * `sudo nano /etc/X11/xinit/xinitrc`로 들어간 후 `xset s off -dpms`를 추가해 줍니다.
 
 
+## 호스트OS(윈도우) 쪽의 NTFS 드라이브 마운트해서 공유하기
+
+* 전제조건은, (1)VirtualBox 게스트 확장이 반드시 설치되어 있어야 하고, (2)가상머신의 설정에서 원하는 폴더를 공유하겠다고 설정되어 있어야 합니다.
+
+* 우선 아래와 같이 설정파일을 열어서 편집합니다.
+```bash
+sudo l3afpad /etc/fstab
+```
+
+열려진 설정 파일에 다음 내용을 추가해 주면됩니다.
+```
+//172.15.30.55/RobotSystem_Div /media/RobotSystem_Div cifs defaults,username=dhkim,pass=xhddlf1!,iocharset=utf8 0 0
+```
+
+
+
+
+
+## 'apt-get update' 명령을 사용할 때 에러 발생시 대처방법
+* 네트워크 상태가 좋지 않거나 기타등등의 이유로 가끔 'apt-get update' 명령이 실패할 때가 있습니다.  자주 보이는 에러메시지는 대체로 'BADSIG GPG errors' 내지는 '해시 합이 맞지 않습니다' 같은 것들입니다.  이럴때는 우분투 패키지 저장소 목록 자체를 완전히 날려버리고 새로 update해서 구성하면 해결될 때가 많다고 합니다.  절차는 아래와 같습니다.
+
+```
+sudo apt-get clean
+sudo mv -r /var/lib/apt/lists /var/lib/apt/lists.old
+sudo mkdir -p /var/lib/apt/lists/partial
+sudo apt-get clean
+sudo apt-get update
+```
+
+* 간단히 말해, 기존의 우분투 패키지 저장소 목록를 .old 이름으로 일단 백업해 놓고, 원래의 디렉토리 'list' 및 그 밑의 하위 디렉토리인 'partial'을 새로 만듭니다.  빈 디렉토리들이 되는거죠.  깨끗하게 비운 것입니다.
+
+* 'apt-get clean'이라는 명령 역시 깨끗하게 비우라는 것인데, 앞뒤로 확인하듯이 한번씩 명령을 줘서 확실하게 합니다.
+
+* 이후에 update를 시도하는 것입니다.  그러면 새롭게 받아진 저장소 목록으로 해당 디렉토리들이 채워집니다.  이렇게 하면 중간에 인증(GPG)나 에러체크(해시 합) 관련해서 오류가 있는 파일들이 있을 확률이 크게 낮아지므로 문제를 해결할 수 있는 경우가 많습니다.
+
+
+
+
 
 ## SAMBA로 네트워크 드라이브 연결하기
 
-## 호스트OS(윈도우) 쪽의 NTFS 드라이브 마운트하기
+* ip주소가 192.168.1.239인 원격지의 어느 컴퓨터에 네트워크 공유되는 디렉토리 share가 있는 경우를 봅니다.  share 디렉토리 접근을 위한 ID와 PW도 주어져 있다고 합시다.
 
-## apt-get 명령을 사용할 때 에러 발생시 대처방법
+```
+ip주소 : //192.168.1.239/share
+ID : testid
+PW : testpw
+```
+
+* 네트워크 드라이브에 관한 리눅스의 서비스 패키지는 SMB[삼바] 입니다.  특히 여기서는 리눅스의 디렉토리를 외부에 공유해서 서비스해 줄 것이 아니라, 외부에 이미 공유되어 있는 디렉토리에 리눅스 쪽에서 접근하고 싶기 때문에, SMB서버가 아니고 클라이언트가 필요한데, 이 패키지는 이미 Ubuntu Server에 기본적으로 들어가 있습니다.  이 패키지에서 제공하는 `mount` 명령을 사용할 것입니다.
+
+* 만일 만에 하나 해당 패키지가 없는 경우라면, SMBFS[삼바 파일시스템] 패키지를 직접 새로 설치해 줍니다.
+```bash
+sudo apt-get install smbfs
+```
+* 일단 시험삼아 마운트하기
+```bash
+sudo mkdir /media/test
+sudo mount -t cifs //192.168.1.239/share /media/test -o user=testid,pass=testpw
+```
+* 마운트 되는 것이 확인되면, 기본 설정에 적용
+
+* 우선 기본설정 편집
+```bash
+sudo l3afpad /etc/fstab
+```
+
+* 다음 내용 추가
+```
+//192.168.1.239/share /media/test cifs defaults,username=testid,pass=testpw,iocharset=utf8 0 0
+```
+
+* 재부팅해서 자동으로 마운트 되어 있는지 확인후 끝!
