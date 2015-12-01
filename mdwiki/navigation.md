@@ -77,10 +77,8 @@
   * [Julia](pages/Code/Julia.md)
   * [Python](pages/Code/Python.md)
   - - - -
-  * # MDwiki
+  * # Service
   * [MDwiki](pages/Code/MDwiki.md)
-  - - - -
-  * # Github
   * [Github](pages/Code/Github.md)
 
 
