@@ -62,6 +62,10 @@
   * [FGPG](pages/Mechanical_Engineering/FGPG.md)
   * [COMBI](pages/Mechanical_Engineering/COMBI.md)
   - - - -
+  * # PDM
+  * [PartNumber](pages/Mechanical_Engineering/PartNumber.md)
+  * [BOM](pages/Mechanical_Engineering/BOM.md)
+  - - - -
   * # Data
   * [Standards](pages/Mechanical_Engineering/Standards.md)
   * [Fastener](pages/Mechanical_Engineering/Fastener.md)
@@ -75,9 +79,7 @@
 
 [PDM]()
 
-  * [PartNumber](pages/PDM/PartNumber.md)
-  * [BOM](pages/PDM/BOM.md)
-  * [CATIA BOM](pages/Code/CATIA_BOM.md)
+
 
 
 
