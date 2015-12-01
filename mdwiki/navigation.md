@@ -72,7 +72,7 @@
 
 
 [Code]()
-  - - - -
+
   * # Language
   * [Julia](pages/Code/Julia.md)
   * [Python](pages/Code/Python.md)
