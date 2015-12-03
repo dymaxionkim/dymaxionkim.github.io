@@ -2,4 +2,4 @@
 
 * EpicEditor
 
-[Local](\\172.15.30.55\wwwroot\Mech)
+\\172.15.30.55\wwwroot\Mech
