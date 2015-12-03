@@ -1,3 +1,8 @@
 # MDwiki
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+* EpicEditor
+<html>
+<div id="epiceditor"></div>
+<script src="epiceditor.min.js"></script>
+var editor = new EpicEditor().load();
+</html>
