@@ -26,6 +26,14 @@
 * `sudo nano /etc/X11/xinit/xinitrc`로 들어간 후 `xset s off -dpms`를 추가해 줍니다.
 
 
+## VirtualBox 심리스 모드 버그 대처
+
+* 현재 버전(V5.0.1)의 경우, 운용해 보니깐 '설정 - 사용자 인터페이스 - 전체 화면 / 심리스 모드에서 보이기' 옵션이 기본으로 체크되어 있습니다.  전체화면 모드에서도 아래쪽에 관리메뉴가 있어서 호스트 윈도우 쪽과 왔다갔다 전환이 편합니다.
+* 그런데 리눅스 상태에서 오랫동안 뒀다가 다시 들어가 보니깐 먹통이 되는 현상이 발견됩니다.  정확한 원인은 모르겠는데  아무튼 버그입니다.
+* 조금 불편하더라도 `전체 화면 / 심리스 모드에서 보이기` 옵션을 체크 해제하고 사용해 보니, 먹통이 되는 현상이 사라졌습니다.
+* 이 버그는 리눅스 쪽이 아니고 VirtualBox 쪽의 버그로 생각됩니다.  VirtualBox가 업데이트되면 계속 잘 업데이트해 주는 것이 좋겠습니다.
+
+
 ## 호스트OS(윈도우) 쪽의 폴더 공유하기
 
 * 전제조건은, (1)VirtualBox 게스트 확장이 반드시 설치되어 있어야 하고, (2)가상머신의 설정에서 원하는 폴더를 공유하겠다고 설정되어 있어야 합니다.
@@ -36,17 +44,43 @@
 sudo usermod -G vboxsf -a dong
 ```
 * 그리고 재부팅.
-* 이제 `/media/sf_dong`으로 접근해서 읽고 쓰기가 가능한지 확인합니다.  잘 된다면 OK.
-* 만일 매번 `/media/sf_dong`으로 접근하기가 귀챦다면, 아래 처럼 심볼릭 링크를 걸어줘서 쓰면 편합니다.
+* 이제 `/media/sf_share`으로 접근해서 읽고 쓰기가 가능한지 확인합니다.  잘 된다면 OK.
+* 만일 매번 `/media/sf_share`으로 접근하기가 귀챦다면, 아래 처럼 심볼릭 링크를 걸어줘서 쓰면 편합니다.
 ```
-ln -s /media/sf_dong ~/sf_dong
+ln -s /media/sf_share ~/sf_share
 ```
 
+
+## SAMBA로 네트워크 드라이브 연결하기
+
+* ip주소가 192.168.1.239인 원격지의 어느 컴퓨터에 네트워크 공유되는 디렉토리 share가 있는 경우를 봅니다.  share 디렉토리 접근을 위한 ID와 PW도 주어져 있다고 합시다.
+```
+ip주소 : //192.168.1.239/share
+ID : testid
+PW : testpw
+```
+
+* 일단 시험삼아 마운트해 봅니다.
+```
+sudo mkdir /media/test
+sudo mount -t cifs -o user=testid,pass=testpw //123.45.67.89/share /media/share
+```
+
+* 마운트 되는 것이 확인되면, 부팅할 때 자동으로 마운트되도록 설정합니다.  `/etc/fstab` 설정파일을 열어서 편집하면 됩니다.
+```
+sudo l3afpad /etc/fstab
+```
+
+* 여기에 다음 내용을 추가합니다.  이때 `uid=dong` 부분은 현재 리눅스의 계정을 적어주면 읽고쓰기 권한을 획득할 수 있습니다.
+```
+//123.45.67.89/share /media/share cifs defaults,username=testid,pass=testpw,uid=dong,iocharset=utf8 0 0
+```
+
+* 재부팅해서 자동으로 마운트 되어 있는지 확인하면 끝!
 
 
 ## 'apt-get update' 명령을 사용할 때 에러 발생시 대처방법
 * 네트워크 상태가 좋지 않거나 기타등등의 이유로 가끔 'apt-get update' 명령이 실패할 때가 있습니다.  자주 보이는 에러메시지는 대체로 'BADSIG GPG errors' 내지는 '해시 합이 맞지 않습니다' 같은 것들입니다.  이럴때는 우분투 패키지 저장소 목록 자체를 완전히 날려버리고 새로 update해서 구성하면 해결될 때가 많다고 합니다.  절차는 아래와 같습니다.
-
 ```
 sudo apt-get clean
 sudo mv -r /var/lib/apt/lists /var/lib/apt/lists.old
@@ -64,38 +98,3 @@ sudo apt-get update
 
 
 
-
-## SAMBA로 네트워크 드라이브 연결하기
-
-* ip주소가 192.168.1.239인 원격지의 어느 컴퓨터에 네트워크 공유되는 디렉토리 share가 있는 경우를 봅니다.  share 디렉토리 접근을 위한 ID와 PW도 주어져 있다고 합시다.
-
-```
-ip주소 : //192.168.1.239/share
-ID : testid
-PW : testpw
-```
-
-* 네트워크 드라이브에 관한 리눅스의 서비스 패키지는 SMB[삼바] 입니다.  특히 여기서는 리눅스의 디렉토리를 외부에 공유해서 서비스해 줄 것이 아니라, 외부에 이미 공유되어 있는 디렉토리에 리눅스 쪽에서 접근하고 싶기 때문에, SMB서버가 아니고 클라이언트가 필요한데, 이 패키지는 이미 Ubuntu Server에 기본적으로 들어가 있습니다.  이 패키지에서 제공하는 `mount` 명령을 사용할 것입니다.
-
-* 만일 만에 하나 해당 패키지가 없는 경우라면, SMBFS[삼바 파일시스템] 패키지를 직접 새로 설치해 줍니다.
-```bash
-sudo apt-get install smbfs
-```
-* 일단 시험삼아 마운트하기
-```bash
-sudo mkdir /media/test
-sudo mount -t cifs //192.168.1.239/share /media/test -o user=testid,pass=testpw
-```
-* 마운트 되는 것이 확인되면, 기본 설정에 적용
-
-* 우선 기본설정 편집
-```bash
-sudo l3afpad /etc/fstab
-```
-
-* 다음 내용 추가
-```
-//192.168.1.239/share /media/test cifs defaults,username=testid,pass=testpw,iocharset=utf8 0 0
-```
-
-* 재부팅해서 자동으로 마운트 되어 있는지 확인후 끝!
