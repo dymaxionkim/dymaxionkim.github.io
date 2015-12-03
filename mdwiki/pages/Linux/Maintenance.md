@@ -26,21 +26,21 @@
 * `sudo nano /etc/X11/xinit/xinitrc`로 들어간 후 `xset s off -dpms`를 추가해 줍니다.
 
 
-## 호스트OS(윈도우) 쪽의 NTFS 드라이브 마운트해서 공유하기
+## 호스트OS(윈도우) 쪽의 폴더 공유하기
 
 * 전제조건은, (1)VirtualBox 게스트 확장이 반드시 설치되어 있어야 하고, (2)가상머신의 설정에서 원하는 폴더를 공유하겠다고 설정되어 있어야 합니다.
-
-* 우선 아래와 같이 설정파일을 열어서 편집합니다.
-```bash
-sudo l3afpad /etc/fstab
+* 이후에 부팅해서 `/media` 안에 들어가 보면 `sf_share` 식으로 `sf_`라는 두문자가 붙은 디렉토리가 생겨있음을 알 수 있습니다.
+* 그런데 이것의 접근권한은 `vboxsf` 유저그룹에게만 주어져 있는데, 만일 내 계정이 여기에 속해있지 않으면 접근할 수 없습니다.  슈퍼유저 상태에서만 접근이 가능하므로 불편합니다.
+* 따라서 터미널에서 다음의 명령어를 쳐서 현재 나의 아이디를 `vboxsf`으로 넣어 줍니다.  여기서 `dong`부분에 현재 나의 계정을 넣어주면 됩니다.
 ```
-
-열려진 설정 파일에 다음 내용을 추가해 주면됩니다.
+sudo usermod -G vboxsf -a dong
 ```
-//172.15.30.55/RobotSystem_Div /media/RobotSystem_Div cifs defaults,username=dhkim,pass=xhddlf1!,iocharset=utf8 0 0
+* 그리고 재부팅.
+* 이제 `/media/sf_dong`으로 접근해서 읽고 쓰기가 가능한지 확인합니다.  잘 된다면 OK.
+* 만일 매번 `/media/sf_dong`으로 접근하기가 귀챦다면, 아래 처럼 심볼릭 링크를 걸어줘서 쓰면 편합니다.
 ```
-
-
+ln -s /media/sf_dong ~/sf_dong
+```
 
 
 
