@@ -1,8 +1,5 @@
 # MDwiki
 
 * EpicEditor
-<html>
-<div id="epiceditor"></div>
-<script src="epiceditor.min.js"></script>
-var editor = new EpicEditor().load();
-</html>
+
+[Local](\\172.15.30.55\wwwroot\Mech)
