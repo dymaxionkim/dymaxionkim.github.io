@@ -25,7 +25,8 @@
 
   * [About](pages/about.md)
   * [Link](pages/link.md)
-  * [Edit](http://prose.io)
+  * [Edit ::: Prose.io](http://prose.io)
+  * [Edit ::: Dillinger.io](http://dillinger.io)
 
 
 [Linux]()
