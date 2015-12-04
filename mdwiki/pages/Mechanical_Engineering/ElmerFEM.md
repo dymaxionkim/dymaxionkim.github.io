@@ -99,6 +99,14 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
+### [GMSH - ElmerFEM - ParaView](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-3.html)
+* GMSH 및 ElmerFEM으로 이어지는 작업 흐름대로 기본적인 선형(Linear) 구조해석을 실시한 것입니다.
+![](http://3.bp.blogspot.com/-7Q4hY-mM6e8/VSr988itROI/AAAAAAAAa6k/SiRorMgRLXY/s1600/20150413_001.png)
+
+![(http://1.bp.blogspot.com/-BQfyb-KmKn4/VSr9-j_5ucI/AAAAAAAAa7M/ILI2XLL7Hd0/s1600/20150413_007.png)]
+
+![](http://1.bp.blogspot.com/-zXlapsxo8M0/VSr9-5kcaKI/AAAAAAAAa7A/RmBcmcIUxtA/s1600/20150413_008.png)
+
 
 ### [CFD with Elmer](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-5-cfd-with.html)
 * 가장 기본적인 관로유동(Internal Flow)에 대한 정적(Static) 유체해석을 실시한 것입니다.
