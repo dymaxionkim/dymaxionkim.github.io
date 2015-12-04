@@ -99,6 +99,12 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
+### [Natural Convection CFD with Elmer](http://dymaxionkim.blogspot.kr/2015/06/natural-convection-cfd-with-elmer.html)
+* Navier-Stokes Equation(유체동역학방정식), Non-Compressible(비압축성)으로 바닥면을 가열하였을때 발생하는 자연대류(Natural Convection) 현상을 시뮬레이션하였습니다.
+* 시간에 따라 500샷 가량 얻어내어 동영상을 만들었습니다.
+* 2D 모델이며, 모델링 및 매쉬 생성은 GMSH를 사용하였습니다.
+[](https://youtu.be/iA1dHt3BniE)
+
 ### [Transient Linear Elastic with Elmer](http://dymaxionkim.blogspot.kr/2015/06/transient-linear-elastic-with-elmer.html)
 * 초기조건으로 변위를 줬다가 제거해 줌으로써 외팔보를 자유진동하게 하고, 이것은 Transient 조건으로 시간에 따라 스냅샷을 3000개 정도 얻어내어 동역학적인 결과를 얻어낸 것입니다.
 [](https://youtu.be/RA9CPvdPU0Y)
