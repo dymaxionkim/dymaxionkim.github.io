@@ -101,6 +101,24 @@ leafpad ~/.config/openbox/autostart
 해서 편집기에서 `volumeicon &`를 써주고 저장하면 끝.
 
 
+## 구글드라이브 동기화 소프트웨어 'Drive'
+
+* 참고1 : http://www.howtogeek.com/196635/an-official-google-drive-for-linux-is-here-sort-of-maybe-this-is-all-well-ever-get/
+* 참고2 : https://github.com/odeke-em/drive
+* 작년에, 구글소속 프로그래머였던 [Burcu Dogan](https://github.com/rakyll)이라는 여성 프로그래머가 구글 드라이브 개발팀에 재직하면서 개발한 거라고 합니다.  지금은 이직하고 이 프로젝트를 다른 사람에게 넘겼나 봅니다.
+* 아무튼 이 유틸리티는 Go Lang으로 개발되었기 때문에 golang 패키지를 먼저 깔아줘야 됩니다.  설치되는 go 개발환경의 용량이 얼마나 되는지는 잘 모르겠습니다(아직 안 해 봤음).
+* 따라서 설치 커맨드는 아래와 같습니다.
+```
+sudo apt-get install golang git mercurial
+go get github.com/odeke-em/drive
+```
+* 설치가 되었으므로 drive를 실행해 볼 수 있는데, 형식이 git 명령과 매우 유사합니다.  Dogan이라는 개발자의 성격을 엿볼 수 있는 듯 합니다.
+* 일단 구글드라이브 싱크시킬 디렉토리를 적절하게 하나 만든 다음에, 거기서 `drive init` 명령을 쳐 넣으면 초기화 과정에 들어갑니다.  구글 인증 코드를 시키는대로 해서 따서 입력해 주면 초기화 완료 됩니다.
+* 그 다음부터는 `drive push`, `drive pull` 등 git을 사용하는 느낌과 흡사합니다.
+* 항상 상주하면서 실시간으로 백그라운드 싱크시켜주는 기능은 개발자가 의도적으로 배제한 듯 합니다.
+
+
+
 
 ## 'apt-get update' 명령을 사용할 때 에러 발생시 대처방법
 * 네트워크 상태가 좋지 않거나 기타등등의 이유로 가끔 'apt-get update' 명령이 실패할 때가 있습니다.  자주 보이는 에러메시지는 대체로 'BADSIG GPG errors' 내지는 '해시 합이 맞지 않습니다' 같은 것들입니다.  이럴때는 우분투 패키지 저장소 목록 자체를 완전히 날려버리고 새로 update해서 구성하면 해결될 때가 많다고 합니다.  절차는 아래와 같습니다.
