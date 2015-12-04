@@ -99,8 +99,9 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
-### [CFD with Elmer by MultiPhysics Natural Convection & Transient]()
-
+### [CFD with Elmer by MultiPhysics Natural Convection & Transient](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-9-cfd-with.html)
+* 온도차에 의한 레일리 버나드 대류 열전달 현상을 Navier-Stokes Equation(유체동역학), Bussinesq(부력), Gravity(중력), 그리고 Heat Source Obstacle(발열물체) 조건을 줘서 다중물리현상(Multi Physics) 시뮬레이션을 해 본 것입니다.
+[](https://youtu.be/Dp6M6J6wAIc)
 
 
 ### [FEM with Elmer by Linear Elascticity & Scanning time varient displacement](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-10-fem-with.html)
@@ -154,17 +155,3 @@ sudo apt-get install elmerfem-csc
 * Scanning 조건을 사용해서 200개의 샷(Shot)을 얻어내어 동영상을 얻어내었습니다.
 * PostProcessor는 ParaView를 사용하였습니다.
 [](https://youtu.be/we3vLBMvJ_8)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
