@@ -105,7 +105,7 @@ leafpad ~/.config/openbox/autostart
 
 * 참고1 : http://www.howtogeek.com/196635/an-official-google-drive-for-linux-is-here-sort-of-maybe-this-is-all-well-ever-get/
 * 참고2 : https://github.com/odeke-em/drive
-* 작년에, 구글소속 프로그래머였던 [Burcu Dogan](https://github.com/rakyll)이라는 여성 프로그래머가 구글 드라이브 개발팀에 재직하면서 개발한 거라고 합니다.  지금은 이직하고 이 프로젝트를 다른 사람에게 넘겼나 봅니다.
+* 작년에, 구글소속 프로그래머인 [Burcu Dogan](https://github.com/rakyll)이라는 여성 프로그래머가 구글 드라이브 개발팀 소속으로 개발한 거라고 합니다.  지금은 바빠서 이 프로젝트를 다른 사람에게 넘겼나 봅니다.
 * 아무튼 이 유틸리티는 Go Lang으로 개발되었기 때문에 golang 패키지를 먼저 깔아줘야 됩니다.  설치되는 go 개발환경의 용량이 얼마나 되는지는 잘 모르겠습니다(아직 안 해 봤음).
 * 따라서 설치 커맨드는 아래와 같습니다.
 ```
