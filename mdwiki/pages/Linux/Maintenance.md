@@ -79,6 +79,29 @@ sudo l3afpad /etc/fstab
 * 재부팅해서 자동으로 마운트 되어 있는지 확인하면 끝!
 
 
+## Alsa 사운드 드라이버 설치하기
+* 필요한 경우에는 사운드 드라이버를 설치하면 됩니다.
+* 나의 VirtualBox에서는 디폴트 오디오로 Windows Direct Sound로 ICH AC97이 잡혀있습니다.  리눅스 게스트 OS 쪽에서는 `lspci` 명령을 때리면 PCI 디바이스들 목록이 나오고 이 중에서 사운드 디바이스가 뭔지 보입니다.  확인해 보니 `Multimedia audio controller: Intel Corporation 82801AA AC'97 Audio Controller (rev 01)`으로 나옵니다.  역시 VirtualBox에서 정해준 것과 동일하고, 사운드 하드웨어 자체는 잘 돌아가고 있다는 것을 알 수 있습니다.
+* 사운드 드라이버는 Alsa 라는 것을 주로 사용하는 모양입니다.  드라이버 설치하고, 이게 적용되게 하려면 audio 유저그룹에 현재의 아이디를 넣어줘야 한다고 하므로 그것까지 해 줍니다.
+```
+sudo apt-get install alsa alsa-tools
+sudo adduser 아이디 audio
+```
+* 그리고 재부팅.
+* 재부팅 후에 startx하고 터미널 에뮬레이터에서 `alsamixer` 명령을 치면 볼륨조절 화면이 나옵니다.  좌우 화살표로 각 장치를 옮기면서 상하 화살표로 볼륨을 조절할 수 있고, 각 장치 볼륨바의 아래쪽에 `MM`이라는 표시는 Mute 상태라는 뜻이므로 키보드 `m`글자를 쳐 줘서 Mute를 풀어줍니다.
+* 그리고 youtube 같은데 들어가서 소리가 잘 나오는지 확인해 봅니다.
+* 추가적으로, Tint2 태스크바에 볼륨조절 아이콘이 상주하도록 하려면 아래와 같이 해당 패키지를 설치해 주고,
+```
+sudo apt-get install volumeicon-alsa
+```
+* 이걸 항상 백그라운드로 작동하도록 autostart에 추가해 줍니다.
+```
+leafpad ~/.config/openbox/autostart
+```
+해서 편집기에서 `volumeicon &`를 써주고 저장하면 끝.
+
+
+
 ## 'apt-get update' 명령을 사용할 때 에러 발생시 대처방법
 * 네트워크 상태가 좋지 않거나 기타등등의 이유로 가끔 'apt-get update' 명령이 실패할 때가 있습니다.  자주 보이는 에러메시지는 대체로 'BADSIG GPG errors' 내지는 '해시 합이 맞지 않습니다' 같은 것들입니다.  이럴때는 우분투 패키지 저장소 목록 자체를 완전히 날려버리고 새로 update해서 구성하면 해결될 때가 많다고 합니다.  절차는 아래와 같습니다.
 ```
