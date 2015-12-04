@@ -5,9 +5,7 @@
 * http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-3.html
 * GMSH 및 ElmerFEM으로 이어지는 작업 흐름대로 기본적인 선형(Linear) 구조해석을 실시한 것입니다.
 <div><img src='http://3.bp.blogspot.com/-7Q4hY-mM6e8/VSr988itROI/AAAAAAAAa6k/SiRorMgRLXY/s1600/20150413_001.png' width=800><br></div>
-
 ![](http://1.bp.blogspot.com/-BQfyb-KmKn4/VSr9-j_5ucI/AAAAAAAAa7M/ILI2XLL7Hd0/s1600/20150413_007.png)
-
 ![](http://1.bp.blogspot.com/-zXlapsxo8M0/VSr9-5kcaKI/AAAAAAAAa7A/RmBcmcIUxtA/s1600/20150413_008.png)
 
 
@@ -16,7 +14,6 @@
 * 가장 기본적인 관로유동(Internal Flow)에 대한 정적(Static) 유체해석을 실시한 것입니다.
 * ElmerGUI 자체적으로 제공하는 VTK 뷰어와, ParaView 모두 사용하여 결과를 확인해 보았습니다.
 ![](http://4.bp.blogspot.com/-qCamyIMvxCg/VTCXj4PtrnI/AAAAAAAAbB4/SC6BdJ_rbyI/s1600/ElmerVTK01.png)
-
 ![](http://4.bp.blogspot.com/-yxYBIm7FtnM/VTCbaVUs2GI/AAAAAAAAbCo/cSvldFQ_3UM/s1600/paraview03.png)
 
 
@@ -25,7 +22,6 @@
 * 바다속의 잠수함을 상정한 모델을 이용하여, 기본적인 외부유동(External Flow)를 정적(Static)으로 해석해 본 것입니다.  아무래도 계산시 발산(Divergence) 확률이 너무 높았으므로, 유체 속도를 크게 낮춰서 겨우 깨끗한 유선(Flow Line)을 얻을 수 있었습니다.
 * 아울러, Post Processot로 사용한 ParaView의 사용 방법도 조금 더 익숙해 질 수 있었습니다.
 ![](http://4.bp.blogspot.com/-MqjyrgZV0Yg/VTMRaD2f8zI/AAAAAAAAbE4/DvE7JxMjU7c/s1600/pic14.png)
-
 ![](http://1.bp.blogspot.com/-GOjWQZXUnxg/VTQ8xwTfIaI/AAAAAAAAbGs/zdLb-5wql9A/s1600/paraview02.png)
 
 
