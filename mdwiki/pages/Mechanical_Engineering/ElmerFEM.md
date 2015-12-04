@@ -99,16 +99,18 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
-### * [Transient Linear Elastic with Elmer](http://dymaxionkim.blogspot.kr/2015/06/transient-linear-elastic-with-elmer.html)
+### [Transient Linear Elastic with Elmer](http://dymaxionkim.blogspot.kr/2015/06/transient-linear-elastic-with-elmer.html)
+* 초기조건으로 변위를 줬다가 제거해 줌으로써 외팔보를 자유진동하게 하고, 이것은 Transient 조건으로 시간에 따라 스냅샷을 3000개 정도 얻어내어 동역학적인 결과를 얻어낸 것입니다.
 [](https://youtu.be/RA9CPvdPU0Y)
 [](https://youtu.be/HGqn0NhYFFc)
 
 ### [Mechanical Contact Analysis with Elmer](http://dymaxionkim.blogspot.kr/2015/06/mechanical-contact-analysis-with-elmer.html)
-[](https://youtu.be/we3vLBMvJ_8)
-
 * 이 예제는 최근에 Elmer에 추가된 멀티바디 접촉 경계조건(Contac BC)를 적용하여 2개의 물체가 서로 꾹 눌려서 서로 반력을 받는 현상을 시뮬레이션한 것입니다.
 * Scanning 조건을 사용해서 200개의 샷(Shot)을 얻어내어 동영상을 얻어내었습니다.
 * PostProcessor는 ParaView를 사용하였습니다.
+[](https://youtu.be/we3vLBMvJ_8)
+
+
 
 
 
