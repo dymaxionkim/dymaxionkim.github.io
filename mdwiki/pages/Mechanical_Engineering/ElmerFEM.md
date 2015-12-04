@@ -99,7 +99,7 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
-### [Transient Linear Elastic with Elmer](http://dymaxionkim.blogspot.kr/2015/06/transient-linear-elastic-with-elmer.html)
+### \\* [Transient Linear Elastic with Elmer](http://dymaxionkim.blogspot.kr/2015/06/transient-linear-elastic-with-elmer.html)
 [](https://youtu.be/RA9CPvdPU0Y)
 [](https://youtu.be/HGqn0NhYFFc)
 
