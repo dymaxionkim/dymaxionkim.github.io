@@ -99,6 +99,15 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
+### [CFD with Elmer with a Body](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-6-cfd-with.html)
+* 바다속의 잠수함을 상정한 모델을 이용하여, 기본적인 외부유동(External Flow)를 정적(Static)으로 해석해 본 것입니다.  아무래도 계산시 발산(Divergence) 확률이 너무 높았으므로, 유체 속도를 크게 낮춰서 겨우 깨끗한 유선(Flow Line)을 얻을 수 있었습니다.
+* 아울러, Post Processot로 사용한 ParaView의 사용 방법도 조금 더 익숙해 질 수 있었습니다.
+![](http://4.bp.blogspot.com/-MqjyrgZV0Yg/VTMRaD2f8zI/AAAAAAAAbE4/DvE7JxMjU7c/s1600/pic14.png)
+
+![](http://1.bp.blogspot.com/-GOjWQZXUnxg/VTQ8xwTfIaI/AAAAAAAAbGs/zdLb-5wql9A/s1600/paraview02.png)
+
+
+
 ### [CFD with Elmer with Transient](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-8-cfd-with.html)
 *  열전달(Heat Transfer) 및 유체동역학(Navier-Stokes Equation)을 연성(Connect)시켜 계산하는
 다중물리현상(Multi Physics) 및 천이(Transient) 현상을 모사 가능한지 확인해 본 것입니다.  유선(Flow Line)이 깨끗하게 나오지는 못했습니다.  이유는 압력차를 좀 과하게 줘서, 유체의 흐름 속도가 지나치게 빠르기 때문인 듯 합니다.
