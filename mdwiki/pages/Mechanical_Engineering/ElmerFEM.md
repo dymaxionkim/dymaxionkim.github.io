@@ -99,6 +99,15 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
+
+### [CFD with Elmer](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-5-cfd-with.html)
+* 가장 기본적인 관로유동(Internal Flow)에 대한 정적(Static) 유체해석을 실시한 것입니다.
+* ElmerGUI 자체적으로 제공하는 VTK 뷰어와, ParaView 모두 사용하여 결과를 확인해 보았습니다.
+![](http://4.bp.blogspot.com/-qCamyIMvxCg/VTCXj4PtrnI/AAAAAAAAbB4/SC6BdJ_rbyI/s1600/ElmerVTK01.png)
+
+![](http://4.bp.blogspot.com/-yxYBIm7FtnM/VTCbaVUs2GI/AAAAAAAAbCo/cSvldFQ_3UM/s1600/paraview03.png)
+
+
 ### [CFD with Elmer with a Body](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-6-cfd-with.html)
 * 바다속의 잠수함을 상정한 모델을 이용하여, 기본적인 외부유동(External Flow)를 정적(Static)으로 해석해 본 것입니다.  아무래도 계산시 발산(Divergence) 확률이 너무 높았으므로, 유체 속도를 크게 낮춰서 겨우 깨끗한 유선(Flow Line)을 얻을 수 있었습니다.
 * 아울러, Post Processot로 사용한 ParaView의 사용 방법도 조금 더 익숙해 질 수 있었습니다.
