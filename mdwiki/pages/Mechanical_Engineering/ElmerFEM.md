@@ -100,11 +100,14 @@ sudo apt-get install elmerfem-csc
 ## ElmerFEM 실습
 
 ### [GMSH - ELMER FEM - PARAVIEW 작업 흐름 강좌](http://dymaxionkim.blogspot.kr/2015/05/gmsh-elmer-fem-paraview.html)
-1. Gmsh 사용 방법 (매쉬 생성)
+
+* Gmsh 사용 방법 (매쉬 생성)
 [](https://youtu.be/qts-H6novo0)
-2. Elmer 사용 방법 (선형 탄성 해석)
+
+* Elmer 사용 방법 (선형 탄성 해석)
 [](https://youtu.be/NDuQikyDDlg)
-3. Paraview 및 문서작성의 예
+
+* Paraview 및 문서작성의 예
 [](https://youtu.be/q_PAZZLYq-4)
 
 ### [Karman Vortex CFD with Elmer](http://dymaxionkim.blogspot.kr/2015/06/karman-vortex-cfd-with-elmer.html)
