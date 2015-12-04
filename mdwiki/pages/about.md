@@ -14,7 +14,7 @@
 * Wiki ::: [Here](http://dymaxionkim.github.io) / [Torchpad](http://dymaxionkim.torchpad.com)
 * Github ::: [dymaxionkim.github.io](https://github.com/dymaxionkim/dymaxionkim.github.io) / [UbuntuBang](https://github.com/dymaxionkim/UbuntuBang) / [JINGO_WIKI](https://github.com/dymaxionkim/JINGO_WIKI) / [COMBI](https://github.com/dymaxionkim/COMBI) / [FGPG](https://github.com/dymaxionkim/FGPG)
 
-## Brief Portfolio
+## Brief Career
 * 1997~2000 ::: 1DOF Inverted Pendulum / 4DOF Rig for 35mm Camera / 6DOF Motion Control Camera
 * 2001~2003 ::: Fine Tungsten Needle by ElectroChemical MEMS Process for Chip Probe Station / Wafer Deprocessing Inspection Machine / Wafer Decapper Inspection Machine
 * 2003~2006 ::: LCD TV / NoteBook / CellPhone / Various Consumer Devices
