@@ -99,6 +99,13 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
+### [CFD with Elmer with Transient](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-8-cfd-with.html)
+*  열전달(Heat Transfer) 및 유체동역학(Navier-Stokes Equation)을 연성(Connect)시켜 계산하는
+다중물리현상(Multi Physics) 및 천이(Transient) 현상을 모사 가능한지 확인해 본 것입니다.  유선(Flow Line)이 깨끗하게 나오지는 못했습니다.  이유는 압력차를 좀 과하게 줘서, 유체의 흐름 속도가 지나치게 빠르기 때문인 듯 합니다.
+* 이 결과를 통해, 전자제품 내부의 냉각팬에 의한 강제대류 해석을 믿을만한 정밀도로 얻어내기 위해서는 적절한 난류모델의 적용이 필수적이라는 점을 알 수 있습니다.
+[](https://youtu.be/CbpazcU72L4)
+
+
 ### [CFD with Elmer by MultiPhysics Natural Convection & Transient](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-9-cfd-with.html)
 * 온도차에 의한 레일리 버나드 대류 열전달 현상을 Navier-Stokes Equation(유체동역학), Bussinesq(부력), Gravity(중력), 그리고 Heat Source Obstacle(발열물체) 조건을 줘서 다중물리현상(Multi Physics) 시뮬레이션을 해 본 것입니다.
 [](https://youtu.be/Dp6M6J6wAIc)
