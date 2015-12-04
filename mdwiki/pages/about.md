@@ -21,5 +21,4 @@
 * 2006~2007 ::: Marine Devices (Steering, Throttle Lever)
 * 2009~2012 ::: Human Sized Low-Cost Light Weight Redundent Manipulators
 * 2007~2015 ::: Education Devices / Humanoid Robots / Articulated & Scara Manipulators / Holonomic Mobile Robots / Human Carring Mobile Robot
-* 2015~ ::: RCWS / PZT
-
+* 2015~ ::: RCWS / PTZ
