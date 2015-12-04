@@ -99,6 +99,27 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerFEM 실습
 
+### [CFD with Elmer by MultiPhysics Natural Convection & Transient]()
+
+
+
+### [FEM with Elmer by Linear Elascticity & Scanning time varient displacement](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-10-fem-with.html)
+* ElmerGUI 상에서 MATC 및 Scaning 조건을 주는 과정을 시연한 시뮬레이션입니다.
+[](https://youtu.be/czrIwudVzdI)
+
+
+### [Salome - Elmer](http://dymaxionkim.blogspot.kr/2015/04/open-source-cae-toolchain-11-salomeelmer.html)
+* 리눅스에 Salome-Meca를 설치하고, Salome에서 Mesh 생성을 수행하였습니다.  어떤 Pre-Processor가 궁합이 좋은지 모색하기 위한 과정입니다.
+* 만들어진 메쉬 모델을 ElmerGUI로 불러들여 열전도 정적해석을 수행한 시뮬레이션입니다.
+![](http://3.bp.blogspot.com/-yZnZnL017OA/VUHBKDt4q0I/AAAAAAAAbQ0/_HOD6SNTBAY/s1600/%ED%99%94%EB%A9%B4-ElmerVTK%2Bpostprocessor.png)
+
+
+### [FEM with Elmer by Linear Elascticity and Scanning time varient normal force](http://dymaxionkim.blogspot.kr/2015/05/open-source-cae-toolchain-13-fem-with.html)
+* ElmerGUI 환경에서 MATC 및 Scaning 조건을 주는 과정을 시연한 시뮬레이션입니다.
+[](https://youtu.be/yC13uiLwPlc)
+
+
+
 ### [GMSH - ELMER FEM - PARAVIEW 작업 흐름 강좌](http://dymaxionkim.blogspot.kr/2015/05/gmsh-elmer-fem-paraview.html)
 
 * Gmsh 사용 방법 (매쉬 생성)
@@ -109,6 +130,7 @@ sudo apt-get install elmerfem-csc
 
 * Paraview 및 문서작성의 예
 [](https://youtu.be/q_PAZZLYq-4)
+
 
 ### [Karman Vortex CFD with Elmer](http://dymaxionkim.blogspot.kr/2015/06/karman-vortex-cfd-with-elmer.html)
 * Navier-Stokes Equation(유체동역학방정식), Non-Compressible(비압축성), Laminar(층류) 조건으로 가운데 장애물을 만난 물의 흐름이 적절한 레이놀즈 계수에 의해 와류(Karman Vortex) 현상을 나타내는 것을 시뮬레이션하였습니다.
