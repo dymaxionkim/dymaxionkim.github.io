@@ -4,7 +4,7 @@
   -->
 
 # Dymaxion.Kim
-[![icon_robot-1102_v03](https://cloud.githubusercontent.com/assets/12775748/11586058/c273f27e-9ab3-11e5-9366-c688c30c56eb.png)](http://dymaxionkim.github.io)
+[![icon_robot-1107_v02](https://cloud.githubusercontent.com/assets/12775748/11586554/45bf4fd6-9ab7-11e5-91af-481ada800b23.png)](http://dymaxionkim.github.io)
 
 <!--
   -- Default theme
