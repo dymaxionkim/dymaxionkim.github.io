@@ -3,8 +3,8 @@
 ## Git ?
 * 이게 뭔지 모른다면 인터넷 검색해서 조사해 보시면 됩니다.
 
-## 
-
+## de
+[MDwiki.md](MDwiki.md)
 
 
 
@@ -70,6 +70,3 @@ git pull
 [![설명](그림URL)](동영상URL)
 ```
 [![Transient Linear Elastic with Elmer 3](https://i.ytimg.com/vi/HGqn0NhYFFc/mqdefault.jpg)](https://youtu.be/HGqn0NhYFFc)
-
-
-
