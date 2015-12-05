@@ -1,5 +1,7 @@
 # Github
 
+![Github](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
+
 ## Git ?
 * 이게 뭔지 모른다면 인터넷 검색해서 조사해 보시면 됩니다.  [깃]이라고 읽습니다.  [짓] 아닙니다.
 * 다만 기능이 너무 강력하기 때문에 모든 기능을 다 설명하려는 것들이 많다 보니, 오히려 이해가 잘 안되는 경우도 있는 듯 합니다.  어렵게 이해할 필요는 없는 것 같습니다.
