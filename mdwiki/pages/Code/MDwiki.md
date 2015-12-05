@@ -19,7 +19,7 @@ MDwiki라는 것은, 웹사이트 서비스의 골격을 미리 만들어놓은 
 ### 06. [Prose.io](http://prose.io)에 가입
 이제 내용편집을 해야 할텐데, Github에서 편집을 원하는 파일로 들어가서 직접 편집해도 됩니다만 여러모로 불편하고, 특히 한글 입력이 잘 안됩니다.  아주 거지같습니다.  그래서 외부의 다른 온라인 편집기 서비스를 갖다 쓰려고 합니다.  여러가지 좋은 것들이 있는데 그 중에 Github와 찰떡궁합이 제일 좋은 Prose.io를 이용하기로 합시다.  http://prose.io 사이트로 들어가면 되고, 회원가입은 별도로 아이디를 만들 필요 없이 이미 가입한 Github 계정으로 소셜계정 로그인이 됩니다.  로그인하면 나의 Github의 방이 보이면서 안에 파일들도 다 보입니다.  원하는 파일을 찝어서 편집해 주고 저장하면 자동으로 Github에 반영이 되어서 바로 보이게 됩니다.  필요없는 파일을 지우거나, 새로운 파일을 만들어서 내용을 써 넣거나, 기존 파일을 열어서 편집하는 것이 모두 즉각 됩니다.
 ### 07. 무슨 파일을 편집해야 할까?
-`index.html` 파일은 MDwiki의 핵심 엔진이므로 조심스럽게 다룹시다.  파일을 Prose.io에서 열어서 보면 코드가 어지럽게 들어 있습니다.  다른 곳은 건드릴 필요 없고, '<title>MDwiki</title>'라는 곳의 문구만 수정해 줍시다.  내 홈페이지의 이름이죠.  웹브라우저의 탭에서 보이는 이름입니다.  수정 후에 'Ctrl-s'를 누르면 저장됩니다.  아니면 우측에 저장 단추 누르고 Commit 해 주시면 됩니다.
+`index.html` 파일은 MDwiki의 핵심 엔진이므로 조심스럽게 다룹시다.  파일을 Prose.io에서 열어서 보면 코드가 어지럽게 들어 있습니다.  다른 곳은 건드릴 필요 없고, '\\<title\\>MDwiki\\</title\\>'라는 곳의 문구만 수정해 줍시다.  내 홈페이지의 이름이죠.  웹브라우저의 탭에서 보이는 이름입니다.  수정 후에 'Ctrl-s'를 누르면 저장됩니다.  아니면 우측에 저장 단추 누르고 Commit 해 주시면 됩니다.
 그 다음에 `config.json` 파일을 열어봅시다.  MDwiki 설정파일이라고 보시면 되겠죠.  'additionalFooterText', 'title' 항목의 내용만 건드려 주시면 됩니다. ([참고1](http://dynalon.github.io/mdwiki/#!customizing.md), [참고2](http://dynalon.github.io/mdwiki/#!layout.md))
 그 다음에는 `index.md` 파일을 열어서 편집합시다.  첫번째 페이지 이므로 마크다운 문법([문법설명](http://dynalon.github.io/mdwiki/#!quickstart.md))으로 대충 줄줄 써 줘 봅시다.
 그 다음에는 `navigation.md` 파일을 열어서 편집합시다.  편집 요령은 [이곳](http://dynalon.github.io/mdwiki/#!quickstart.md) 중에서 'Adding a navigation'를 참고합시다.  참고로, 여기서 메뉴를 구성할 때 `[EDIT](http://prose.io)` 메뉴를 하나 만들어 줍시다.  홈페이지 편집을 즉각즉각 하기가 편해집니다.
