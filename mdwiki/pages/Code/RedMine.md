@@ -28,6 +28,7 @@
 * 아무튼 아직 좀 더 검토해 볼 필요가 있다고 생각합니다.
 
 ## 설치방법
+* Native ::: https://opentutorials.org/course/438/2436
 * Bitnami RedLine Package ::: https://bitnami.com/stack/redmine
 * Docker + RedMine ::: https://translate.google.com/translate?prev=_t&hl=en&ie=UTF-8&u=http://qiita.com/shouta-dev/items/24cfee84ae1d4135ee43&sl=auto&tl=ko
 
