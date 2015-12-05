@@ -26,69 +26,63 @@ git commit -m 'Add new contents'
 git push -u origin master
 ```
 * git의 이런 형태의 명령 체계는, 전형적인 유닉스 명령의 전통을 잘 따르고 있을 뿐만 아니라, 이후에 등장한 다른 성공한 오픈소스 소프트웨어들에게도 많은 영향을 주고 있는 것 같습니다.  예를 들면, 반가상화 솔루션으로 사실상 업계표준이 된 Docker의 경우를 보면 거의 git과 명령체계가 유사합니다.  go언어로 만든 구글드라이브 동기화 프로젝트인 Drive도 보니깐 git에서 강한 영향을 받아, 구글드라이브를 마치 Git서버 처럼 여기고 사용할 수 있도록 만들어 놨더군요.
-* 
 
-
-
-### 일단 닥치고 따라해 보는 Git
-
-* _Git, GitHub 체계를 전혀 모르겠으면 일단 닥치고 아래 순서대로 따라해 보면 됩니다._
-* _Branch 만드는 건 복잡하니까 여기서는 생략하고 그냥 Master 가지고 곧바로 업데이트 하는 형태입니다.  따라서 제대로 된 사용법은 추후 계속 연습이 필요함._
-* _일단 오리지널 텍스트 명령어로 Git을 다루면서 체계를 익혀나가는 것이 좋겠음._
-
-##### github 가입하고 repository 만들기
-> 처음 만드는 repository는 "계정.github.io" 이름으로 만들 것. (메인 홈페이지 역할을 하도록 만들어주기 위해서)
-
-##### git용 폴더만들기
-```bash
-mkdir GIT
-cd ./GIT
+## 내 PC에 Git 준비하기
+* 아무튼, 내 PC에 git이 설치되어 있다고 하고, 실제 사용할 준비를 합니다.  방법은 아래의 간단한 절차로 완료됩니다.
 ```
-
-##### git 셋업하기
-```bash
-git config --global user.name "계정"
-git config --global user.email "이메일주소"
-```
-
-##### 로컬 git 저장소로 환경구성
-```bash
+mkdir ~/github
+cd ~/github
 git init
+git config --global user.email dymaxion.kim@gmail.com
+git config --global user.name dong
 ```
+물론 위 문구 중에서 'dymaxion.kim@gmail.com' 및 'dong'은 자신의 것으로 대신 써줘야겠죠.
+* 간단히 말해 github라는 디렉토리를 만들고, 그곳을 초기화(init)해 주었습니다.  그러면 그 디렉토리 안에 숨겨진 디렉토리인 `.git`이 생기면서 git 운영 관련된 각종 정보들이 거기에 저장됩니다.
+* 그리고 이 git을 실제로 사용하는 나에 관한 정보 즉 이메일과 이름을 인식시켜 준 것입니다.
 
-##### github에 만들어둔 repository 받아오기
+## Github에서 Clone해 오기
+* 이제 Github 사이트에 만들어둔 나의 방을 Clone해 옵니다.
 ```bash
-git clone https://github.com/계정/계정.github.io.git
-git clone https://github.com/계정/계정.github.io.wiki.git
-cd ./계정.github.io
+git clone https://github.com/dymaxionkim/dymaxionkim.github.io.git
+cd ./dymaxionkim.github.io
 ```
+* 위 문구는, Github에 이미 만들어둔 나의 홈페이지 호스팅용 방인 `dymaxionkim.github.io`를 통째로 나의 PC로 가져오라는 명령입니다.
+* clone 다음에 붙는 주소는, Github 사이트의 해당 방에 가면 HTTPS 주소란에 보이고 있으므로, 그걸 복사해서 넣어주면 됩니다.  주소 체계는 쉽게 이해 가능할 것입니다.
+* 이 명령을 통해, `~/github/dymaxionkim.github.io.git` 디렉토리가 생기고 그 안에 모든 파일들이 다운로드 받아지게 됩니다.
+* 이제 다운로드 받아진 파일들을 나의 로컬 PC에서 마음대로 수정 작업을 하면 됩니다.
 
-##### 로컬 쪽에서 수정작업후 GitHub에 올리기
+## 수정작업후 GitHub에 올리기
+* 수정 작업후, 다시 Github에 업로드해서 업데이트 해주는 것은 아래의 3개 명령어를 사용합니다.
 ```bash
 git add --all
 git commit -m '간단한 설명'
 git push -u origin master
 ```
+* 새로 추가된 파일들이 있을 수도 있으므로 'add --all' 옵션을 줘서 전부 긁어서 인식시켜 주라고 했고, 이번의 업데이트에 관한 간단한 설명 문구를 넣어서 커밋(Commit)을 해 주었으며, 그것을 Github로 푸쉬(push)해 주었습니다.
+* 왜 커밋과 푸쉬를 굳이 분리해서 불편하게 해 놨냐면, 로컬 PC에서도 작업하면서 여러번의 업데이트를 진행할 수도 있으니깐 로컬에서도 자체적으로 히스토리 관리를 해 두는 것으로 이해하면 될 것 같습니다.  그리고 최종적으로 푸쉬 해 주는 것은, 자료를 단순히 업로드 해서 서버쪽의 데이타를 업데이트 해 주는 의미를 넘어서, 수정된 자료를 동료들에게 '발표' 하는 행위로 이해할 수 있을 것 같습니다.
+* 따라서 대개 소스코드 관리 원칙으로, 푸쉬하기 전에 반드시 소스코드를 빌드해서 작동이 되는지 확인 후에 실제로 돌아가는 버전이라는 점을 확인한 후에 푸쉬를 해 주라고 권장되더군요.  그 전의 로컬에서 하는 커밋은 뭐 중간중간 제대로 빌드도 안되는 경우도 많겠지만요.
+* 다만 본 예제는, 소스코드가 아니고 그냥 홈페이지 컨텐츠 문서들의 집합이므로 이런 것 까지 신경쓰지 않아도 될 것입니다.
 
-
-##### GitHub 쪽에서 수정작업후 로컬 쪽으로 업데이트 해 주기
+## GitHub 쪽에서 수정작업후 로컬 쪽으로 업데이트 해 주기
+* 그럼, 반대로 내 PC가 아닌 다른 PC에서 작업해서 푸쉬 했다면 아직 내 PC에는 반영이 안 되어 있을 것입니다.  또는 Github 사이트에서 온라인으로 직접 문구들 수정할 수도 있을 것이고요.
+* 이때는 Github 서버 쪽에서 내 PC로 업데이트된 것을 땡겨와서 반영시켜줘야 할 것입니다.
 ```bash
 git pull
 ```
+* 이렇게 해 주면 Git이 양쪽의 정보를 비교해서 자동으로 내 PC의 자료들이 최신 버전으로 업데이트가 됩니다.
+* 수정 장소가 이곳 저곳 자꾸 바뀌다 보면 버전이 서로 충돌되어 꼬이기도 합니다.  따라서 나의 로컬 PC에서 수정작업 하기 전에 습관적으로 `git pull`을 먼저 때려줘서 버전을 업데이트 한 후에, 작업하고 나서 커밋/푸쉬 해 주는 습관을 가지는 것이 좋겠습니다.
 
-### Git 설명서들
-* [오리지널 설명서](https://pages.github.com/)
-* [Git의 기초](http://wit.nts-corp.com/2015/03/26/3412)
+## 왜 커맨드 명령으로 불편하게 하는가?
+* Github에서는 윈도우 및 맥OS 용의 GUI Git클라이언트 프로그램을 제공해 줍니다.  그런데 리눅스 버전은 따로 없습니다.  그냥 지금처럼 커맨드 명령을 쓰라는 이야기죠.
+* 그러면 리눅스 차별하냐는 생각을 할 수도 있는데, 사실 원래 Git은 리눅스 커널 개발용입니다.  Git에게 리눅스는 가장 중요한거죠.  그런데 리눅스를 사용하면서, 리눅스용 소프트웨어를 개발하는 사용자 중에서 GUI툴을 필요로 하는 사람이 얼마나 되느냐 볼 때 거의 없다고 생각됩니다.  이쪽의 사람들은 커맨드 명령 환경을 오히려 더 좋아하죠. 수요공급에 의한 선택이라고 생각됩니다.
 
-### GitHub 설명서들
-* [Jekyll,Git 을 몰라도 무료 Github Pages 즐기기 (Jekyll을 사용하는 블로그 제작하는 방법)](http://ilmol.com/2015/01/Jekyll,Git%20%EC%9D%84%20%EB%AA%B0%EB%9D%BC%EB%8F%84%20%EB%AC%B4%EB%A3%8C%20Github%20Pages%20%EC%A6%90%EA%B8%B0%EA%B8%B0.html)
+## 기타
+* 사실 Git의 장점을 극대화하기 위해서는, 서로 다른 장소에 있는 여러 팀원들이 공동작업으로 하나의 소프트웨어를 개발해 나갈 때가 최고의 조건이라고 생각됩니다.
+* Github를 중심으로 개발자 각자가 자신의 PC에 브랜치를 내고 따로 따로 업데이트 진행하고요.  개발자 중에서 관리역할을 맡은 리더가 각각의 브랜치 결과물들을 보면서 마스터 브랜치(원본)으로 잘 판단해서 합쳐주고(Merge)...  이런 식으로 업데이트가 굴러가는 케이스 입니다.
+* 그러나 본 예제에서는, 사용자는 나 하나 뿐이므로 브랜치를 따로 낼 필요가 없어서(필요하다면 낼 수도 있겠찌만) 그냥 마스터를 직접 관리하는 형태를 취했습니다.
 
 
-### GitHub향 마크다운 한글 설명서
-* <https://github.com/demun/demunCode/blob/master/Markdown/readme.md>
-* <https://nolboo.github.io/blog/2014/03/25/github-flavored-markdown/>
-* YouTube 연결하는 마크다운 형태
-```
-[![설명](그림URL)](동영상URL)
-```
-[![Transient Linear Elastic with Elmer 3](https://i.ytimg.com/vi/HGqn0NhYFFc/mqdefault.jpg)](https://youtu.be/HGqn0NhYFFc)
+
+
+
+
