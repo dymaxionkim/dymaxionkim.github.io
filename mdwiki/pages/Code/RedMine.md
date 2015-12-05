@@ -29,7 +29,7 @@
 
 ## 설치방법
 * Native ::: https://opentutorials.org/course/438/2436
-* Bitnami RedLine Package ::: https://bitnami.com/stack/redmine
+* Bitnami RedMine Package ::: https://bitnami.com/stack/redmine
 * Docker + RedMine ::: https://translate.google.com/translate?prev=_t&hl=en&ie=UTF-8&u=http://qiita.com/shouta-dev/items/24cfee84ae1d4135ee43&sl=auto&tl=ko
 * Docker Image of RedMine ::: https://hub.docker.com/r/sameersbn/redmine/
 
