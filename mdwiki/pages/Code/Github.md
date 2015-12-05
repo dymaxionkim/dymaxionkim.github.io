@@ -1,6 +1,6 @@
 # Github
 
-![Github](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
+![Github](https://openframework.stanford.edu/sites/default/files/githuboctocat.jpeg)
 
 ## Git ?
 * 이게 뭔지 모른다면 인터넷 검색해서 조사해 보시면 됩니다.  [깃]이라고 읽습니다.  [짓] 아닙니다.
