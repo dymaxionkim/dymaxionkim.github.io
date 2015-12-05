@@ -1,5 +1,7 @@
 # RedMine
 
+![RedMine](https://raw.githubusercontent.com/docker-library/docs/master/redmine/logo.png)
+
 ## 소개
 * 레드마인 위키 ::: https://www.redmine.org/projects/redmine/wiki/KoGetting_Started
 * 레드마인은 웹서버를 구성해서 제공하는 형태의 유연한 프로젝트 관리 툴입니다.
