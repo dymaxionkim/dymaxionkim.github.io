@@ -105,7 +105,7 @@ sudo usermod -aG docker 아이디
 docker run hello-world
 ```
 
-## 이미지 땡겨오기
+## RedMine 이미지 땡겨오기
 * 여러가지 예제가 많겠지만, 여기서는 프로젝트 관리용 유틸리티인 RedMine 이미지를 땡겨와 보겠습니다.  Bitnami라는 회사에서 베타버전으로 최근에 제공해 주기 시작한 패키지화된 스택을 땡겨옵니다. (참고 : https://bitnami.com/stack/redmine )
 * 그리고 설치 순서는 이곳( https://hub.docker.com/r/bitnami/redmine/ )을 참고해서 그대로 해 봅니다.  이미지를 땡겨오고, 그 이미지에 역시 Bitnami에서 만들어서 Github에 공유해 둔 Dockerfile을 빌드해서 먹여주는 순서입니다.
 ```
@@ -116,7 +116,7 @@ docker pull bitnami/redmine:latest
 docker images
 ```
 
-## 땡겨온 이미지 실행해 보기
+## 땡겨온 RedMine 이미지 실행해 보기
 * 이렇게 땡겨온 후 곧바로 실행해 보면 됩니다.  (더 자세한 실행 옵션은 설명서 보면서 확인.  여기서는 일단 백그라운드로 실행하도록 -d 옵션을 주고, 또 9999로 포트포워딩을 하도록 -p 옵션을 주었습니다.)
 ```
 docker run -d -p 9999:80 bitnami/redmine
