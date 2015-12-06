@@ -111,13 +111,11 @@ docker run hello-world
 ```
 docker pull bitnami/redmine:latest
 ```
-이렇게 땡겨온 후 곧바로 실행해 봐도 되고..
+이렇게 땡겨온 후 곧바로 실행해 보면 됩니다.
 ```
-git clone https://github.com/bitnami/bitnami-docker-redmine.git
-cd bitnami-docker-redmine
-docker build -t bitnami/redmine .
+docker run -it redmine
 ```
-이걸 추가로 실행해서 빌드작업을 더 해 줘도 됩니다.
+
 이후에 다른 설명들을 참고해서 원하는대로 설정이나 앱을 추가해 주고, 이렇게 빌드된 컨테이너를 운용하는데...  그냥 날려버리기 전에 컨테이너를 압축파일로 백업하거나 하는 방법 등이 더 설명되어 있습니다.
 
 
