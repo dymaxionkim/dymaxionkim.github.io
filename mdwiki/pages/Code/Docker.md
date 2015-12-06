@@ -106,4 +106,20 @@ docker run hello-world
 ```
 
 ## 이미지 땡겨오기
-* 여러가지 예제가 많겠지만, 여기서는 프로젝트 관리용 유틸리티인 RedMine 이미지를 땡겨와 보겠습니다.
+* 여러가지 예제가 많겠지만, 여기서는 프로젝트 관리용 유틸리티인 RedMine 이미지를 땡겨와 보겠습니다.  Bitnami라는 회사에서 베타버전으로 최근에 제공해 주기 시작한 패키지화된 스택을 땡겨옵니다. (참고 : https://bitnami.com/stack/redmine )
+* 그리고 설치 순서는 이곳( https://github.com/Bitnami/bitnami-docker-redmine )을 참고해서 그대로 해 봅니다.  이미지를 땡겨오고, 그 이미지에 역시 Bitnami에서 만들어서 Github에 공유해 둔 Dockerfile을 빌드해서 먹여주는 순서입니다.
+```
+docker pull bitnami/redmine:latest
+```
+이렇게 땡겨온 후 곧바로 실행해 봐도 되고..
+```
+git clone https://github.com/bitnami/bitnami-docker-redmine.git
+cd bitnami-docker-redmine
+docker build -t bitnami/redmine .
+```
+이걸 추가로 실행해서 빌드작업을 더 해 줘도 됩니다.
+이후에 다른 설명들을 참고해서 원하는대로 설정이나 앱을 추가해 주고, 이렇게 빌드된 컨테이너를 운용하는데...  그냥 날려버리기 전에 컨테이너를 압축파일로 백업하거나 하는 방법 등이 더 설명되어 있습니다.
+
+
+
+
