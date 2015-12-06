@@ -89,6 +89,28 @@ sudo apt-get install docker-engine
 sudo service docker start
 sudo docker run hello-world
 ```
+'hello-world'라는 이미지는 도커로 실행하면 자신이 실행되었다는 메시지를 뱉아놓고 곧바로 종료되는 확인용 이미지인 것 같습니다.  때문에 이 이미지를 run 해 보니까 나오는 메시지는 다음과 같더군요.  자기가 어떻게 동작했는지 설명을 해 주네요.
+```
+Hello from Docker.
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker Hub account:
+ https://hub.docker.com
+
+For more examples and ideas, visit:
+ https://docs.docker.com/userguide/
+```
 * 도커 유저그룹에 사용자 아이디를 가입시킵니다.  도커는 슈퍼유저 권한을 항상 사용해야 하므로, docker라는 유저그룹에 슈퍼유저 권한을 주고 필요한 사용자를 여기에 집어넣어 쓴다는 개념인 듯 합니다.
 ```
 sudo usermod -aG docker 아이디
