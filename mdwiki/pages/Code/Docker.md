@@ -151,4 +151,4 @@ http://localhost:9999/
 * 현재 중지상태인 컨테이너 삭제하기 ::: `docker rm 이름`
 * 현재 중지상태인 컨테이너 시작하기 ::: `docker start 이름`
 * 컨테이너 외부에서 컨테이너 내부로 명령 때려주기 ::: `docker exec 이름 명령`
-* `docker run -it 이름 /bin/bash`
+* 컨테이너 내부를 뒤져보고 싶을 때 실행 방법 ::: `docker run -it 이름 /bin/bash`
