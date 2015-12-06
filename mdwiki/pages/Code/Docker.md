@@ -121,9 +121,9 @@ docker pull bitnami/redmine:latest
 ```
 
 ## 땡겨온 RedMine 이미지 실행해 보기
-* 이렇게 땡겨온 후 곧바로 실행해 보면 됩니다.  (더 자세한 실행 옵션은 설명서 보면서 확인.  여기서는 일단 -it 옵션을 주고, 또 9999로 포트포워딩을 하도록 -p 옵션을 주었습니다.)
+* 이렇게 땡겨온 후 곧바로 실행해 보면 됩니다.  (더 자세한 실행 옵션은 설명서 보면서 확인.  여기서는 일단 -d 옵션을 주고, 또 9999로 포트포워딩을 하도록 -p 옵션을 주었습니다.)
 ```
-docker run -it --name=redmine -p 9999:80 bitnami/redmine /bin/bash
+docker run -d --name=redmine -p 9999:80 bitnami/redmine
 ```
 * 현재 실행중인 컨테이너들의 목록을 보는 명령은,
 ```
@@ -150,3 +150,6 @@ http://localhost:9999/
 * 현재 중지상태인 컨테이너 삭제하기 ::: `docker rm 이름`
 * 현재 중지상태인 컨테이너 시작하기 ::: `docker start 이름`
 * 컨테이너 외부에서 컨테이너 내부로 명령 때려주기 ::: `docker exec 이름 명령`
+* `docker run -it 이름 /bin/bash`
+
+
