@@ -107,7 +107,7 @@ docker run hello-world
 
 ## 이미지 땡겨오기
 * 여러가지 예제가 많겠지만, 여기서는 프로젝트 관리용 유틸리티인 RedMine 이미지를 땡겨와 보겠습니다.  Bitnami라는 회사에서 베타버전으로 최근에 제공해 주기 시작한 패키지화된 스택을 땡겨옵니다. (참고 : https://bitnami.com/stack/redmine )
-* 그리고 설치 순서는 이곳( https://github.com/Bitnami/bitnami-docker-redmine )을 참고해서 그대로 해 봅니다.  이미지를 땡겨오고, 그 이미지에 역시 Bitnami에서 만들어서 Github에 공유해 둔 Dockerfile을 빌드해서 먹여주는 순서입니다.
+* 그리고 설치 순서는 이곳( https://hub.docker.com/r/bitnami/redmine/ )을 참고해서 그대로 해 봅니다.  이미지를 땡겨오고, 그 이미지에 역시 Bitnami에서 만들어서 Github에 공유해 둔 Dockerfile을 빌드해서 먹여주는 순서입니다.
 ```
 docker pull bitnami/redmine:latest
 ```
@@ -119,10 +119,14 @@ docker images
 ```
 docker run -it bitnami/redmine
 ```
-* Bitnami 것 말고 다른 좋은 이미지들도 많이 있는 것 같으니, 잘 골라서 테스트 해 봅시다.
+* 현재 실행중인 컨테이너들의 목록을 보는 명령은,
+```
+docker ps
+```
 * 아무튼 이후에 다른 설명들을 참고해서 원하는대로 설정이나 앱을 추가해 주고, 이렇게 빌드된 컨테이너를 운용하는데...  그냥 날려버리기 전에 컨테이너를 압축파일로 백업하거나 하는 방법 등을 더 확인해 둡니다.
-
 * 실행후 메시지를 잘 보고, Bitnami RedMine의 디폴트 아이디는 'user', 패스워드는 'bitnami'임을 확인합시다.
+* 이제 다른 새로운 터미널 에뮬레이터를 하나 더 띄우고, 여기서 `ifconfig` 명령을 쳐서 도커로 제공되는 RedMine 가상 서버의 아이피를 확인합니다.
+
 
 
 
