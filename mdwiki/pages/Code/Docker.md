@@ -8,6 +8,7 @@
 * 도커 한국어 문서 모음 ::: https://github.com/remotty/documents.docker.co.kr
 * 과학기술 파이썬 툴체인 가상화 ::: http://raspberry-pi.xwmooc.org/raspberry-pi-programming-science-docker.html
 * 도커 사용법 예제와 함께 설명 ::: https://github.com/leeplay/study/tree/master/docker/thedockerbook
+* Doker run 특성 관련 ::: https://bestna.wordpress.com/2014/11/10/docker-container-run-%EC%9D%B4%EC%95%BC%EA%B8%B0/
 * 사용법 아주 짧게 요약 ::: https://github.com/koojh89/wiki/wiki/docker
 * 치트 시트 ::: https://gist.github.com/nacyot/8366310
 
