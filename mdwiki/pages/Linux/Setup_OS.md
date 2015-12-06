@@ -380,47 +380,18 @@ LC_MEASUREMENT="ko_KR.UTF-8"
 sudo apt-get install uim uim-byeoru
 ```
 
-* 그리고, 이것과 별도로 새로 나온 다솜입력기를 설치해 봅니다.  UIM벼루와 비교해서 일장일단이 있는 듯 합니다.  다솜입력기는 개발자께서 Github에서 컴파일된 배포판을 제공해 주고 있습니다.  별도의 웹브라우저로 다운로드 받을 필요 없이, wget 명령을 이용해서 직접 다운로드 받아 봅시다.
+* 그리고, 이것과 별도로 새로 나온 다솜입력기를 설치해 봅니다.  UIM벼루와 비교해서 일장일단이 있는 듯 합니다.
+
+* 다솜입력기는 2015.12.05일부터 PPA 저장소에서 자동 설치본 제공이 시작되었습니다.  따라서 다음 저장소를 반영합니다.
 ```
-wget https://github.com/cogniti/dasom/releases/download/1.0.1/dasom_1.0.1-ubuntu-14.04_amd64.deb
+sudo add-apt-repository ppa:dasom
+```
+* 그리고 설치하면 됩니다.
+```
+sudo apt-get update
+sudo apt-get install dasom dasom-gtk dasom-qt dasom-jeongeum
 ```
 
-* 다운로드가 다 되면 `ls` 명령을 쳐서 파일이 잘 다운되어 있는지 확인해 보고, 이것을 설치합니다.  *.deb 파일을 설치해주는 명령어는 dpkg 입니다.  install 하라는 의미로 '-i'라는 옵션을 붙입니다.  현재 이 디렉토리에는 *.deb 파일이 하나만 있기 때문에, 파일 이름을 번거롭게 다 쓰지 말고 '*.deb'로 써 줘도 충분할 것입니다.
-```
-sudo dpkg -i *.deb
-```
-
-* 그런데, 현재 상태에서 시도해 보니 의존성 오류가 있는 듯 합니다.  즉 먼저 설치되어 있어야 할 라이브러리 같은 것들이 좀 빠져 있나 봅니다.  일단 오류메시지 중에서 의존서 관련 부분의 내용을 보면 다음과 같습니다.
-```
-dpkg: dependency problems prevent configuration of dasom:
- dasom depends on libappindicator3-1 (>= 0.2.96); however:
-  Package libappindicator3-1 is not installed.
- dasom depends on libhangul1 (>= 0.1.0); however:
-  Package libhangul1 is not installed.
- dasom depends on libqt5core5a (>= 5.0.2); however:
-  Package libqt5core5a is not installed.
- dasom depends on libqt5gui5 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2); however:
-  Package libqt5gui5 is not installed.
-  Package libqt5gui5-gles is not installed.
- dasom depends on libqt5widgets5 (>= 5.0.2); however:
-  Package libqt5widgets5 is not installed.
- dasom depends on libqtcore4 (>= 4:4.7.0~beta1); however:
-  Package libqtcore4 is not installed.
- dasom depends on libqtgui4 (>= 4:4.5.3); however:
-  Package libqtgui4 is not installed.
- dasom depends on qtbase-abi-5-2-1; however:
-  Package qtbase-abi-5-2-1 is not installed.
-```
-
-* 이걸 보고 필요한 패키지를 설치해 줍시다.  사소한 문제가 있어도 강제로 설치하기 위해 '-f' 옵션을 붙여줬습니다.
-```
-sudo apt-get -f install libappindicator3-1 libhangul1 libqt5core5a libqt5gui5 libqt5gui5-gles libqt5widgets5 libqtcore4 libqtgui4 qtbase-abi-5-2-1
-```
-
-* 그리고 이제 다시 다솜입력기 설치를 시도합니다.  아마 문제없이 잘 완료될 것입니다.
-```
-sudo dpkg -i *.deb
-```
 
 * UIM벼루 및 다솜입력기 2가지를 설치했습니다.  이제 어느것을 사용할지 결정해 줘야 할 것 같습니다.  한글입력기 결정을 설정해 주는 유틸리티로 im-config가 있으며, 이것을 또 설치해 줍시다.
 ```
