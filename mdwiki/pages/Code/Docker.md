@@ -47,7 +47,7 @@ sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
 sudo update-rc.d docker.io defaults
 ```
 
-## 설치 방법 2 (조금 복잡하지만 정석대로 가기)
+## 설치 방법 2 (조금 복잡하지만 정석대로 가기.  저는 이 방식으로 설치해 보았습니다.)
 * 참고 : http://docs.docker.com/engine/installation/ubuntulinux/
 * 아마 이쪽이 더 최신버전을 한템포 더 빨리 반영하기가 좋은 것 같습니다. (도커에서 직접 제공하는 저장소에서 설치하기 때문)
 * 우선 아래 명령으로 apt 저장소 소스를 새로 등록해 줍니다.
