@@ -96,7 +96,7 @@ sudo usermod -aG docker 아이디
 이후에 로그아웃 했다가 다시 로그인 하면 docker 유저그룹으로서 적용이 됩니다.
 * 그리고 이제 `sudo` 명령을 생략하고 명령을 때려서 확인해 봅니다.
 ```
-docker run -i -t hello-world
+docker run hello-world
 ```
 
 ## 이미지 땡겨오기
