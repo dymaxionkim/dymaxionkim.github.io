@@ -138,7 +138,28 @@ http://localhost:9999/
 * Bitnami RedMine의 디폴트 아이디는 'user', 패스워드는 'bitnami'임을 확인합시다.  이제 RedMine 서비스를 사용해 보면 됩니다.
 * 이렇게 일단 사용은 가능한데, 몇가지 문제가 더 남아있습니다.  이 이미지의 경우에는, DB 같은 것들이 다 포함되어 있어서, 내용을 변경하거나 채워넣으면 내부의 DB에 변화가 일어나는데, 이것을 따로 commit 해서 새로운 이미지로 만들어놓지 않으면 그대로 다 날아가 버립니다.
 * 때문에 이상적으로는, DB나 파일저장소는 도커 이미지 안에 들어있는걸 쓰지 말고 외부의 것을 갖다 쓰는 방식으로 구성하고, 도커 컨테이너에는 순수하게 어플리케이션만 돌아가도록 해서 이미지 백업을 안 해도 되도록 구성하는게 낫지 않나 합니다.
-* 본 예제에서 사용된 Bitnami RedMine의 경우, 컨테이너를 Stop 했다가 다시 Start 시켜보니깐 다시 살아나는데 문제가 있는 듯 합니다.  재부팅이 안되므로 지속적으로 사용하기가 곤란하다는 이야기인데, 원인은 아직 규명하지 못했습니다.  이것 말고 다른 이미지들을 더 테스트해보고 적당한 것으로 골라야겠습니다. (예 : https://hub.docker.com/r/sameersbn/redmine/ )
+
+* 백그라운드 실행, 컨테이너 이름 결정, 외부와 디렉토리 공유, 포트포워딩 조건을 줘서 제대로 실행해 보면...
+```
+docker run -d --name=redmine -v ~/redmine-files:/opt/redmine/apps -e USER_UID=`id -u` -p 9999:80 -p 443:443 bitnami/redmine
+```
+* 새로운 터미널을 만들어서 안을 둘러보거나 할 때 이걸로 하면 되고..
+```
+docker exec -it redmine /bin/bash
+```
+* 로그파일을 생성해서 상황을 볼 때는 이걸로.. (물론 아래 경로의 디렉토리는 다 만들어줘야 할 듯)
+```
+docker exec -it redmine /opt/bitnami/scripts/logs.sh apache
+docker exec -it redmine /opt/bitnami/scripts/logs.sh mysql
+```
+* 웹서비스를 중단했다가 다시 시작하려면 이걸 때리면 됩니다.
+```
+docker exec -it redmine /services.sh stop
+docker exec -it redmine /services.sh start
+```
+
+* 본 예제에서 사용된 Bitnami RedMine의 경우, 컨테이너를 Stop 했다가 다시 Start 시켜보니깐 다시 살아나는데 문제가 있는 듯 합니다.  조사해 보니, 아파치 등 부팅 직후 자동실행되는 서비스들이 올라타는 Bash쉘이 EXIT 되어 버리기 때문에 재기동할 때 서비스가 자동으로 실행되지 않는 문제 같습니다.
+* 따라서, 현재로서는 stop 및 start가 잘 안되므로, 이걸 피해서 운용하는 수 밖에 없는 듯 합니다.  일단 핵심 데이타(DB)는 외부로 빼내주고, 핵심 설정 내용들을 얼려주기 위해 commit을 사용하여 새로운 업데이트된 이미지를 생성하는 것이 정석일 듯 합니다.
 
 
 ## 기타 기본적인 관리 명령어들
