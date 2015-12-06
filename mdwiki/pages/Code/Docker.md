@@ -9,6 +9,7 @@
 * 과학기술 파이썬 툴체인 가상화 ::: http://raspberry-pi.xwmooc.org/raspberry-pi-programming-science-docker.html
 * 도커 사용법 예제와 함께 설명 ::: https://github.com/leeplay/study/tree/master/docker/thedockerbook
 * 사용법 아주 짧게 요약 ::: https://github.com/koojh89/wiki/wiki/docker
+* 치트 시트 ::: https://gist.github.com/nacyot/8366310
 
 ## Docker ?
 * 이게 뭔지는 정확하게 구글링해서 알아보면 됩니다.
@@ -151,5 +152,3 @@ http://localhost:9999/
 * 현재 중지상태인 컨테이너 시작하기 ::: `docker start 이름`
 * 컨테이너 외부에서 컨테이너 내부로 명령 때려주기 ::: `docker exec 이름 명령`
 * `docker run -it 이름 /bin/bash`
-
-
