@@ -119,7 +119,7 @@ docker images
 ## 땡겨온 RedMine 이미지 실행해 보기
 * 이렇게 땡겨온 후 곧바로 실행해 보면 됩니다.  (더 자세한 실행 옵션은 설명서 보면서 확인.  여기서는 일단 백그라운드로 실행하도록 -d 옵션을 주고, 또 9999로 포트포워딩을 하도록 -p 옵션을 주었습니다.)
 ```
-docker run -d -p 9999:80 bitnami/redmine
+docker run -d --name=redmine -p 9999:80 bitnami/redmine
 ```
 * 현재 실행중인 컨테이너들의 목록을 보는 명령은,
 ```
