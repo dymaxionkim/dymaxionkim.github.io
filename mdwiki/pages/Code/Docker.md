@@ -31,7 +31,7 @@
 뭐 이런 것들을 따로따로 Docker로 묶어서 제공한다면 관리가 상당히 편해지지 않을까 생각되네요.  실제 사용 방법은 천천히 익혀봐야 겠습니다.
 
 ## 설치 방법 1
-  **(쉽게 가기)**
+Note: 쉽게 가기
 
 * 참고 : http://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/
 * Ubuntu 14.04에서는 apt-get으로 곧바로 설치가 가능하므로 엄청나게 편합니다.
@@ -50,7 +50,7 @@ sudo update-rc.d docker.io defaults
 ```
 
 ## 설치 방법 2
-  **(조금 복잡하지만 정석대로 가기.  저는 이 방식으로 설치해 보았습니다.)**
+Note: 조금 복잡하지만 정석대로 가기.  저는 이 방식으로 설치해 보았습니다.
 
 * 참고 : http://docs.docker.com/engine/installation/ubuntulinux/
 * 아마 이쪽이 더 최신버전을 한템포 더 빨리 반영하기가 좋은 것 같습니다. (도커에서 직접 제공하는 저장소에서 설치하기 때문)
