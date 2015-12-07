@@ -33,8 +33,10 @@
 * Docker + RedMine ::: https://translate.google.com/translate?prev=_t&hl=en&ie=UTF-8&u=http://qiita.com/shouta-dev/items/24cfee84ae1d4135ee43&sl=auto&tl=ko
 * Docker Image of RedMine ::: https://hub.docker.com/r/sameersbn/redmine/
 
+## 테마 추가 설치
+* [flatly_light](https://github.com/Nitrino/flatly_light_redmine), [flat](https://github.com/tsi/redmine-theme-flat), [hardpixel](https://github.com/hardpixel/minelab), [makotokw](https://github.com/makotokw/redmine-theme-gitmike), [PurpleMine2](https://github.com/mrliptontea/PurpleMine2)
+
+
 ## 사례
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
-
-
