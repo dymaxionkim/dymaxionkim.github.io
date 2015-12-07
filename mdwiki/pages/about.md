@@ -13,6 +13,7 @@
 * Blog ::: [Old Blog in Naver.com](http://blog.naver.com/dymaxion) / [Blog in Google Blogspot](http://dymaxionkim.blogspot.kr/)
 * Wiki ::: [Here](http://dymaxionkim.github.io) / [Torchpad](http://dymaxionkim.torchpad.com)
 * Github ::: [dymaxionkim.github.io](https://github.com/dymaxionkim/dymaxionkim.github.io) / [UbuntuBang](https://github.com/dymaxionkim/UbuntuBang) / [JINGO_WIKI](https://github.com/dymaxionkim/JINGO_WIKI) / [COMBI](https://github.com/dymaxionkim/COMBI) / [FGPG](https://github.com/dymaxionkim/FGPG)
+* Temperature Personal Servers ::: [RedMine](http://dymaxionkim.iptime.org:8000) / [Jupyter Notebook](http://dymaxionkim.iptime.org:9000)
 
 ## Brief Career
 * 1997~2000 ::: 1DOF Inverted Pendulum / 4DOF Rig for 35mm Camera / 6DOF Motion Control Camera
