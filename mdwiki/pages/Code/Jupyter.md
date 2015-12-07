@@ -30,16 +30,13 @@ c.NotebookApp.password = u'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e
 ```
 # Set ip to '*' to bind on all interfaces (ips) for the public server
 c.NotebookApp.ip = '*'
-
 # The port the notebook server will listen on.
 c.NotebookApp.port = 8100
-
 # Whether to open in a browser after starting. The specific browser used is
 # platform dependent and determined by the python standard library `webbrowser`
 # module, unless it is overridden using the --browser (NotebookApp.browser)
 # configuration option.
 c.NotebookApp.open_browser = False
-
 ```
 * 이제 설정파일 편집은 됐고, 지정해 준 포트로 외부 접속이 되도록 방화벽 설정이 되어 있는지 확인해서 풀어줄 필요가 있습니다.  현재 사용중인 UbuntuBang은 방화벽이 없으므로 생략.  또 프록시 관련된 것도 생략.
 * 이제 남은 건, 집에서 보통 공유기를 사용하게 되는데 공유기 부분의 설정을 건드려주면 좀 더 편리해 질 것입니다.  ipTime 공유기의 경우, 포트포워드 설정 부분을 건드려서 외부에서 접속할 때, 예를 들어 여기서 지정된 8100 포트를 80 포트로 포워딩되록 바꿔서 편리하게 해 준다던가...  또 ipTime의 특수기능으로 DDNS 설정에 들어가서 호스트 이름을 '지정한이름.iptime.org'로 등록해 줘서 가정용 유동ip 상황일때도 도메인 네임으로 편하게 접속할 수 있도록 해 준다던가 하는 것들을 건드려주면 되겠습니다.
