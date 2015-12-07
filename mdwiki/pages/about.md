@@ -6,7 +6,7 @@
 * Name : Kim,Dong-ho
 * Email : dymaxion.kim@gmail.com
 * Job : Mechanical Engineer / Mechanical Designer
-* Interested : Easy Engineering with Free/Open Source Softwares
+* Interested : Easy Engineering with Free/Open Source Softwares / Dexterous Light-Weight Manipulator
 
 ## My Sites
 * SNS ::: [Google Plus](https://plus.google.com/u/0/+DymaxionKim) / [Youtube Chanel](https://www.youtube.com/channel/UCFiY-7XHuvE6tNbF35qRcFA)
