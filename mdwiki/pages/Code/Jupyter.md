@@ -50,7 +50,24 @@ c.NotebookApp.open_browser = False
 * 그런데 이렇게 주소를 입력하면 자동으로 'http://주소:포트/tree' 로 들어가 집니다.  (예: http://dymaxionkim.iptime.org:9000/tree ) 여기서 서비스가 이루어지죠.
 * 그럼 주소를 변경해서, 'tree' 부분을 'files'로 변경해 봅니다.  'http://주소:포트/files' (예: http://dymaxionkim.iptime.org:9000/files )  이런 식으로요.
 * 물론 이때 `/home/dong/index.html` 파일을 만들어 둔 상태로요.  그러면 이 파일로 웹호스팅이 됩니다.
-
+* 응용예로, '`/home/dong/MDwiki/' 디렉토리를 만들어서 그 안에 MDwiki를 넣어두고, `/home/dong/index.html` 파일에는 편집기로 내용을 아래와 같이 해서 저장해 두면...
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--
+     Override `MDwiki` below with your default language and country code
+  -->
+<meta http-equiv="refresh" content="0; url=MDwiki/" />
+<title>Loading</title>
+</head>
+<body>
+<h1>쫌만 기둘려!</h1>
+</body>
+</html>
+```
+* `/home/dong/index.html`  파일이 웹에 띄워지면서 그 아래에 있는 'MDwiki/' 디렉토리로 옯겨가서 그 안의 '/home/dong/MDwiki/index.html' 파일을 로드해 줍니다.  그러면 MDwiki 서비스가 되는거죠.
 
 ## Jupyter Notebook Extensions
 * **gist.js** ::: Github Gist에 현재의 .ipynb 파일을 업로드하는 버튼 추가하는 확장기능.  [설명서 보기](http://nbviewer.ipython.org/gist/dymaxionkim/d9a2ab620303982df1af?flush_cache=true)
