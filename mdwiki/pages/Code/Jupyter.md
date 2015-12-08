@@ -44,4 +44,4 @@ c.NotebookApp.open_browser = False
 
 
 ## Jupyter Notebook Extensions
-* **gist.js** (Github Gist에 현재의 .ipynb 파일을 업로드하는 버튼 추가) ::: https://gist.github.com/dymaxionkim/d9a2ab620303982df1af
+* **gist.js** ::: Github Gist에 현재의 .ipynb 파일을 업로드하는 버튼 추가하는 확장기능.  [설명서 보기](http://nbviewer.ipython.org/gist/dymaxionkim/d9a2ab620303982df1af?flush_cache=true)
