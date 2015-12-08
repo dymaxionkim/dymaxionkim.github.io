@@ -42,6 +42,15 @@ c.NotebookApp.open_browser = False
 * 이제 남은 건, 집에서 보통 공유기를 사용하게 되는데 공유기 부분의 설정을 건드려주면 좀 더 편리해 질 것입니다.  ipTime 공유기의 경우, 포트포워드 설정 부분을 건드려서 외부에서 접속할 때, 예를 들어 여기서 지정된 8100 포트를 80 포트로 포워딩되록 바꿔서 편리하게 해 준다던가...  또 ipTime의 특수기능으로 DDNS 설정에 들어가서 호스트 이름을 '지정한이름.iptime.org'로 등록해 줘서 가정용 유동ip 상황일때도 도메인 네임으로 편하게 접속할 수 있도록 해 준다던가 하는 것들을 건드려주면 되겠습니다.
 * 현재의 Jupyter Notebook은 싱글유저만 되는데, 멀티유저로 서비스하려면 JupyterHub를 설치해서 운용해야 합니다.  다만 이런식으로 퍼블릭하게 나가려면 좀 더 제대로 된 서버를 구축하고, JupyterHub는 Docker 컨테이너로 운용을 한다던가 하는 등의 관리 전략을 세우면 될 것 같습니다만...  여기서의 목표는 서버 관리자가 되는게 아니므로 이정도까지만 하겠습니다.  다만 외부 인터넷 연결되는 서버 운용시 외부 해커 침입에는 유의해 주는 것이 좋겠습니다.
 
+## Jupyter Notebook을 정적 웹서버로도 활용하기
+* 이건 일종의 팁 같은 걸로 볼 수 있을 듯 합니다.
+* Jupyter Notebook은 기본적으로 자신을 실행시킨 계정의 홈 디렉토리에서 시작합니다.  예를 들어 dong 이라는 계정으로 별다른 옵션 없이 실행하면 `/home/dong/`에서 그 아래의 모든 디렉토리를 볼 수 있죠.
+* 그럼 `/home/dong/index.html` 파일을 하나 적당히 넣어놓고 이걸 호스팅 할 수 있지 않을까요?  가능한 것 같습니다.
+* Jupyter Notebook 서비스의 URL은 보통 'http://주소:포트' 이렇게 됩니다.  (예: http://dymaxionkim.iptime.org:9000 )
+* 그런데 이렇게 주소를 입력하면 자동으로 'http://주소:포트/tree' 로 들어가 집니다.  (예: http://dymaxionkim.iptime.org:9000/tree ) 여기서 서비스가 이루어지죠.
+* 그럼 주소를 변경해서, 'tree' 부분을 'files'로 변경해 봅니다.  'http://주소:포트/files' (예: http://dymaxionkim.iptime.org:9000/files )  이런 식으로요.
+* 물론 이때 `/home/dong/index.html` 파일을 만들어 둔 상태로요.  그러면 이 파일로 웹호스팅이 됩니다.
+
 
 ## Jupyter Notebook Extensions
 * **gist.js** ::: Github Gist에 현재의 .ipynb 파일을 업로드하는 버튼 추가하는 확장기능.  [설명서 보기](http://nbviewer.ipython.org/gist/dymaxionkim/d9a2ab620303982df1af?flush_cache=true)
