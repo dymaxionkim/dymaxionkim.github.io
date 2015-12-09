@@ -48,7 +48,7 @@ c.NotebookApp.open_browser = False
 * 그럼 `/home/dong/index.html` 파일을 하나 적당히 넣어놓고 이걸 호스팅 할 수 있지 않을까요?  가능한 것 같습니다.
 * Jupyter Notebook 서비스의 URL은 보통 'http://주소:포트' 이렇게 됩니다.  (예: http://dymaxionkim.iptime.org:9000 )
 * 그런데 이렇게 주소를 입력하면 자동으로 'http://주소:포트/tree' 로 들어가 집니다.  (예: http://dymaxionkim.iptime.org:9000/tree ) 여기서 서비스가 이루어지죠.
-* 그럼 주소를 변경해서, 'tree' 부분을 'files'로 변경해 봅니다.  'http://주소:포트/files' (예: http://dymaxionkim.iptime.org:9000/files )  이런 식으로요.
+* 그럼 주소를 변경해서, 'tree' 부분을 'files'로 변경해 봅니다.  'http://주소:포트/files/index.html' (예: http://dymaxionkim.iptime.org:9000/files/index.html )  이런 식으로요.
 * 물론 이때 `/home/dong/index.html` 파일을 만들어 둔 상태로요.  그러면 이 파일로 웹호스팅이 됩니다.
 * 응용예로, '`/home/dong/MDwiki/' 디렉토리를 만들어서 그 안에 MDwiki를 넣어두고, `/home/dong/index.html` 파일에는 편집기로 내용을 아래와 같이 해서 저장해 두면...
 ```
