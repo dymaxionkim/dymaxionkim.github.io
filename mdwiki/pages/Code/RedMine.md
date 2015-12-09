@@ -37,6 +37,20 @@
 * [flatly_light](https://github.com/Nitrino/flatly_light_redmine), [flat](https://github.com/tsi/redmine-theme-flat), [hardpixel](https://github.com/hardpixel/minelab), [makotokw](https://github.com/makotokw/redmine-theme-gitmike), [PurpleMine2](https://github.com/mrliptontea/PurpleMine2)
 
 
+## 간트챠트를 그림으로 출력할 때 한글 문제 해결
+* Ref ::: http://www.whatwant.com/582
+* RedMine 사용중 발견한 문제점으로, Gantt Chart를 PNG 그림파일로 출력할 때 한글이 다 '???' 식으로 깨져서 나옵니다.  폰트 설정 문제이므로 설정을 변경해서 해결할 수 있다고 합니다.
+* 다음 설정 파일을 편집기로 열어서 수정하면 됩니다.
+```
+sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/config/configuration.yml
+```
+요기서 `rmagick_font_path:` 문구를 찾은 다음, 내용을 `rmagick_font_path: /usr/share/fonts/truetype/nanum/NanumGothic.ttf` 으로 바꿔 써 주면 됩니다.
+* 그리고 Redmine 매니저를 실행한 후 여기서 아파치 서버를 다시 시작하면 됩니다.
+```
+sudo /opt/redmine-3.1.2-0/manager-linux-x64.run
+```
+
+
 ## 사례
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
