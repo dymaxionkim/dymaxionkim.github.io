@@ -50,6 +50,16 @@ sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/config/configuration.yml
 sudo /opt/redmine-3.1.2-0/manager-linux-x64.run
 ```
 
+## RedMine 페이지의 상단 메뉴에서 '도움말' 링크 위치 변경하기
+* 디폴트 상태에서는 레드마인 공식 홈페이지의 사용법 주소로 연결됩니다.
+* 사내에서 또는 소규모 팀에서 사용할 경우, 별도로 작성한 도움말로 연결해주는 것이 좋을 때가 있을 것 같습니다.
+* 이를 변경하려면 설정파일을 다음과 같이 열어서..
+```
+sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/lib/redmine/info.rb
+```
+* `def help_url; '...'` 항목에 들어있는 주소를 원하는 주소로 변경하면 됩니다.
+* 그리고 RedMine 서버 재시작.
+
 
 ## 사례
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
