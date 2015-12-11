@@ -37,6 +37,52 @@
 * [flatly_light](https://github.com/Nitrino/flatly_light_redmine), [flat](https://github.com/tsi/redmine-theme-flat), [hardpixel](https://github.com/hardpixel/minelab), [makotokw](https://github.com/makotokw/redmine-theme-gitmike), [PurpleMine2](https://github.com/mrliptontea/PurpleMine2)
 
 
-## 사례
+## 간트챠트를 그림으로 출력할 때 한글 문제 해결
+* Ref ::: http://www.whatwant.com/582
+* RedMine 사용중 발견한 문제점으로, Gantt Chart를 PNG 그림파일로 출력할 때 한글이 다 '???' 식으로 깨져서 나옵니다.  폰트 설정 문제이므로 설정을 변경해서 해결할 수 있다고 합니다.
+* 다음 설정 파일을 편집기로 열어서 수정하면 됩니다.
+```
+sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/config/configuration.yml
+```
+요기서 `rmagick_font_path:` 문구를 찾은 다음, 내용을 `rmagick_font_path: /usr/share/fonts/truetype/nanum/NanumGothic.ttf` 으로 바꿔 써 주면 됩니다.
+* 그리고 Redmine 매니저를 실행한 후 여기서 아파치 서버를 다시 시작하면 됩니다.
+```
+sudo /opt/redmine-3.1.2-0/manager-linux-x64.run
+```
+
+## RedMine 페이지의 상단 메뉴에서 '도움말' 링크 위치 변경하기
+* 디폴트 상태에서는 레드마인 공식 홈페이지의 사용법 주소로 연결됩니다.
+* 사내에서 또는 소규모 팀에서 사용할 경우, 별도로 작성한 도움말로 연결해주는 것이 좋을 때가 있을 것 같습니다.
+* 이를 변경하려면 설정파일을 다음과 같이 열어서..
+```
+sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/lib/redmine/info.rb
+```
+* `def help_url; '...'` 항목에 들어있는 주소를 원하는 주소로 변경하면 됩니다.
+* 그리고 RedMine 서버 재시작.
+
+## 플러그인 설치 (Monitoring-Controlling 플러그인 설치예)
+* Ref. ::: http://egloos.zum.com/keugbang/v/5845069
+* Bitnami RedMine 패키지를 설치해서 운용할 경우, 다음의 플러그인 설치 디렉토리로 우선 이동합니다.
+```
+cd /opt/redmine-3.1.2-0/apps/redmine/htdocs/plugins
+```
+* 그 다음, 플러그인을 Github에서 곧바로 다운로드 합니다.
+```
+sudo git clone http://github.com/alexmonteiro/Redmine-Monitoring-Controlling.git redmine_monitoring_controlling
+```
+* 설치 끝!
+* 설치는 끝났으니, 이제 적용하려면 RedMine을 재시작한 다음, 관리 메뉴에서 플러그인이 인식되었는지 확인하면 됩니다.  각 프로젝트의 설정 메뉴의 모듈 탭에서 'Monitoring & Controlling by Project'를 체크해 주면 'Monitoring & Controlling' 메뉴가 생겨납니다.
+* 적용 끝!
+
+NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하여 다운로드 받은 플러그인을 인식시켜주도록 설명되어 있는데, 최신버전으로 업데이트 되면서 그 과정이 생략되고 자동으로 인식되는 것으로 생각되네요. Bitnami RedMine에서 rake 같은 명령을 사용하려면, 그냥 일반 터미널 에뮬레이터에서 하면 path가 잡혀있지 않아 해당 명령어를 찾지 못하는데, 그때는 `/opt/redmine-3.1.2-0/use_redmine` 쉘스크립트를 터미널에서 실행시키면 그 안에 내용대로 path 잡아주면서 쉘이 시작됩니다.
+
+
+## Ref.
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
+* 레드마인 커뮤니티 ::: http://www.jenkins.or.kr/projects/community
+* 레드마인 플러그인 리스트 ::: http://www.redmine.org/projects/redmine/wiki/Plugin_list
+
+
+
+
