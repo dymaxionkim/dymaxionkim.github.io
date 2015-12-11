@@ -77,7 +77,12 @@ sudo git clone http://github.com/alexmonteiro/Redmine-Monitoring-Controlling.git
 NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하여 다운로드 받은 플러그인을 인식시켜주도록 설명되어 있는데, 최신버전으로 업데이트 되면서 그 과정이 생략되고 자동으로 인식되는 것으로 생각되네요. Bitnami RedMine에서 rake 같은 명령을 사용하려면, 그냥 일반 터미널 에뮬레이터에서 하면 path가 잡혀있지 않아 해당 명령어를 찾지 못하는데, 그때는 `/opt/redmine-3.1.2-0/use_redmine` 쉘스크립트를 터미널에서 실행시키면 그 안에 내용대로 path 잡아주면서 쉘이 시작됩니다.
 
 
-## 사례
+## Ref.
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
 * 레드마인 커뮤니티 ::: http://www.jenkins.or.kr/projects/community
+* 레드마인 플러그인 리스트 ::: http://www.redmine.org/projects/redmine/wiki/Plugin_list
+
+
+
+
