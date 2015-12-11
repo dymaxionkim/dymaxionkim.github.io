@@ -61,6 +61,7 @@ sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/lib/redmine/info.rb
 * 그리고 RedMine 서버 재시작.
 
 ## 플러그인 설치 (Monitoring-Controlling 플러그인 설치예)
+* Ref. ::: http://egloos.zum.com/keugbang/v/5845069
 * Bitnami RedMine 패키지를 설치해서 운용할 경우, 다음의 플러그인 설치 디렉토리로 우선 이동합니다.
 ```
 cd /opt/redmine-3.1.2-0/apps/redmine/htdocs/plugins
