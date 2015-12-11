@@ -73,6 +73,7 @@ sudo git clone http://github.com/alexmonteiro/Redmine-Monitoring-Controlling.git
 * 설치 끝!
 * 설치는 끝났으니, 이제 적용하려면 RedMine을 재시작한 다음, 관리 메뉴에서 플러그인이 인식되었는지 확인하면 됩니다.  각 프로젝트의 설정 메뉴의 모듈 탭에서 'Monitoring & Controlling by Project'를 체크해 주면 'Monitoring & Controlling' 메뉴가 생겨납니다.
 * 적용 끝!
+NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하여 다운로드 받은 플러그인을 인식시켜주도록 설명되어 있는데, 최신버전으로 업데이트 되면서 그 과정이 생략되고 자동으로 인식되는 것으로 생각되네요. 
 
 
 ## 사례
