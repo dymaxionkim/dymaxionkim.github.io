@@ -64,3 +64,6 @@ sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/lib/redmine/info.rb
 ## 사례
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
+* 레드마인 커뮤니티 ::: http://www.jenkins.or.kr/projects/community
+
+
