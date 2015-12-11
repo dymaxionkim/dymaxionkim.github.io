@@ -84,6 +84,7 @@
   * [Github](pages/Code/Github.md)
   * [RedMine](pages/Code/RedMine.md)
   * [Docker](pages/Code/Docker.md)
+  * [Jupyter](pages/Code/Jupyter.md)
 
 
 

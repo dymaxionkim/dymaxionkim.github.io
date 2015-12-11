@@ -142,3 +142,39 @@ sudo apt-get update
 * 'apt-get clean'이라는 명령 역시 깨끗하게 비우라는 것인데, 앞뒤로 확인하듯이 한번씩 명령을 줘서 확실하게 합니다.
 
 * 이후에 update를 시도하는 것입니다.  그러면 새롭게 받아진 저장소 목록으로 해당 디렉토리들이 채워집니다.  이렇게 하면 중간에 인증(GPG)나 에러체크(해시 합) 관련해서 오류가 있는 파일들이 있을 확률이 크게 낮아지므로 문제를 해결할 수 있는 경우가 많습니다.
+
+
+
+## UbuntuBang 쪽에서 네트워크 설정 변경 (고정아이피로 하기)
+* 가정용 공유기로 외부에서 접근 가능하게 접속해 주면, 포트포워딩 같은걸 해야 하므로 리눅스 쪽이 공유기로 접속되는 내부 아이피를 고정아이피로 바꿔줄 필요가 있습니다.  재부팅할때마다 바뀌면 곤란하니까요.
+* 전제조건으로, VirtualBox에서 운용중인 리눅스의 네트워크 설정이 VirtualBox 쪽에서 반드시 '브릿지어댑터'로 되어 있어야 합니다.  'NAT'로 되어 있을 경우에는 호스트 단인 윈도우 쪽에 종속된 아이피를 사용하게 되므로 외부와 연결되는 서버 운용이 안됩니다.
+* 일단 아래 네트워크 설정 파일을 편집기로 엽니다.
+```
+sudo leafpad /etc/network/interfaces
+```
+* 열어보니 아래와 같은 내용이 보입니다.  eth0 랜카드를 auto로 뭐 어쩌구 해라 대충 이런 내용이겠죠.
+```
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+# The loopback network interface
+auto lo
+iface lo inet loopback
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+```
+* 이걸 지우고(불안하면 다름 이름으로 카피해서 백업해 두고) 아래 내용으로 바꿔줍니다.  물론 address는 원하는 아이피로 바꿔줘야겠고, netmask 및 게이트웨이도 확인해 줍니다.  공유기를 사용할 경우에는 공유기에서 정보 확인해서 적용합니다.
+```
+auto lo
+iface lo inet loopback
+auto eth0
+iface eth0 inet static
+address 192.168.0.9
+netmask 255.255.255.0
+gateway 110.35.26.1
+```
+* 그리고 네트워크 재 시작 명령.
+```
+sudo /etc/init.d/networking restart
+```
+

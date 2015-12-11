@@ -6,15 +6,17 @@
 * Name : Kim,Dong-ho
 * Email : dymaxion.kim@gmail.com
 * Job : Mechanical Engineer / Mechanical Designer
-* Interested : Easy Engineering with Free/Open Source Softwares
+* Interested : Easy Engineering with Free/Open Source Softwares / Dexterous Light-Weight Manipulator
 
 ## My Sites
 * SNS ::: [Google Plus](https://plus.google.com/u/0/+DymaxionKim) / [Youtube Chanel](https://www.youtube.com/channel/UCFiY-7XHuvE6tNbF35qRcFA)
 * Blog ::: [Old Blog in Naver.com](http://blog.naver.com/dymaxion) / [Blog in Google Blogspot](http://dymaxionkim.blogspot.kr/)
 * Wiki ::: [Here](http://dymaxionkim.github.io) / [Torchpad](http://dymaxionkim.torchpad.com)
 * Github ::: [dymaxionkim.github.io](https://github.com/dymaxionkim/dymaxionkim.github.io) / [UbuntuBang](https://github.com/dymaxionkim/UbuntuBang) / [JINGO_WIKI](https://github.com/dymaxionkim/JINGO_WIKI) / [COMBI](https://github.com/dymaxionkim/COMBI) / [FGPG](https://github.com/dymaxionkim/FGPG)
+* Temperature Personal Servers ::: [RedMine](http://dymaxionkim.iptime.org:8000/redmine) / [Jupyter Notebook](http://dymaxionkim.iptime.org:9000)
 
 ## Brief Career
+**I have some experiences in Semiconductor Inspections, Consumer Devices, Robotics and some Military Devices.**
 * 1997~2000 ::: 1DOF Inverted Pendulum / 4DOF Rig for 35mm Camera / 6DOF Motion Control Camera
 * 2001~2003 ::: Fine Tungsten Needle by ElectroChemical MEMS Process for Chip Probe Station / Wafer Deprocessing Inspection Machine / Wafer Decapper Inspection Machine
 * 2003~2006 ::: LCD TV / NoteBook / CellPhone / Various Consumer Devices
