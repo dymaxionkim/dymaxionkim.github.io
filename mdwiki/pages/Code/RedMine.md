@@ -60,10 +60,21 @@ sudo leafpad /opt/redmine-3.1.2-0/apps/redmine/htdocs/lib/redmine/info.rb
 * `def help_url; '...'` 항목에 들어있는 주소를 원하는 주소로 변경하면 됩니다.
 * 그리고 RedMine 서버 재시작.
 
+## 플러그인 설치 (Monitoring-Controlling 플러그인 설치예)
+* Bitnami RedMine 패키지를 설치해서 운용할 경우, 다음의 플러그인 설치 디렉토리로 우선 이동합니다.
+```
+cd /opt/redmine-3.1.2-0/apps/redmine/htdocs/plugins
+```
+* 그 다음, 플러그인을 Github에서 곧바로 다운로드 합니다.
+```
+git clone http://github.com/alexmonteiro/Redmine-Monitoring-Controlling.git redmine_monitoring_controlling
+```
+* 설치 끝!
+* 설치는 끝났으니, 이제 적용하려면 RedMine을 재시작한 다음, 관리 메뉴에서 플러그인이 인식되었는지 확인하면 됩니다.  각 프로젝트의 설정 메뉴의 모듈 탭에서 'Monitoring & Controlling by Project'를 체크해 주면 'Monitoring & Controlling' 메뉴가 생겨납니다.
+* 적용 끝!
+
 
 ## 사례
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
 * 레드마인 커뮤니티 ::: http://www.jenkins.or.kr/projects/community
-
-
