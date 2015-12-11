@@ -74,7 +74,7 @@ sudo git clone http://github.com/alexmonteiro/Redmine-Monitoring-Controlling.git
 * 설치는 끝났으니, 이제 적용하려면 RedMine을 재시작한 다음, 관리 메뉴에서 플러그인이 인식되었는지 확인하면 됩니다.  각 프로젝트의 설정 메뉴의 모듈 탭에서 'Monitoring & Controlling by Project'를 체크해 주면 'Monitoring & Controlling' 메뉴가 생겨납니다.
 * 적용 끝!
 
-NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하여 다운로드 받은 플러그인을 인식시켜주도록 설명되어 있는데, 최신버전으로 업데이트 되면서 그 과정이 생략되고 자동으로 인식되는 것으로 생각되네요. 
+NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하여 다운로드 받은 플러그인을 인식시켜주도록 설명되어 있는데, 최신버전으로 업데이트 되면서 그 과정이 생략되고 자동으로 인식되는 것으로 생각되네요. Bitnami RedMine에서 rake 같은 명령을 사용하려면, 그냥 일반 터미널 에뮬레이터에서 하면 path가 잡혀있지 않아 해당 명령어를 찾지 못하는데, 그때는 `/opt/redmine-3.1.2-0/use_redmine` 쉘스크립트를 터미널에서 실행시키면 그 안에 내용대로 path 잡아주면서 쉘이 시작됩니다.
 
 
 ## 사례
