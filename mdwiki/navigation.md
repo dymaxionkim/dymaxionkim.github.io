@@ -27,7 +27,7 @@
   * [Link](pages/link.md)
   * [Edit ::: Prose.io](http://prose.io)
   * [Edit ::: Dillinger.io](http://dillinger.io)
-  * [Edit ::: Draw.io](https://www.draw.io)
+  * [Drawing ::: Draw.io](https://www.draw.io)
 
 
 [Linux]()
