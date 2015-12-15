@@ -63,6 +63,7 @@
   * # Numerical Analysis
   * [FGPG](pages/Mechanical_Engineering/FGPG.md)
   * [COMBI](pages/Mechanical_Engineering/COMBI.md)
+  * [SCREW](pages/Mechanical_Engineering/SCREW.md)
   - - - -
   * # PDM
   * [PartNumber](pages/Mechanical_Engineering/PartNumber.md)
