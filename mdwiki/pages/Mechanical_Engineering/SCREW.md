@@ -60,6 +60,23 @@ def GearParameter(
 ## 결과 예시
 ![SCREW_Output](https://cloud.githubusercontent.com/assets/12775748/11821108/526286ac-a3ab-11e5-8e87-b2c87eaa5107.png)
 
+* 상단의 슬라이드바를 움직여서 간단하게 입력 파라미터를 조절해 줄 수 있습니다.
+
+|입력 파라미터                    | 설명                                         |
+|---------------------------------|----------------------------------------------|
+| Axial Force on Screw Nut [kgf]  | 스크류의 너트에 걸리는 축력 즉 저지하는 외력 |
+| Friction Factor on Screw Nut    | 스크류와 너트간의 마찰계수                   |
+| Mass on Screw [kgf]             | 스크류의 너트에 붙어있는 질량                |
+| Friction Factor between Mass and Ground | 질량체와 바닥면의 마찰계수           |
+| Pitch Diameter of Screw [mm]    | 스크류의 피치 직경                           |
+| Pitch of Screw [mm]	          | 스크류의 피치 치수 (리드값)                  |
+
+
+
+
+
+
+
 
 
 
