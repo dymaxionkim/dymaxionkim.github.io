@@ -54,6 +54,7 @@ def GearParameter(
 
 ## 모델
 ![SCREW](http://4.bp.blogspot.com/-iD2t6aPmZ6g/VS34aBQ5ubI/AAAAAAAAa-w/oM9bUoEYSMU/s1600/20150415_ScrewTorque.png)
+
 * 온라인에서 직접 계산 ::: http://dymaxionkim.blogspot.kr/search/label/SAGE
 
 ## 결과 예시
