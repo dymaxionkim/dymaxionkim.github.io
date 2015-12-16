@@ -72,10 +72,47 @@ def GearParameter(
 | Pitch of Screw [mm]	          | 스크류의 피치 치수 (리드값)                  |
 
 
-
-
-
-
+<div class="compute">
+<script type="text/x-sage">
+#########################################
+# How much Lead Screw Torque V04 (English)
+# 20150415 DH,Kim
+# dymaxion.kim@gmail.com
+#########################################
+@interact
+def GearParameter(
+    Fi = slider(0,50,0.1,10.0,'Axial Force on Screw Nut [kgf]'),
+    us = slider(0,0.5,0.01,0.1,'Friction Factor on Screw Nut'),
+    W = slider(0,10,0.01,0.1,'Mass on Screw [kgf]'),
+    uw = slider(0,0.5,0.01,0.1,'Friction Factor between Mass and Ground'),
+    D = slider(0.1,10,0.1,3.5,'Pitch Diameter of Screw [mm]'),
+    P = slider(0.1,5,0.1,0.7,'Pitch of Screw [mm]')
+    ):
+    ### Physical Constant
+    g = 9806.65 # Gravity Acceleration [mm/s^2]
+    ### Axial Force
+    F = 50 # Max Axial Force on Screw Nut in [kgf]
+    F_total = F + uw*W # Total Axial Force [kgf]
+    Fi_total = Fi + uw*W # Total Axial Force [kgf]
+    ### Screw (ref : http://www.engineersedge.com/hardware/metric-external-thread-sizes1.htm )
+    R = D*pi # Lead of Screw [mm]
+    alpha = atan(P/R)  # Lead Angle of Screw [Rad]
+    nu = (1-us*tan(alpha))/(1+us/tan(alpha)) # Efficiency of Screw
+    ### Torque in [kgf.cm]
+    T = F_total*R/(2*pi*nu)  # Torque in [kgf.mm]
+    T = T*0.1  # Torque in [kgf.cm]
+    Ti = Fi_total*R/(2*pi*nu)  # Torque in [kgf.mm]
+    Ti = Ti*0.1  # Torque in [kgf.cm]
+    t = var('t')
+    DATA = parametric_plot( (t/1000,(0.1*(t+uw*W)*R/(2*pi*nu))/1000), (t,0,int(F_total)*1000), axes_labels=['Total Axial Force\n$[kgf]$','Screw Torque\n$[kgf.cm]$'])
+    DATA += line([(Fi_total,0), (Fi_total,Ti)], color='red')
+    DATA += line([(0,Ti), (Fi_total,Ti)], color='red')
+    DATA += point((Fi_total,Ti), color='green', size=100)
+    Ti = float(Ti)
+    html(r'$Given\ Total\ Axial\ Force = %s [kgf]$<br>'%latex(Fi_total))
+    html(r'$Required\ Screw\ Torque = %s [kgf.cm]$'%latex(Ti))
+    show(DATA, figsize=7, aspect_ratio='automatic', gridlines='automatic')
+ </script></div>
 
 
 
