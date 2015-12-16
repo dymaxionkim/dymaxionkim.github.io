@@ -73,6 +73,17 @@ def GearParameter(
 
 
 <div class="compute">
+	<script src='http://sage.skku.edu/embedded_sagecell.js'/>
+	<script>$(function () {
+	    <!--// Make the div with id &#39;mycell&#39; a Sage cell-->
+	    sagecell.makeSagecell({inputLocation:  &#39;#mycell&#39;,
+	                           template:       sagecell.templates.minimal,
+	                           evalButtonText: &#39;Activate&#39;});
+	    <!--// Make *any* div with class &#39;compute&#39; a Sage cell-->
+	    sagecell.makeSagecell({inputLocation: &#39;div.compute&#39;,
+	                           evalButtonText: &#39;Evaluate&#39;});
+	    });
+	</script>
 <script type="text/x-sage">
 #########################################
 # How much Lead Screw Torque V04 (English)
