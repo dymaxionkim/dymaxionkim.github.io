@@ -77,12 +77,50 @@ sudo git clone http://github.com/alexmonteiro/Redmine-Monitoring-Controlling.git
 NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하여 다운로드 받은 플러그인을 인식시켜주도록 설명되어 있는데, 최신버전으로 업데이트 되면서 그 과정이 생략되고 자동으로 인식되는 것으로 생각되네요. Bitnami RedMine에서 rake 같은 명령을 사용하려면, 그냥 일반 터미널 에뮬레이터에서 하면 path가 잡혀있지 않아 해당 명령어를 찾지 못하는데, 그때는 `/opt/redmine-3.1.2-0/use_redmine` 쉘스크립트를 터미널에서 실행시키면 그 안에 내용대로 path 잡아주면서 쉘이 시작됩니다.
 
 
+## 셋팅 및 데이타 백업하기
+* 일감, 문서, 업로드한 파일들의 백업을 위해서는 다음 경로를 통째로 복사해서 백업합니다.
+```
+/opt/redmine-3.1.2-0/apps/redmine/htdocs/files
+```
+* 데이타베이스 백업을 위해서는 몇가지 절차가 필요합니다.
+* 우선 다음 파일을 복사해서 백업하고, 편집기로 열어서 database, username, password 정보를 파악해 둡니다.
+```
+/opt/redmine-3.1.2-0/apps/redmine/htdocs/config/database.yml
+```
+* 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 위에서 파악한 내용으로 대체해서 적어줍니다.)
+```
+cd /opt/redmine-3.1.2-0/mysql/bin
+./mysqldump -u username -p database > backup.sql
+```
+* 그러면 `backup.sql`으로 데이타베이스 셋팅 백업파일이 생깁니다.
+
+
+## 셋팅 및 데이타 복원하기
+* 새로 설치된 RedMine 경로를 확인해 둡니다.  (여기서는 `/opt/redmine-3.1.2-0`으로 설치했다고 합시다.)  여기에 앞서 백업한 셋팅 및 데이타를 심어넣고자 합니다.
+* 새로 설치된 RedMine의 데이타베이스 셋팅을 파악합니다.  절차는 위와 같습니다.  즉, 다음 파일을 편집기로 열어서 database, username, password 정보를 파악해 둡니다.
+```
+/opt/redmine-3.1.2-0/apps/redmine/htdocs/config/database.yml
+```
+* 그리고 앞서 생성해서 백업해 뒀던 `backup.sql` 데이타베이스 셋팅 백업파일을 `/opt/redmine-3.1.2-0/mysql/bin` 경로로 복사해 넣습니다.
+* 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 직전에 파악한 내용으로 대체해서 적어줍니다.)
+```
+cd /opt/redmine-3.1.2-0/mysql/bin
+./mysql -u username -p database < backup.sql
+```
+* 그러면 데이타베이스 셋팅이 먹어들어가게 됩니다.
+* 이제 앞서 백업해 뒀던 일감, 문서, 업로드한 파일들의 백업을 위해서는 다음 경로를 통째로 복사해서 다음 경로에 풀어넣습니다.
+```
+/opt/redmine-3.1.2-0/apps/redmine/htdocs/files
+```
+* 기존에 사용하던 각종 플러그인 같은 것들도 알아서 다시 설치해 주면 됩니다.
+
+
+
 ## Ref.
 * http://www.damduck01.com/category/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8
 * http://www.redmine.or.kr
 * 레드마인 커뮤니티 ::: http://www.jenkins.or.kr/projects/community
 * 레드마인 플러그인 리스트 ::: http://www.redmine.org/projects/redmine/wiki/Plugin_list
-
-
+* 데이타 백업 ::: http://real-1.tistory.com/entry/redmine-data-%EB%B0%B1%EC%97%85-%EB%B0%8F-%EB%B3%B5%EC%9B%90
 
 
