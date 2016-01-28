@@ -87,10 +87,10 @@ NOTE: 각종 인터넷 설명문에서 보면, rake라는 명령어를 사용하
 ```
 /opt/redmine-3.1.2-0/apps/redmine/htdocs/config/database.yml
 ```
-* 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 위에서 파악한 내용으로 대체해서 적어줍니다.)
+* 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 위에서 파악한 내용으로 대체해서 적어줍니다.  아울러, 이때 RedMine의 데이타베이스는 실행중이어야 접속해서 백업이 이루어지게 되므로 유의합니다.)
 ```
 cd /opt/redmine-3.1.2-0/mysql/bin
-./mysqldump -u username -p database > backup.sql
+sudo ./mysqldump -u username -p database > /home/backup.sql
 ```
 * 그러면 `backup.sql`으로 데이타베이스 셋팅 백업파일이 생깁니다.
 
@@ -105,7 +105,7 @@ cd /opt/redmine-3.1.2-0/mysql/bin
 * 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 직전에 파악한 내용으로 대체해서 적어줍니다.)
 ```
 cd /opt/redmine-3.1.2-0/mysql/bin
-./mysql -u username -p database < backup.sql
+sudo ./mysql -u username -p database < /home/backup.sql
 ```
 * 그러면 데이타베이스 셋팅이 먹어들어가게 됩니다.
 * 이제 앞서 백업해 뒀던 일감, 문서, 업로드한 파일들의 백업을 위해서는 다음 경로를 통째로 복사해서 다음 경로에 풀어넣습니다.
@@ -122,5 +122,3 @@ cd /opt/redmine-3.1.2-0/mysql/bin
 * 레드마인 커뮤니티 ::: http://www.jenkins.or.kr/projects/community
 * 레드마인 플러그인 리스트 ::: http://www.redmine.org/projects/redmine/wiki/Plugin_list
 * 데이타 백업 ::: http://real-1.tistory.com/entry/redmine-data-%EB%B0%B1%EC%97%85-%EB%B0%8F-%EB%B3%B5%EC%9B%90
-
-
