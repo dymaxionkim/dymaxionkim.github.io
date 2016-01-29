@@ -101,8 +101,8 @@ sudo ./mysqldump -u username -p database > /home/backup.sql
 ```
 /opt/redmine-3.1.2-0/apps/redmine/htdocs/config/database.yml
 ```
-* 그리고 앞서 생성해서 백업해 뒀던 `backup.sql` 데이타베이스 셋팅 백업파일을 `/opt/redmine-3.1.2-0/mysql/bin` 경로로 복사해 넣습니다.
-* 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 직전에 파악한 내용으로 대체해서 적어줍니다.)
+* 그리고 앞서 생성해서 백업해 뒀던 `backup.sql` 데이타베이스 셋팅 백업파일을 `/home` 경로로 복사해 넣습니다. (다른 장소라도 상관없음)
+* 이제 다음 경로로 이동해서 데이타베이스 셋팅 명령어를 입력합니다. (이때 username, database 부분은 직전에 파악한 내용으로 대체해서 적어줍니다.  아울러, 이때 RedMine의 데이타베이스는 실행중이어야 접속이 이루어지게 되므로 유의합니다.)
 ```
 cd /opt/redmine-3.1.2-0/mysql/bin
 sudo ./mysql -u username -p database < /home/backup.sql
