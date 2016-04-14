@@ -106,17 +106,33 @@ leafpad ~/.config/openbox/autostart
 * 참고1 : http://www.howtogeek.com/196635/an-official-google-drive-for-linux-is-here-sort-of-maybe-this-is-all-well-ever-get/
 * 참고2 : https://github.com/odeke-em/drive
 * 작년에, 구글소속 프로그래머인 [Burcu Dogan](https://github.com/rakyll)이라는 여성 프로그래머가 구글 드라이브 개발팀 소속으로 개발한 거라고 합니다.  지금은 바빠서 이 프로젝트를 다른 사람에게 넘겼나 봅니다.
-* 아무튼 이 유틸리티는 Go Lang으로 개발되었기 때문에 golang 패키지를 먼저 깔아줘야 됩니다.  설치되는 go 개발환경의 용량이 얼마나 되는지는 잘 모르겠습니다(아직 안 해 봤음).
-* 따라서 설치 커맨드는 아래와 같습니다.
+* 이전에는 개발단계여서 Go Lang을 깔고 그 위에 소스를 직접 클론해서 패스 잡고 적용해 줘야 했으나, 지금은 리눅스 배포본별로 바이너리를 생성해서 제공해 줍니다.
+( 플랫폼별 패키지 제공 설명서 : https://github.com/odeke-em/drive/blob/master/platform_packages.md )
+* 일단 우분투 계통은 다음 명령으로 설치가 되네요.
 ```
-sudo apt-get install golang git mercurial
-go get github.com/odeke-em/drive
+sudo add-apt-repository ppa:twodopeshaggy/drive
+sudo apt-get update
+sudo apt-get install drive
 ```
-* 설치가 되었으므로 drive를 실행해 볼 수 있는데, 형식이 git 명령과 매우 유사합니다.  Dogan이라는 개발자의 성격을 엿볼 수 있는 듯 합니다.
-* 일단 구글드라이브 싱크시킬 디렉토리를 적절하게 하나 만든 다음에, 거기서 `drive init` 명령을 쳐 넣으면 초기화 과정에 들어갑니다.  구글 인증 코드를 시키는대로 해서 따서 입력해 주면 초기화 완료 됩니다.
-* 그 다음부터는 `drive push`, `drive pull` 등 git을 사용하는 느낌과 흡사합니다.
+* 설치 후에, 초기 환경 설정 과정은 다음과 같습니다.
+```
+drive init ~/gdrive
+```
+* 그러면 구글 인증 코드 따내는 URL이 나오는데, 그걸 긁어서 복사한 다음에 브라우저로 가서 구글계정으로 로그인하면 인증 코드가 나옵니다.  인증코드를 역시 긁어다 복사해서 터미널에 Paste하면 됩니다.  이제 구글드라이브의 자료들을 땡겨옵니다.
+* 전체를 땡겨오려면,
+```
+cd ~/gdrive
+drivem pull
+```
+해 줘 봅니다.  이때 만일 구글드라이브에 사진 등이 많은 자료들이 저장되어 있다면 에러가 날 확률이 높아질 것 같습니다.  용량 문제도 있을 수 있고요.
+* 때문에 특정 폴더만 땡겨오려면 다음 처럼 하면 되는 것 같습니다.
+```
+drivem pull 경로(폴더명)
+```
+* 기타 더 자세한 사용법은 설명서 찾아서 잘 연구해 봅시다. 형식이 git 명령과 매우 유사합니다. Dogan이라는 개발자의 성격을 엿볼 수 있는 듯 합니다.
 * 항상 상주하면서 실시간으로 백그라운드 싱크시켜주는 기능은 개발자가 의도적으로 배제한 듯 합니다.
 * 구글드라이브 기본용량이 대략 15GB 정도 되기 때문에, 나의 VirtualBox에 할당해 둔 용량이 충분치 않다면 사용하지 않도록 유의하는 것이 좋겠습니다.
+
 
 ## 부팅 직후 터미널에 한글 메시지가 다 깨져서 보여서 짜증날 때
 * 부팅 직후의 터미널은 그래픽 상태가 아니므로 ASCII 문자만 보이기 때문에, 한글 같은 것들은 다 깨져서 나옵니다.  무슨 메시지인지 확인이 안 되어 불편합니다.
@@ -177,4 +193,3 @@ gateway 110.35.26.1
 ```
 sudo /etc/init.d/networking restart
 ```
-
