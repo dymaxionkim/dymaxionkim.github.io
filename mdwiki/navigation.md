@@ -79,6 +79,7 @@
 
   * # Language
   * [Julia](pages/Code/Julia.md)
+  * [GNU Octave](pages/Code/Octave.md)
   * [Python](pages/Code/Python.md)
   - - - -
   * # Service
