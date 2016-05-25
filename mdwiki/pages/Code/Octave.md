@@ -10,13 +10,14 @@
 ```
 sudo add-apt-repository ppa:octave/stable
 sudo apt-get update
-sudo apt-get install octave*
+sudo apt-get install octave
 ```
 
 * [런치패드](https://launchpad.net/~octave/+archive/ubuntu/stable) 에 가 보면 포함되는 패키지들이 각각 어떤 것들이 있는지 쉽게 확인 할 수 있습니다.
 * 아울러 참고로, 공식 윈도우용 [배포판](ftp://ftp.gnu.org/gnu/octave/windows/octave-4.0.1-installer.exe)도 받을 수 있습니다.
+* GUI로 실행시키려면 다음 명령어를 치면 됩니다.
 
-
-
-
+```
+octave --force-gui
+```
 
