@@ -31,11 +31,20 @@
 * Git 관련 플러그인도 있긴 한데, 아직 버전도 낮고 사용법도 파악하지 못해서 일단 보류...
 * 아무튼 최신 에디터 중에서 가장 해커 스럽다는 느낌이 드는 물건이다.
 
-### 설치 방법
+### 설치 방법 1
 * 다운로드 : <http://lighttable.com/>
 * 압축풀기 : 아무데나 풀어도 되지만 가급적 root 권한으로 `/opt/LightTable`으로 넣는 것이 좋겠다.
 * 실행파일 심볼릭 링크 : 터미널에서 `sudo ln -s /opt/LightTable/LightTable /usr/bin/LightTable` 명령을 준다.
 * 그럼 아무 데서나 `LightTable` 명령을 주면 그 자리에서 실행된다.
+
+### 설치 방법 2
+* 참고기사 : <http://itsfoss.com/install-lighttable-ubuntu/>
+* 다음과 같이 PPA 저장소를 등록하고 설치한다.
+```
+sudo add-apt-repository ppa:dr-akulavich/lighttable
+sudo apt-get update
+sudo apt-get install lighttable-installer
+```
 
 ### 단축키
 * Auto-Completion : `Tab`
