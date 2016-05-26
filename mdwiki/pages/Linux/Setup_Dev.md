@@ -250,9 +250,14 @@ sudo apt-get install octave octave-control octave-plot octave-symbolic
 
 * Octave 역시 많은 추가 패키지들이 있는데, 그 중에서 control, plot, symbolic 정도를 함께 설치해 줘 봤습니다.  Octave는 자신의 전용 패키지 관리자가 따로 없기 때문에 이처럼 그냥 apt-get으로 직접 패키지들을 설치합니다.
 
-* 이제 막 설치된 Octave를 Jupyter에 연결해 주는 커널을 설정해 줍니다.  이것은 Python 패키지로 제공이 되네요.
+* 이제 막 설치된 Octave를 Jupyter에 연결해 주는 커널을 설치해 줍니다.  이것은 Python 패키지로 제공이 되네요.
 ```
 sudo pip install octave_kernel
+```
+
+* 그리고 설치한 옥타브 커널을 다음과 같이 실행해서, Jupyter에 설치(설정)해 줍니다.
+```
+python -m octave_kernel.install
 ```
 
 * 이제 터미널에서 `jupyter notebook` 명령을 쳐서 뜨는 서비스로 다시 들어가서, Octave 커널이 추가되어 잘 동작하는지 확인해 봅시다.  그럼 끝입니다.
