@@ -248,6 +248,8 @@ quit()
 sudo apt-get install octave octave-control octave-plot octave-symbolic
 ```
 
+* 만일 우분투 기본저장소 말고, 최신 버전으로 설치하고 싶다면 [이곳](http://dymaxionkim.github.io/mdwiki/#!pages/Code/Octave.md)을 참고해서 전용 저장소를 등록해서 설치해 주면 됩니다.  Octave 3.8 부터 GUI 환경이 새로 개발되어 기본으로 포함되어 있기 때문에, 가급적 최신버전 설치가 더 좋은 것 같습니다.
+
 * Octave 역시 많은 추가 패키지들이 있는데, 그 중에서 control, plot, symbolic 정도를 함께 설치해 줘 봤습니다.  Octave는 자신의 전용 패키지 관리자가 따로 없기 때문에 이처럼 그냥 apt-get으로 직접 패키지들을 설치합니다.
 
 * 이제 막 설치된 Octave를 Jupyter에 연결해 주는 커널을 설치해 줍니다.  이것은 Python 패키지로 제공이 되네요.
