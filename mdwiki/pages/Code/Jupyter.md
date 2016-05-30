@@ -79,3 +79,7 @@ c.NotebookApp.open_browser = False
 sudo apt-get install texlive texlive-latex-extra ko.tex pandoc
 sudo pip install nbconvert
 ```
+
+* 이 상태에서는 Pandoc에서 한글이 출력되지 못한다.  폰트 설정 때문으로 보인다.  따라서 한글 폰트로 출력될 수 있도록 설정을 손 봐 주어야 한다.
+
+
