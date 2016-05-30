@@ -71,3 +71,12 @@ c.NotebookApp.open_browser = False
 
 ## Jupyter Notebook Extensions
 * **gist.js** ::: Github Gist에 현재의 .ipynb 파일을 업로드하는 버튼 추가하는 확장기능.  [설명서 보기](http://nbviewer.ipython.org/gist/dymaxionkim/d9a2ab620303982df1af?flush_cache=true)
+
+## pdf 파일 출력 기능 작동하도록 만들기
+* 출처 : http://stackoverflow.com/questions/29156653/ipython-jupyter-problems-saving-notebook-as-pdf
+```
+sudo apt-get install texlive texlive-latex-extra pandoc
+sudo pip install nbconvert
+```
+
+
