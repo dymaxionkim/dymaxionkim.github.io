@@ -80,6 +80,4 @@ sudo apt-get install texlive texlive-latex-extra ko.tex pandoc
 sudo pip install nbconvert
 ```
 
-* 이 상태에서는 Pandoc에서 한글이 출력되지 못한다.  폰트 설정 때문으로 보인다.  따라서 한글 폰트로 출력될 수 있도록 설정을 손 봐 주어야 한다.
-
-
+* 이 상태에서는 Pandoc에서 한글이 출력되지 못한다.  폰트 설정 때문으로 보인다.  따라서 한글 폰트로 출력될 수 있도록 설정을 손 봐 주어야 한다.  이 부분을 손보기 위해서는 Pandoc을 호출하는 nbconvert의 설정을 건드려야 할 것 같다.  [nbconvert 설명서 참조](http://nbconvert.readthedocs.io/en/latest/index.html)
