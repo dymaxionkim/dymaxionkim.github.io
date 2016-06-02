@@ -199,6 +199,7 @@ python setup.py install
 
 ## 프리젠테이션을 그대로 PDF로 인쇄하기
 
+* 참고 : https://github.com/damianavila/RISE/issues/127
 * RISE를 사용하는 상태에서는 인쇄가 곤란하다.  대신 다음 방법을 사용할 수 있다.
 * 먼저 가상 PDF 프린터가 존재해야 한다.
 * 웹브라우저는 HTML5가 지원되는 모던 웹 브라우저여야 한다.
