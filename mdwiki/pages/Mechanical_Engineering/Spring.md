@@ -51,3 +51,8 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
   2. 앞뒤 스프링 사이의 합력 균형점을 찾기 쉽도록 하려면 스프링을 동일하게 가는 것도 좋다.
   2. 스프링 설치 변위를 가급적 최대한 키운다. : \\(x_0\\)
   3. 각각의 스프링 상수는 총 스프링 개수만큼 나누어 분배 가능하다.
+  
+  
+  [gimmick:gist](443d83fa1d213976e6de)
+  
+  <script src="https://gist.github.com/dymaxionkim/443d83fa1d213976e6de.js"></script>
