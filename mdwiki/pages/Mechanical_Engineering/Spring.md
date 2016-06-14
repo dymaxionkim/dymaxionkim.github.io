@@ -53,7 +53,7 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
   3. 각각의 스프링 상수는 총 스프링 개수만큼 나누어 분배 가능하다.
   
   
-[gimmick:gist](5641564)
+
 
 [gimmick:gist](5361661)
 
@@ -62,7 +62,7 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
 <script src="https://gist.github.com/dymaxionkim/443d83fa1d213976e6de.js"></script>
   
 <script src="https://gist.github.com/go2zo/5361661.js"></script>
-  
+  [gimmick:gist](5641564)
   
   
 
