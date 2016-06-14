@@ -55,14 +55,10 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
   
 
 
-[gimmick:gist](5361661)
 
 [gimmick:gist](443d83fa1d213976e6de.)
   
-<script src="https://gist.github.com/dymaxionkim/443d83fa1d213976e6de.js"></script>
-  
-<script src="https://gist.github.com/go2zo/5361661.js"></script>
-  [gimmick:gist](5641564)
+
   
   
 
