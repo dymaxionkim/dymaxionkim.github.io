@@ -37,7 +37,7 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
 
 * Conditions 2 : \\( k_1 > k_2 \\)
 
-  + \\(f_{total}\\)이 줄어들\\(f_{total}\\)이 줄어들게 됨
+  + \\(f_{total}\\)이 줄어들게 됨
 
 * Condition 3 : \\( k_1 < k_2 \\)
 
