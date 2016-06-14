@@ -24,7 +24,7 @@ f_1 = k_2 ( x_0 + x_1 )
 $$
 
 $$
-f_total = f_1 + f_2 = ( k_1 + k_2 ) x_0 + ( k_2 - k_1 ) x_1
+f_{total} = f_1 + f_2 = ( k_1 + k_2 ) x_0 + ( k_2 - k_1 ) x_1
 $$
 
 ## Conditions
@@ -33,15 +33,15 @@ $$
 
 $$( k_2 - k_1 ) x_1 = 0$$
 
-$$f_total = ( k_1 + k_2 ) x_0 = Constant$$
+$$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
 
 * Conditions 2 : \\( k_1 > k_2 \\)
 
-\\(f_total\\)이 줄어들게 됨
+\\(f_{total}\\)이 줄어들게 됨
 
 * Condition 3 : \\( k_1 < k_2 \\)
 
-\\(f_total\\)이 커지게 됨
+\\(f_{total}\\)이 커지게 됨
 
 
 ## Conclusion
