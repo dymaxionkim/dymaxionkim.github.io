@@ -56,7 +56,7 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
 
 
 
-[gimmick:gist](443d83fa1d213976e6de.)
+[gimmick:gist](443d83fa1d213976e6de)
   
 
   
