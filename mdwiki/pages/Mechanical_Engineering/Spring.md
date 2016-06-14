@@ -13,7 +13,7 @@
 ![](http://www.ux1.eiu.edu/~cfadd/1150-05/Hmwk/Ch13/Images/D13.2b.gif)
 
 ## Analysis
-* + 방향으로 \\(x_1\\) 만큼 변위 발생할 때의 합력을 구해보면
+* 플러스 방향으로 \\(x_1\\) 만큼 변위 발생할 때의 합력을 구해보면
 
 $$
 f_1 = k_1 ( x_0 - x_1 )
@@ -37,11 +37,11 @@ $$f_{total} = ( k_1 + k_2 ) x_0 = Constant$$
 
 * Conditions 2 : \\( k_1 > k_2 \\)
 
-\\(f_{total}\\)이 줄어들게 됨
+  + \\(f_{total}\\)이 줄어들\\(f_{total}\\)이 줄어들게 됨
 
 * Condition 3 : \\( k_1 < k_2 \\)
 
-\\(f_{total}\\)이 커지게 됨
+  + \\(f_{total}\\)이 커지게 됨
 
 
 ## Conclusion
