@@ -209,7 +209,7 @@ python setup.py install
 * 웹브라우저는 HTML5가 지원되는 모던 웹 브라우저여야 한다. (보통 구글크롬에서 잘 된다고 하는데, 내 경우엔 크롬에선 레이아웃이 엉망이 되고 대신 파이어폭스에서 안 깨지고 잘 되었다.)
 * 터미널 명령으로 다음을 친다.
 ```
-jupyter nbconvert --to slide 문서이름.ipynb --post serve
+jupyter nbconvert --to slides 문서이름.ipynb --post serve
 ```
 * 그러면 웹브라우저가 실행되면서 슬라이드가 포스팅될 것이다.
 * 포스팅된 웹브라우저 주소창의 주소는 다음과 같은 형식으로 되어 있다.
