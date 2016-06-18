@@ -127,6 +127,10 @@ pip install https://github.com/ipython-contrib/IPython-notebook-extensions/archi
 ```
 http://localhost:8888/nbextensions
 ```
+* 만일 위 주소로 들어갔는데, 빈 화면만 보인다면, 다음 터미널 명령으로 설치본을 업그레이드 해 본다.
+```
+pip install --upgrade https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip --user
+```
 * 여러가지 Extension들이 상당히 많이 있는데, 이 중에서 `Gist-it`을 선택한다.
 * `Gist-it`을 활성화하기 위해서는 인증토큰을 설정해 줘야 한다.
 * 인증토큰을 위해서 우선 웹브라우저에 새 탭을 열고 다음 주소로 들어간다.
