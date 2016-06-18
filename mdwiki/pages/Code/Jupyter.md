@@ -131,7 +131,7 @@ http://localhost:8888/nbextensions
 ```
 pip install --upgrade https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip --user
 ```
-* 업그레이드 하면서 터미널에 어떤 문제가 있는지 메시지가 뜬다.  보통 퍼미션 문제이므로, 메시지를 잘 보고 해당 파일의 퍼미션이 root로 되어 있을 경우에는 풀어주고 다시 시도한다.
+* 업그레이드 하면서 터미널에 어떤 문제가 있는지 메시지가 뜬다.  보통 퍼미션 문제이므로, 메시지를 잘 보고 해당 파일의 퍼미션이 root로 되어 있을 경우에는 풀어주고 다시 시도한다.  그렇게 하면 해결이 된다.
 * 여러가지 Extension들이 상당히 많이 있는데, 이 중에서 `Gist-it`을 선택한다.
 * `Gist-it`을 활성화하기 위해서는 인증토큰을 설정해 줘야 한다.
 * 인증토큰을 위해서 우선 웹브라우저에 새 탭을 열고 다음 주소로 들어간다.
