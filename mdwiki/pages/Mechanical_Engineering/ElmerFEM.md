@@ -97,9 +97,7 @@ sudo apt-get install elmerfem-csc
 
 
 <div class="content">
-    <div class="embed-container">
-        <script src="https://gist.github.com/dymaxionkim/f3949116dc25d8bb677cc1f633dc1047.js"></script>
-    </div>
+ <script src="https://gist.github.com/dymaxionkim/f3949116dc25d8bb677cc1f633dc1047.js"></script>
 </div>
 
 
