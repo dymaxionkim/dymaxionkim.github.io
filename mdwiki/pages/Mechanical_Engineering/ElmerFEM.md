@@ -96,9 +96,6 @@ sudo apt-get install elmerfem-csc
 * 단, 이때 ParaView는 반드시 시스템에 설치되어 있어야만 실행이 이루어진다.
 
 
-<script type="text/javascript" src="https://gist.github.com/dymaxionkim/f3949116dc25d8bb677cc1f633dc1047.js"></script>
-
-
 
 
 
