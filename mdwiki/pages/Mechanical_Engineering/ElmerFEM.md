@@ -94,3 +94,9 @@ sudo apt-get install elmerfem-csc
 * ElmerPost, ElmerVTK 말고 외부 가시화 툴로 ParaView를 ElmerGUI 상에서 직접 실행시킬 수 있도록 메뉴가 추가되어 있다.
 * `ElmerGUI`의 멘 중에서 `Run > Start ParaView`를 선택하면 ParaView가 자동으로 실행되면서 해석된 결과를 보여줄 수 있게 된다.
 * 단, 이때 ParaView는 반드시 시스템에 설치되어 있어야만 실행이 이루어진다.
+
+
+<script src="https://gist.github.com/dymaxionkim/f3949116dc25d8bb677cc1f633dc1047.js"></script>
+
+
+
