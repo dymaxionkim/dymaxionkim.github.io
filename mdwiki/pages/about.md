@@ -26,6 +26,6 @@
 * 2015~ ::: RCWS / PTZ
 
 
-[gimmick:gist](5641564)
+[gimmick:gist](7011f032c805d06e16fb4cf1b4b43ece)
 
-
+<script src="https://gist.github.com/dymaxionkim/7011f032c805d06e16fb4cf1b4b43ece.js"></script>
