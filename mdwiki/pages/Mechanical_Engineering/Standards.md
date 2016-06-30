@@ -1,10 +1,2 @@
-
-
-https://gist.github.com/dymaxionkim/7011f032c805d06e16fb4cf1b4b43ece
-
-
-<div class="content">
-        <iframe src="https://gist.github.com/dymaxionkim/7011f032c805d06e16fb4cf1b4b43ece" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
-
+#
 
