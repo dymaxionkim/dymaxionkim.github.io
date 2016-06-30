@@ -1,3 +1,13 @@
+
+# CAE_Work (Dodaam_Education)
+
+## 윈도우 PC에 해석 소프트웨어 설치
+* https://gist.github.com/dymaxionkim/f3949116dc25d8bb677cc1f633dc1047
+
+## Ex01 (예제1)
+* https://gist.github.com/dymaxionkim/7011f032c805d06e16fb4cf1b4b43ece
+
+
 # CAE_Work (실습 예제들)
 
 
