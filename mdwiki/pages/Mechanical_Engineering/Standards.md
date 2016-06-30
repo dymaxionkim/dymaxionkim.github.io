@@ -1,6 +1,6 @@
 
 
-https://gist.github.com/7011f032c805d06e16fb4cf1b4b43ece.git
+https://gist.github.com/dymaxionkim/7011f032c805d06e16fb4cf1b4b43ece
 
 
 <div class="content">
