@@ -236,7 +236,7 @@ http://127.0.0.1:8000/문서이름.slides.html?print-pdf#/
 * 그리고 가상 PDF 프린터를 선택해서 파일로 인쇄를 하면 끝.
 
 
-##Jupyter 및 Julia를 윈도우 환경에서 설치하기
+## Jupyter 및 Julia를 윈도우 환경에서 설치하기
 
 * 참고 : http://quant-econ.net/jl/learning_julia.html
 * Scientific Python 배포판 중의 하나인 Anaconda를 설치하고, Julia를 직접 설치 후 IJulia를 깔아주면 된다.
