@@ -241,7 +241,6 @@ http://127.0.0.1:8000/문서이름.slides.html?print-pdf#/
 * 참고 : http://quant-econ.net/jl/learning_julia.html
 * Scientific Python 배포판 중의 하나인 Anaconda를 설치하고, Julia를 직접 설치 후 IJulia를 깔아주면 된다.
 * 단점은...
-
   1. 엉뚱하게 다른 소프트웨어의 동작이 이상해질 수 있다.  내 경우엔, PTC CREO 2.0이 실행되지 않아서 일을 할 수 없는 경우가 있었다.  원인은 path로 잡힌 것들 중에서 양쪽에서 모두 쓰는 C라이브러리가 있었던 모양인데, Path 때문에 CREO 쪽에서 Anaconda 내의 라이브러리를 불러오다 보니 Crush된 경우.  이때는 답이 없다.  그냥 리눅스에서 사용하는게 맘 편하다.
   2. Anaconda 패포판에 의지하다 보니, 아무래도 업데이트가 한발씩 늦다.
   3. 전에는 Anaconda 배포판이 32비트 버전만 제공된다는 단점이 있었는데, 최근에 보니 전부 64비트 버전도 전격 제공하고 있다.  이 부분은 박수!
