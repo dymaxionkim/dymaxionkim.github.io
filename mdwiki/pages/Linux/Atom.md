@@ -24,7 +24,13 @@ sudo apt-get update
 sudo apt-get install atom
 ```
 
-### 단축키
-* -
-
-
+### Juno 패키지 설치
+* Atom에 플러그인되는 Julia 개발환경이다.
+* `Ctrl+,` 단축키를 치면 Setting 화면이 나온다.  여기서 uber-juno를 검색해서 깔아준다.
+* 이때 진행하다가 중간에 실패하게 되는데, 이유는 Julia 패키지 업데이트가 다 안되어 있기 때문이다.
+* 먼저 터미널에서 cmake를 설치해 준다. (업데이트할 때 MbedTLS라는 패키지가 빌드될 때 사용하게 됨)
+```
+sudo apt-get install cmake
+```
+* 이후 터미널에서 julia를 쳐서 Julia 상태로 들어간 후, `Pkg.update()` 명령을 쳐서 업데이트를 진행해 준다.
+* 그리고 Atom을 실행하면 마저 진행된다.
