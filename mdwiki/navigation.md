@@ -42,6 +42,7 @@
   * [Tips](pages/Linux/Tips.md)
   - - - -
   * # 주요 프로그램 설명
+  * [Atom](pages/Linux/Atom.md)
   * [LightTable](pages/Linux/LightTable.md)
   * [LibreOffice](pages/Linux/LibreOffice.md)
 
