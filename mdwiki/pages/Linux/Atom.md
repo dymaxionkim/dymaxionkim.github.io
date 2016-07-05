@@ -33,4 +33,5 @@ sudo apt-get install atom
 sudo apt-get install cmake
 ```
 * 이후 터미널에서 julia를 쳐서 Julia 상태로 들어간 후, `Pkg.update()` 명령을 쳐서 업데이트를 진행해 준다.
-* 그리고 Atom을 실행하면 마저 진행된다.
+* 그리고 Atom을 실행하면 마저 진행된다.  진행 과정은 Atom이 예쁘게 메시지를 띄워서 고지해 준다.
+* 다 되고 나면, 그 다음부터는 Atom이 Julia를 위한 환경이 된다.
