@@ -96,7 +96,8 @@ sudo apt-get install elmerfem-csc
 * 단, 이때 ParaView는 반드시 시스템에 설치되어 있어야만 실행이 이루어진다.
 
 
-
-
-
+## ElmerGUI의 EDF 확장
+```
+sudo cp /usr/share/ElmerGUI/edf-extra/*.xml /usr/share/ElmerGUI/edf
+```
 
