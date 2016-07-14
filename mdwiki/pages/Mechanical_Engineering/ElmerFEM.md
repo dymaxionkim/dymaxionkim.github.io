@@ -98,6 +98,6 @@ sudo apt-get install elmerfem-csc
 
 ## ElmerGUI의 EDF 확장
 ```
-sudo cp /usr/share/ElmerGUI/edf-extra/*.xml /usr/share/ElmerGUI/edf
+sudo cp /usr/share/ElmerGUI/edf-extra/*.xml /usr/share/ElmerGUI/edf/
 ```
 
