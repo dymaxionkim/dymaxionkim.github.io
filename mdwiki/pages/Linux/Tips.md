@@ -20,7 +20,7 @@ sudo update-alternatives --config x-www-browser
 
 
 
-## 동영상 편집
+## 동영상 편집 1
 
 * 가끔 간단한 동영상 편집이 필요할 때가 있는데, 최대한 간단하게 하고 싶을 때는 ffmpeg 유틸리티를 사용하는 것이 좋겠습니다.
 * ffmpeg으로 GUI 없이, 터미널에서 직접 명령어를 쳐서 간단히 동영상들을 가지고 편집할 수 있습니다.
@@ -46,3 +46,18 @@ ffmpeg -i a.avi -ss 600 -t 120 b.avi
 # 프레임 레이트 조정 (-an은 오디오 제거 옵션, 1/4은 배속 조절 비율)
 ffmpeg -i a.avi -vf "setpts=(1/4)*PTS" -an b.avi
 ```
+
+
+## 동영상 편집 2
+
+* GUI로 동영상을 편집할 수 있는 소프트웨어는 여러가지가 상당히 많은데, 그중에 윈도우 무비메이커랑 제일 비슷한 느낌으로 사용 가능한 것이 OpenShot 인 것 같습니다. ( http://www.openshotvideo.com/ )
+
+* 설치 방법은 아래와 같습니다. ( http://www.cyberciti.biz/faq/howto-install-openshot-under-debian-ubuntu-linux/ )
+```
+sudo add-apt-repository ppa:jonoomph/openshot-edge
+sudo apt-get update
+sudo apt-get install openshot openshot-doc
+```
+
+
+
