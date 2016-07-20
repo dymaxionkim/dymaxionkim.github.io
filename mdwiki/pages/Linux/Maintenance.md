@@ -60,7 +60,7 @@ ID : testid
 PW : testpw
 ```
 
-* 일단 시험삼아 마운트해 봅니다.
+* 일단 시험삼아 마운트해 봅니다.  이때 만일 디렉토리 중에 빈 칸이 있을 경우에는, 전체 경로를 따옴표("...")로 감싸면 됩니다.
 ```
 sudo mkdir /media/test
 sudo mount -t cifs -o user=testid,pass=testpw //123.45.67.89/share /media/share
@@ -72,6 +72,7 @@ sudo l3afpad /etc/fstab
 ```
 
 * 여기에 다음 내용을 추가합니다.  이때 `uid=dong` 부분은 현재 리눅스의 계정을 적어주면 읽고쓰기 권한을 획득할 수 있습니다.
+* 그리고, 만일 디렉토리 중에 빈 칸이 있을 경우에는, 빈 칸을 `\040`으로 대체해서 써 넣어 빈 칸이 없도록 해 주면 됩니다.
 ```
 //123.45.67.89/share /media/share cifs defaults,username=testid,pass=testpw,uid=dong,iocharset=utf8 0 0
 ```
