@@ -58,6 +58,3 @@ sudo add-apt-repository ppa:jonoomph/openshot-edge
 sudo apt-get update
 sudo apt-get install openshot openshot-doc
 ```
-
-
-
