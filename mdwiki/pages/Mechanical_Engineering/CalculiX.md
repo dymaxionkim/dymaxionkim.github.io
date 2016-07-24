@@ -27,10 +27,7 @@
   3. FreeCAD 0.16 이상의 버전을 설치 : 기본적으로 FreeCAD 안에 ccx와 Netgen이 통합되어 있다.  그러나 cgx는 누락되어 있기 때문에 불완전하고, ccx는 최신버전은 아닌 것 같다.
   4. CalculiX Launcher 리눅스 버전 설치 : 러시아 쪽 사람이 제공하는 것 같은데, 이쪽을 더 추천하고 싶다.  http://calculixforwin.blogspot.kr/2015/05/calculix-launcher.html  이곳에서 Launcher-02 for Linux (Ubuntu tested) 64 bit 라고 써져있는 링크로 들어가서 다운로드 받으면 된다.  압축을 원하는 장소에 푼다.  최신버전으로 패치하려면 NEW!!! 2016/07/12 Launcher-03 beta (32&64bit linux) updates for Launcher -02 라고 써져있는 링크를 추가로 다운로드 받아서, 압축을 풀어서 덮어써 주면 된다.  설명서를 보고 파일네임,디렉토리네임 등을 조정해 준다.
   
-## CalculiX Launcher
+## CalculiX Launcher (Lazarus Launcher)
 * http://calculixforwin.blogspot.kr/2015/05/calculix-launcher.html 이 페이지를 자세히 보면, 마지막에 Salome-meca 리눅스용 배포본과, 또 Salome Platform 윈도우 배포본도 함께 제공해 준다.  윈도우 환경에서는 이것을 설치하는 것이 좋은 것 같다.
 * 설치 및 사용 방법을 간단히 보인 동영상 클립도 있으므로 참고가 된다. https://youtu.be/ViLf4Z4VE1Y
 * 그리고 이 사람의 개인 유튜브 채널을 구독하는 것도 좋겠다.  https://www.youtube.com/channel/UCiAhHLXtYGcQC9eZIzd_COg
-
- 
-
