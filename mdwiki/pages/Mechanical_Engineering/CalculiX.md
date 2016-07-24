@@ -36,6 +36,7 @@
 ## 결과 파일 .frd를 .vtu로 변환
 * CalculiX에서 해석을 끝내면 결과파일은 cgx전용의 .frd 포멧으로 만들어진다.
 * Paraview에서 결과를 보려면 .vtu 파일이 필요하므로, 변환기가 필요하다.
-* 윈도우용 변환기 : http://caelinux.com/CMS/index.php?option=com_kunena&func=view&catid=6&id=8189&Itemid=300025
-
+* [윈도우용 변환기1](http://caelinux.com/CMS/index.php?option=com_kunena&func=view&catid=6&id=8189&Itemid=300025)
+* [윈도우용 변환기2](https://sourceforge.net/projects/candystore/)
+* [윈도우용 변환기3](https://sourceforge.net/projects/vtkpost/)
 
