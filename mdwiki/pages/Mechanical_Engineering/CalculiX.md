@@ -39,4 +39,6 @@
 * [윈도우용 변환기1](http://caelinux.com/CMS/index.php?option=com_kunena&func=view&catid=6&id=8189&Itemid=300025)
 * [윈도우용 변환기2](https://sourceforge.net/projects/candystore/)
 * [윈도우용 변환기3](https://sourceforge.net/projects/vtkpost/)
+* 리눅스용 변환기는 아직 충분히 성숙된 것을 찾을 수가 없다.
+
 
