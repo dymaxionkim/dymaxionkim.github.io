@@ -21,13 +21,21 @@
 * 개인적으로, 최초 학습 목적이 아니고 실제 업무에 적용해 보려고 한다면 윈도우 환경에서 뭔가 해 보려는 생각 자체를 버리는 것이 좋다고 생각한다.  낭비요소와 제약조건이 너무 많기 때문이다.
 
 ## 리눅스 환경에 설치
-* 4가지 방법이 있다.
+* 여러가지 방법이 있다.
   1. 리눅스 환경에서 직접 소스코드를 빌드 : [참고1](http://www.libremechanics.com/?q=node/9), [참고2](http://www.dhondt.de/)
   2. 리눅스용 바이너리 파일을 직접 다운로드 받아서 실행 : [참고2](http://www.dhondt.de/)에서 Linux wxwcutable을 다운로드.  의존성 있는 Rapack 같은 라이브러리들은 따로 설치해 줘야 하고, 심볼릭 링크 등을 직접 설정해 줘야 하기 때문에 번거롭다.
   3. FreeCAD 0.16 이상의 버전을 설치 : 기본적으로 FreeCAD 안에 ccx와 Netgen이 통합되어 있다.  그러나 cgx는 누락되어 있기 때문에 불완전하고, ccx는 최신버전은 아닌 것 같다.  [참고](http://www.freecadweb.org/wiki/index.php?title=FEM_Install)
   4. CalculiX Launcher 리눅스 버전 설치 : 러시아 쪽 사람이 제공하는 것 같은데, 이쪽을 더 추천하고 싶다.  http://calculixforwin.blogspot.kr/2015/05/calculix-launcher.html  이곳에서 Launcher-02 for Linux (Ubuntu tested) 64 bit 라고 써져있는 링크로 들어가서 다운로드 받으면 된다.  압축을 원하는 장소에 푼다.  최신버전으로 패치하려면 NEW!!! 2016/07/12 Launcher-03 beta (32&64bit linux) updates for Launcher -02 라고 써져있는 링크를 추가로 다운로드 받아서, 압축을 풀어서 덮어써 주면 된다.  설명서를 보고 파일네임,디렉토리네임 등을 조정해 준다.
-  
+  5. CalculiX Extras : https://www.openaircraft.com/calculix-extras/  CUDA 기능을 사용할 수 있는 확장판이다.
+
 ## CalculiX Launcher (Lazarus Launcher)
 * http://calculixforwin.blogspot.kr/2015/05/calculix-launcher.html 이 페이지를 자세히 보면, 마지막에 Salome-meca 리눅스용 배포본과, 또 Salome Platform 윈도우 배포본도 함께 제공해 준다.  윈도우 환경에서는 이것을 설치하는 것이 좋은 것 같다.
 * 설치 및 사용 방법을 간단히 보인 동영상 클립도 있으므로 참고가 된다. https://youtu.be/ViLf4Z4VE1Y
 * 그리고 이 사람의 개인 유튜브 채널을 구독하는 것도 좋겠다.  https://www.youtube.com/channel/UCiAhHLXtYGcQC9eZIzd_COg
+
+## 결과 파일 .frd를 .vtu로 변환
+* CalculiX에서 해석을 끝내면 결과파일은 cgx전용의 .frd 포멧으로 만들어진다.
+* Paraview에서 결과를 보려면 .vtu 파일이 필요하므로, 변환기가 필요하다.
+* 윈도우용 변환기 : http://caelinux.com/CMS/index.php?option=com_kunena&func=view&catid=6&id=8189&Itemid=300025
+
+
