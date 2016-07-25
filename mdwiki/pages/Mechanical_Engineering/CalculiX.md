@@ -27,7 +27,7 @@
 
 ## 리눅스 환경에 설치
 * 여러가지 방법이 있다.
-  1. 리눅스 환경에서 직접 소스코드를 빌드 : [참고1](http://www.libremechanics.com/?q=node/9), [참고2](http://www.dhondt.de/), [참고3](http://nicklj.com/?p=639)
+  1. 리눅스 환경에서 직접 소스코드를 빌드 : [참고1](http://www.libremechanics.com/?q=node/9), [참고2](http://www.dhondt.de/), [참고3](http://nicklj.com/?p=639), [참고4](http://greyattic.blogspot.kr/2014/02/devtip-ubuntu-calculix.html)
   2. 리눅스용 바이너리 파일을 직접 다운로드 받아서 실행 : [참고2](http://www.dhondt.de/)에서 Linux wxwcutable을 다운로드.  의존성 있는 Rapack 같은 라이브러리들은 따로 설치해 줘야 하고, 심볼릭 링크 등을 직접 설정해 줘야 하기 때문에 번거롭다.
   3. FreeCAD 0.16 이상의 버전을 설치 : 기본적으로 FreeCAD 안에 ccx와 Netgen이 통합되어 있다.  그러나 cgx는 누락되어 있기 때문에 불완전하고, ccx는 최신버전은 아닌 것 같다.  [참고](http://www.freecadweb.org/wiki/index.php?title=FEM_Install)  cgx를 따로 설치해서 연결하는 것은 [이쪽](http://forum.freecadweb.org/viewtopic.php?t=10789)으로 참고.
   4. CalculiX Launcher 리눅스 버전 설치 : 러시아 쪽 사람이 제공하는 것 같은데, 이쪽을 더 추천하고 싶다.  http://calculixforwin.blogspot.kr/2015/05/calculix-launcher.html  이곳에서 Launcher-02 for Linux (Ubuntu tested) 64 bit 라고 써져있는 링크로 들어가서 다운로드 받으면 된다.  압축을 원하는 장소에 푼다.  최신버전으로 패치하려면 NEW!!! 2016/07/12 Launcher-03 beta (32&64bit linux) updates for Launcher -02 라고 써져있는 링크를 추가로 다운로드 받아서, 압축을 풀어서 덮어써 주면 된다.  설명서를 보고 파일네임,디렉토리네임 등을 조정해 준다.
