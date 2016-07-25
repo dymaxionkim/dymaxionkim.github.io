@@ -45,6 +45,9 @@ ffmpeg -i a.avi -ss 600 -t 120 b.avi
 
 # 프레임 레이트 조정 (-an은 오디오 제거 옵션, 1/4은 배속 조절 비율)
 ffmpeg -i a.avi -vf "setpts=(1/4)*PTS" -an b.avi
+
+# gif 움짤(?)을 avi 동영상으로 변환
+ffmpeg -i a.gif a.avi
 ```
 
 
