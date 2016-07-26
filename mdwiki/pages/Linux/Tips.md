@@ -40,6 +40,10 @@ sudo apt-get install ffmpeg
 # 여러개의 동영상을 하나로 합치기 (a.avi + b.avi --> ab.avi)
 ffmpeg -i a.avi -i b.avi -vcodec copy -acodec copy -vcodec copy -acodec copy ab.avi -newvideo -newaudio
 
+
+# 여러개의 동영상을 하나로 합치기 (001.ogv + 002.ogv --> out.ogv)
+ffmpeg -i "concat:001.ogv|002.ogv" -c copy out.ogv
+
 # 일정구간 잘라내기 (a.avi에서 600초부터 120초간만 잘라내서 b.avi로 저장)
 ffmpeg -i a.avi -ss 600 -t 120 b.avi
 
