@@ -16,6 +16,11 @@
   2. 아웃풋 파일은 호환성에 문제가 좀 있다.  전용 포멧인 .frd 파일은 cgx에서만 읽을 수 있기 때문에, 이것은 gmsh 또는 paraview에서 읽어들이기 위해서는 파일 포멧을 변환해 주어야 한다.  그런데 아직 이 부분에 대한 개발이 전반적으로 부실하다.  아쉬운대로 cgx에서 필요한 그림이나 동영상을 추출해 낼 수는 있다.
   3. CaculiX가 사용하는 편미분방정식 솔버는 Arpack이다.  멀티코어 지원하는 초고속(?)의 안정적인 포트란 코드로서, Elmer에서 디폴트로 사용하는 솔버들보다 속도 면에서 상당히 빨라 보인다.  그럼에도 불구하고 Abaqus 같이 잘 튜닝된 상용 코드 보다는 느리다.
 
+## 튜토리얼
+* MIT 검색엔진에서 유용한 것들을 찾아볼 수 있다.
+* http://search.mit.edu/search?client=mithome&site=mit&output=xml_no_dtd&proxystylesheet=mithome&num=15&submit=Search&as_q=calculix
+* http://web.mit.edu/calculix_v2.7/CalculiX/cgx_2.7/doc/cgx/cgx.html
+
 
 ## 윈도우 환경에 설치
 * 3가지 방법이 있다.
