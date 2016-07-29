@@ -14,3 +14,6 @@
 ## JupyterHub
 * 
 Deploying JupyterHub for Education ::: https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/
+
+## CAE
+* http://freeplanets.ship.jp/  (프록시로 접근 가능)
