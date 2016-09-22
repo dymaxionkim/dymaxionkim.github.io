@@ -60,7 +60,7 @@ ffmpeg -i a.gif a.avi
 
 * 설치 방법은 아래와 같습니다. ( http://www.cyberciti.biz/faq/howto-install-openshot-under-debian-ubuntu-linux/ )
 ```
-sudo add-apt-repository ppa:jonoomph/openshot-edge
+sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get install openshot openshot-doc
 ```
