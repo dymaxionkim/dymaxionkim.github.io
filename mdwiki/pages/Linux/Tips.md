@@ -31,6 +31,12 @@ sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
 sudo apt-get update
 sudo apt-get install ffmpeg
 ```
+또는
+```
+sudo add-apt-repository ppa:jonathonf/ffmpeg-3
+sudo apt-get update
+sudo apt-get install ffmpeg libav-tools x264 x265
+```
 
 * 사용 방법은 [이곳](http://www.minetech.co.kr/bbs/view.php?id=FREE_BOARD&no=136), [이곳](http://horangi.tistory.com/290), [이곳](http://ffmpeg.org/ffmpeg.html#Video-Options) 등을 참고합니다.
 
