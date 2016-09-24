@@ -27,7 +27,7 @@ sudo update-alternatives --config x-www-browser
 * 설치 방법은 다음과 같습니다.  (비공식 저장소를 이용하여 설치)
 
 ```
-sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+ssudo add-apt-repository ppa:djcj/hybrid
 sudo apt-get update
 sudo apt-get install ffmpeg
 ```
