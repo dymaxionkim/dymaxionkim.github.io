@@ -175,7 +175,7 @@ https://gist.github.com/dymaxionkim/GIST_ID
 * 본 강의자료는 RISE로 프리젠테이션 되고 있다.
 * Reveal.js 기반
 
-### RISE 설치
+### RISE 설치 (1)
 
 * Git 설치 (이미 설치되어 있으면 생략) : [참조](http://dymaxionkim.github.io/mdwiki/#!pages/Code/Github.md)
 ```
@@ -198,6 +198,11 @@ python setup.py install
 ```
 
 * Jupyter를 다시 시작한다!
+
+
+### RISE 설치 (2)
+* anaconda를 통해서 Python 플랫폼을 구축했을 경우에는...
+* jupyter-nbextension enable rise --py --sys-prefix
 
 
 ### RISE 사용의 의미
