@@ -28,7 +28,7 @@
 [NAS 구축]()
 
   * [32비트 넷북 NAS](pages/Setting_NAS.md)
-  * [테스트](https://rawgit.com/dymaxionkim/Dodaam_Education/master/0101.slides.html)
+  * [테스트](https://cdn.rawgit.com/dymaxionkim/Dodaam_Education/master/0101.slides.html)
 
 
 
