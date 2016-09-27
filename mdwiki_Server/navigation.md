@@ -28,7 +28,7 @@
 [NAS 구축]()
 
   * [32비트 넷북 NAS](pages/Setting_NAS.md)
-
+  * [Jingo Wiki 서비스 추가하기](pages/Setting_Jingo.md)
 
 
 
