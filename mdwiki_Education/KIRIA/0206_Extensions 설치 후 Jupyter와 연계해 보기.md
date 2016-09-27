@@ -1,0 +1,185 @@
+# 6교시 : Extensions 설치 후 Jupyter와 연계해 보기
+
+## 6.1. Gist Extension
+
+### Gist?
+
+* Github에서 제공하는 서비스.
+* 소스코드 조각을 예쁘게 꾸며서 고정된 주소를 부여해 준다.
+* 이 주소를 이용해서
+웹에서 링크해 주면 된다.
+
+### Gist & Jupyter
+
+* Jupyter Notebook에서 문서를 작성하면 .ipynb 확장자의 파일이 된다.
+* JSON 형식을
+가진 텍스트 파일이다.
+* Github에서는 이 파일을 자동으로 해석,렌더링해서 보여주는 기능이 있다.
+* 따라서 이 파일을 Gist에 올리면
+그냥 하나의 웹페이지가 되고, 주소가 부여된다.
+* Gist에 올린 다음, 개인 블로그 등에 링크/임베드 시키면 웹 게시 끝.
+
+### Gist로 .ipynb 파일 업로드
+
+* 만들어진 파일을 매번 하나하나 Github에서 업로드 하는 것이 매우 귀챦다.
+* 버튼만 누르면
+현재의 문서를 Gist에 업로드해주는 것은 없을까?
+* 당연히 있다!
+* 이 기능을 해 주는 Jupyter Extensions를 찾아보자.
+
+### Jupyter Extensions for Gist Upload
+
+* 검색을 해 보면 가장 눈에 띄는 것이 2종류 있다.
+
+>
+https://github.com/minrk/ipython_extensions#gist
+
+> https://github.com/ipython-
+contrib/IPython-notebook-extensions
+
+* 둘 중 골라서 설치하면 된다.
+
+### Jupyter Gist Extension 설치 (첫번째 것)
+
+* 아래의 문서는 Jupyter Notebook에서 작성되었고, Gist에
+업로드되어 있다.
+http://nbviewer.jupyter.org/gist/dymaxionkim/d9a2ab620303982df1af?flush_cache=true
+* 다만 이 익스텐션은, Python 스크립트에 의해서 설치되는 방식이라서 실패 확률이 높은 것 같다.
+* 권장하지 않는다.
+
+### Jupyter Gist Extension 설치 (두번째 것)
+
+* 대신 이것을 사용하는 것이 더 낫겠다.
+* 다음 설치 명령을 주면
+설치된다.
+```
+pip install https://github.com/ipython-contrib/IPython-notebook-
+extensions/archive/master.zip --user
+```
+* Python Notebook을 종료했다가 다시 시작한다.
+
+* 환경
+설정을 위해서는, 웹브라우저 주소창에 다음 주소로 들어간다.
+```
+http://localhost:8888/nbextensions
+```
+*
+여러가지 Extension들이 상당히 많이 있는데, 이 중에서 `Gist-it`을 선택한다.
+* `Gist-it`을 활성화하기 위해서는
+인증토큰을 설정해 줘야 한다.
+* 인증토큰을 위해서 우선 웹브라우저에 새 탭을 열고 다음 주소로 들어간다.
+```
+https://github.com/settings/applications
+```
+* 그리고 이제, 좌측 메뉴 중에서 'Personal
+access tokens'를 누르면 새로운 페이지가 뜬다.
+* 여기서 'Generate new token' 버튼을 누른다.
+* 'Token
+description'을 적당히 적어주고, 'Select scopes' 카테고리에서 'gist'가 체크되어 있는지 확인후 'Generate
+token' 버튼을 눌러준다.
+* 이제 Pernoal access token이 만들어졌다. 코드를 긁어다 복사해서, `Gist-it`의 인증코드
+요구 팝업창에 넣어주면 된다. (약간의 시차가 필요할 수도 있으므로, 코드 생성 이후 조금 기다렸다 하는 것이 좋겠음.)
+* 그리고, 토큰을
+복사해 넣어준 입력칸 바로 밑에 `Gists default to public.`의 라디오 버튼을 체크해 준다.
+* Public으로 해 줘야
+남에게 보여줄 때 그냥 보여지게 할 수 있기 때문이다.
+* 별도의 저장 버튼은 없고, Activate 버튼이 흐리게 되어 있으면 이미
+Activate 상태라고 보면 될것같다.  그냥 빠져나오면 된다.
+
+### Gist it!
+
+* 이제 Jupyter Notebook에 보면 Gist-it 버튼이 하나 추가된 것을 확인할 수 있다.
+* 이 버튼을
+누르면 팝업이 뜨는데, `Gist ID` 창은 그냥 비워둔 채로 실행하면 된다.
+* `Gist ID`는 기존에 해당 문서의 Gist가 이미 있을
+경우에, 그 번호를 써 넣어 주면 버전을 올려주는 역할이다.
+* Gist가 올라갔으면, 다음 주소로 링크해서 활용하면 된다.
+(`GIST_ID`는 얻어진 GIST ID 번호를 넣어준다.)
+```
+https://gist.github.com/dymaxionkim/GIST_ID
+```
+
+### Gist 사용의 의미
+
+* 기존에는, .ipynb 파일을 html로 변환한 후 그것을 웹서버에 업로드하고, 업로드 된 주소를 링크시켜
+게시하는 과정을 거치게 된다.
+* 그러나, 개인 웹사이트가 없는 경우에는 안정적으로 마땅히 업로드 할 만한 곳이 없다는 문제가 있다.
+* 또
+매번 수동으로 업로드 하는 일도 꽤 귀챦게 된다.
+* Gist로 이 과정을 한 번에 끝내고, 공유 및 검색이 편하도록 해 줄 수 있다.
+
+## 6.2. RISE Extension
+
+### RISE?
+
+* https://github.com/adl/RISE
+* Jupyter에 애드온으로 설치하는 익스텐션 중의 하나.
+*
+Jupyter로 작성한 .ipynb 파일을 그대로 프리젠테이션 용으로 쓸 수 있게 해 준다.
+* Jupyter Notebook 안에 통합되어
+버튼이 추가된다.
+* 본 강의자료는 RISE로 프리젠테이션 되고 있다.
+* Reveal.js 기반
+
+### RISE 설치
+
+* Git 설치 (이미 설치되어 있으면 생략) :
+[참조](http://dymaxionkim.github.io/mdwiki/#!pages/Code/Github.md)
+```
+sudo apt-
+get install git
+```
+
+* Github의 저장소에서 내 컴퓨터로 Clone해 오기
+```
+git clone
+https://github.com/adl/RISE.git
+```
+
+* Clone 해 온 폴더로 이동
+```
+cd ~/github/RISE
+```
+* 설치 명령 입력
+```
+python setup.py install
+```
+
+* Jupyter를 다시 시작한다!
+
+### RISE 사용의 의미
+
+* 기존에는, nbconvert 명령을 이용해서 일일이 ipynb 파일을 슬라이드 html 파일로 변환했다.
+*
+RISE를 사용해서 Notebook 상에서 그냥 곧바로 슬라이드를 보여주고, 내용을 수정하거나 직접 실행하면서 진행이 가능하다.
+
+### 프리젠테이션을 그대로 PDF로 인쇄하기 (팁)
+
+* RISE를 사용하는 상태에서는 인쇄가 곤란하다.  대신 다음 방법을 사용할 수 있다.
+* 먼저 가상 PDF 프린터가 존재해야 한다.
+* 웹브라우저는 HTML5가 지원되는 모던 웹 브라우저여야 한다.
+* 터미널 명령으로 다음을
+친다.
+```
+jupyter nbconvert --to slide 문서이름.ipynb --post serve
+```
+* 그러면 웹브라우저가
+실행되면서 슬라이드가 포스팅될 것이다.
+* 포스팅된 웹브라우저 주소창의 주소는 다음과 같은 형식으로 되어 있다.
+```
+http://127.0.0.1:8000/문서이름.slides.html#/
+```
+* 여기서 다음과 같이 마지막 문구인 `#/`를 `?print-
+pdf#/`로 대체해 주고 엔터.
+```
+http://127.0.0.1:8000/문서이름.slides.html?print-pdf#/
+```
+*
+이제 웹브라우저로 인쇄버튼을 누르고 미리보기에서 다음 설정을 고친다.
+
+> 종이를 '가로'로 설정한다.
+
+> 여백은 '없음'으로 해서 없앤다.
+> 배경 그래픽은 체크해서 인쇄에 반영되도록 한다.
+
+* 그리고 가상 PDF 프린터를 선택해서 파일로 인쇄를 하면 끝.
