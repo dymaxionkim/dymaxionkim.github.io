@@ -18,5 +18,5 @@
 ## Github Pages
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim)
 * [Education](https://dymaxionkim.github.io/Education/index.html)
-* [UbuntuBang](https://dymaxionkim.github.io/UbuntuBang)
+* [UbuntuBang](: http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html)
 
