@@ -1,8 +1,7 @@
 
-# [Dymaxionkim.github.io](http://Dymaxionkim.github.io)
-_Dymaxionkim's Personal Bookmark_
+# _Dymaxionkim's Personal Bookmark_
 
-![Icon](https://avatars1.githubusercontent.com/u/12775748?v=3&s=466)
+![Icon](https://cloud.githubusercontent.com/assets/12775748/11586629/cc78e47e-9ab7-11e5-8ed8-0a12610c0988.png)
 
 ## Blogs
 * [Jekyll](https://dymaxionkim.github.io/beautiful-jekyll/)
@@ -18,6 +17,6 @@ _Dymaxionkim's Personal Bookmark_
 
 ## Github Pages
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim)
-* [Education](https://dymaxionkim.github.io/Education)
+* [Education](https://dymaxionkim.github.io/Education/index.html)
 * [UbuntuBang](https://dymaxionkim.github.io/UbuntuBang)
 
