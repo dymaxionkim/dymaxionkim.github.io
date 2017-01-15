@@ -8,7 +8,7 @@
 
 ## Home Server
 * [OwnCloud](http://dymaxionkim.mooo.com/owncloud)
-* [Wiki](http://dymaxionkim.mooo.com:3000)
+* [Jingo Wiki](http://dymaxionkim.mooo.com:3000)
 * [Jupyter Notebook](http://dymaxionkim.mooo.com:8888)
 * [FTP](ftp://dymaxionkim.mooo.com:3001)
 * [Torrent](http://dymaxionkim.mooo.com:3002)
