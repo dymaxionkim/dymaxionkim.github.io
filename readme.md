@@ -19,3 +19,5 @@
 * [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : Ubuntu Server + X-Window Installer
 * [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool
+* [ElmerFEM_Examples](http://dymaxionkim.github.io/ElmerFEM_Examples/) : Open-source Mechanical Analysis Examples
+
