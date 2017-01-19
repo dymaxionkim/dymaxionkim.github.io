@@ -3,8 +3,8 @@
 
 ## Blogs
 * [Jekyll](https://dymaxionkim.github.io/beautiful-jekyll/) : 2017~now
-* [Blogger](http://dymaxionkim.blogspot.kr) : 2011~2016
-* [Naver](http://blog.naver.com/dymaxion) : 2003~2011
+* [Google Blogger](http://dymaxionkim.blogspot.kr) : 2011~2016
+* [Naver Blog](http://blog.naver.com/dymaxion) : 2003~2011
 
 ## Github Pages
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim) : TOP
