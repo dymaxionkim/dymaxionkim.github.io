@@ -15,6 +15,7 @@
 
 ## Github Pages
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim)
-* [Education](https://dymaxionkim.github.io/Education/index.html)
-* [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html)
-* [FGPG](http://dymaxionkim.github.io/FGPG/)
+* [Education](https://dymaxionkim.github.io/Education/index.html) : Open-Source Mechanical Analysis Method
+* [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : Ubuntu Server + X-Window Installer
+* [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator
+* [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool
