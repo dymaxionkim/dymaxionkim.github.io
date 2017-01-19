@@ -5,6 +5,7 @@
 * [Jekyll](https://dymaxionkim.github.io/beautiful-jekyll/) : 2017~now
 * [Google Blogger](http://dymaxionkim.blogspot.kr) : 2011~2016
 * [Naver Blog](http://blog.naver.com/dymaxion) : 2003~2011
+* [Torchpad](http://dymaxionkim.torchpad.com/)
 
 ## Github Pages
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim) : TOP
