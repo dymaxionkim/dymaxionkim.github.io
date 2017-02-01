@@ -11,10 +11,11 @@
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim) : TOP
 * [Education](https://dymaxionkim.github.io/Education/index.html) : Open-Source Mechanical Analysis Method
 * [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : Ubuntu Server + X-Window Installer
-* [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator
-* [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool
+* [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator / Julia Lang
+* [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8 / C Lang
+* [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool / Julia Lang
 * [ElmerFEM_Examples](http://dymaxionkim.github.io/ElmerFEM_Examples/) : Open-source Mechanical Analysis Examples
-* [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8
+
 
 ## Home Server
 * [Jingo Wiki](http://dymaxionkim.mooo.com:3000) : Personal Wiki based on Node.js
