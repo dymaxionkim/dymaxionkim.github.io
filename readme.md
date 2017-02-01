@@ -14,6 +14,7 @@
 * [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool
 * [ElmerFEM_Examples](http://dymaxionkim.github.io/ElmerFEM_Examples/) : Open-source Mechanical Analysis Examples
+* [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8
 
 ## Home Server
 * [Jingo Wiki](http://dymaxionkim.mooo.com:3000) : Personal Wiki based on Node.js
