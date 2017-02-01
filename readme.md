@@ -15,7 +15,7 @@
 * [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8 / C Lang
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool / Julia Lang
 * [ElmerFEM_Examples](http://dymaxionkim.github.io/ElmerFEM_Examples/) : Open-source Mechanical Analysis Examples
-
+* [CATIA_Auto_Settup](http://dymaxionkim.github.io/CATIA_Auto_Settup/) : CATIA 자동 설정 도구 V08 / MS Windows Batch File
 
 ## Home Server
 * [Jingo Wiki](http://dymaxionkim.mooo.com:3000) : Personal Wiki based on Node.js
