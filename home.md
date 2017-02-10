@@ -1,4 +1,8 @@
 
+## Blog
+* [Naver Blog](http://blog.naver.com/dymaxion) : 2003~2011
+* [Torchpad](http://dymaxionkim.torchpad.com/) : 2016
+
 ## Home Server
 * [Jingo Wiki](http://dymaxionkim.mooo.com:3000) : Personal Wiki based on Node.js
 * [Jupyter Notebook](http://dymaxionkim.mooo.com:8888) : Personal Jupyter Notebook for Online Coding
