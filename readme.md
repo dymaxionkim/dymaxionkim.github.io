@@ -6,16 +6,25 @@
 * [Google Blogger](http://dymaxionkim.blogspot.kr) : 2011~2016
 
 ## Github Pages
+
+### Basics
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim) : TOP
-* [Education](https://dymaxionkim.github.io/Education/index.html) : Open-Source Mechanical Analysis Method
 * [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : Ubuntu Server + X-Window Installer
+
+### Coding
 * [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator / Julia Lang
 * [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8 / C Lang
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool / Julia Lang
-* [ElmerFEM_Examples](http://dymaxionkim.github.io/ElmerFEM_Examples/) : Open-source Mechanical Analysis Examples
+
+### CAD
 * [CATIA_Auto_Settup](http://dymaxionkim.github.io/CATIA_Auto_Settup/) : CATIA 자동 설정 도구 V08 / MS Windows Batch File
 * [CREO3_STARTUP](http://dymaxionkim.github.io/CREO3_STARTUP/) : Startup Setting for PTC CREO3
 * [CREO3_STARTUP_DJDMP](https://dymaxionkim.github.io/CREO3_STARTUP_DJDMP/) : CREO Startup Environment for DJDMP
+
+### CAE
+* [Education](https://dymaxionkim.github.io/Education/index.html) : Open-Source Mechanical Analysis Method
+* [ElmerFEM_Examples](http://dymaxionkim.github.io/ElmerFEM_Examples/) : Open-source Mechanical Analysis Examples
+* [Elmer_Examples_for_CADG](https://dymaxionkim.github.io/Elmer_Examples_for_CADG/) : ElmerFEM examples for CAD&Graphics
 
 
 
