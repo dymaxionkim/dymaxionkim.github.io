@@ -12,6 +12,7 @@
 * [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : Ubuntu Server + X-Window Installer
 
 ### Coding
+* [CRD](https://github.com/dymaxionkim/CRD) : Cycloidal Reducer Designer / Julia Lang
 * [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator / Julia Lang
 * [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8 / C Lang
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool / Julia Lang
