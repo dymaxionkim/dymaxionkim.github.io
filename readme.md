@@ -9,7 +9,7 @@
 
 ### Basics
 * [Github.com/dymaxionkim](https://github.com/dymaxionkim) : TOP
-* [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : Ubuntu Server + X-Window Installer
+* [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : My personal Ubuntu based Desktop
 
 ### Coding
 * [CRD](https://github.com/dymaxionkim/CRD) : Cycloidal Reducer Designer / Julia Lang
