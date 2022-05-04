@@ -12,13 +12,18 @@
 * [UbuntuBang](http://dymaxionkim.github.io/UbuntuBang/mdwiki_UbuntuBang/index.html) : My personal Ubuntu based Desktop
 
 ### Coding
+* [TBC](https://github.com/dymaxionkim/TBC) : Timing Belt Calculator / Python3
+* [CRD3](https://github.com/dymaxionkim/CRD3) : Cycloidal Eccentric Reducer Designer 3 / Python3 with GUI
+* [CRD2](https://github.com/dymaxionkim/CRD2) : Cycloidal Eccentric Reducer Designer 2 / Python3 with GUI
 * [CRD](https://github.com/dymaxionkim/CRD) : Cycloidal Reducer Designer / Julia Lang
-* [FGPG2](http://dymaxionkim.github.io/FGPG2/) : Fine Involute Gear Profile Generator / Python Lang with GUI
+* [FGPG2](https://github.com/dymaxionkim/FGPG2) : Fine Involute Gear Profile Generator / Python Lang with GUI
 * [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator / Julia Lang
 * [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8 / C Lang
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool / Julia Lang
 
 ### CAD
+* [PySolidworks](https://github.com/dymaxionkim/PySolidworks) : My Solidworks Settings
+* [Solidworks](https://github.com/dymaxionkim/SOLIDWORKS) : Handling .SLDPRT with Global Variables/ Export_PdfDxfStp
 * [CATIA_Auto_Settup](http://dymaxionkim.github.io/CATIA_Auto_Settup/) : CATIA 자동 설정 도구 V08 / MS Windows Batch File
 * [CREO3_STARTUP](http://dymaxionkim.github.io/CREO3_STARTUP/) : Startup Setting for PTC CREO3
 * [CREO3_STARTUP_DJDMP](https://dymaxionkim.github.io/CREO3_STARTUP_DJDMP/) : CREO Startup Environment for DJDMP
