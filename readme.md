@@ -17,6 +17,7 @@
 * [CRD2](https://github.com/dymaxionkim/CRD2) : Cycloidal Eccentric Reducer Designer 2 / Python3 with GUI
 * [CRD](https://github.com/dymaxionkim/CRD) : Cycloidal Reducer Designer / Julia Lang
 * [FGPG2](https://github.com/dymaxionkim/FGPG2) : Fine Involute Gear Profile Generator / Python Lang with GUI
+* [FGPG2/web](https://dymaxionkim.github.io/FGPG2/index.html) : Web version of FGPG2
 * [FGPG](http://dymaxionkim.github.io/FGPG/) : Fine Involute Gear Profile Generator / Julia Lang
 * [GPG](http://dymaxionkim.github.io/GPG/) : Involute Gear Profile Generator V0.8 / C Lang
 * [COMBI](http://dymaxionkim.github.io/COMBI/) : Planetary & Harmonic COMBI REDUCER Design Tool / Julia Lang
